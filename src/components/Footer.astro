@@ -1,0 +1,25 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import ui from '../data/ui.json';
+import links from '../data/links.json';
+
+const t = ui[Astro.locals.starlightRoute.lang as keyof typeof ui] ?? ui.en;
+---
+
+<Default><slot /></Default>
+<p class="site-note">
+  © 2026 Volantis Labs · {t.license} {t.videoNote}
+  <br />
+  <a href={links.site}>Moxie</a> · <a href={links.privacy}>{t.privacy}</a>
+</p>
+
+<style>
+  .site-note {
+    margin-top: 2rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+  }
+  .site-note a {
+    color: inherit;
+  }
+</style>

@@ -1,0 +1,39 @@
+/* Colours of volantislabs.dev: neutral greys, orange accent. */
+:root {
+  --sl-color-accent-low: #3d2a05;
+  --sl-color-accent: #f5a516;
+  --sl-color-accent-high: #fbd68d;
+  --sl-color-white: #f5f5f7;
+  --sl-color-gray-1: #e5e5ea;
+  --sl-color-gray-2: #c7c7cc;
+  --sl-color-gray-3: #8e8e93;
+  --sl-color-gray-4: #636366;
+  --sl-color-gray-5: #3a3a3c;
+  --sl-color-gray-6: #1d1d1f;
+  --sl-color-black: #111113;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #fdf1d6;
+  --sl-color-accent: #9a5b00; /* dark orange: readable as link text on the light background */
+  --sl-color-accent-high: #6b3f00;
+  --sl-color-white: #1d1d1f;
+  --sl-color-gray-1: #1d1d1f;
+  --sl-color-gray-2: #3a3a3c;
+  --sl-color-gray-3: #6e6e73;
+  --sl-color-gray-4: #8e8e93;
+  --sl-color-gray-5: #c7c7cc;
+  --sl-color-gray-6: #e5e5ea;
+  --sl-color-gray-7: #f5f5f7;
+  --sl-color-black: #fbfbfd;
+}
+
+/* The language labels have a flag, thus they need more width than the default 7em. */
+starlight-lang-select select {
+  width: 10.5em;
+}
+
+/* "System" (German, Dutch) does not fit in the default width. */
+starlight-theme-select select {
+  width: 7.5em;
+}

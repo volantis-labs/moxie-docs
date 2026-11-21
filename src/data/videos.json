@@ -1,0 +1,16 @@
+{
+  "first-meeting": { "id": "", "poster": "" },
+  "speakers": { "id": "", "poster": "" },
+  "enhanced-notes": { "id": "", "poster": "" },
+  "search": { "id": "", "poster": "" },
+  "chat": { "id": "", "poster": "" },
+  "export": { "id": "", "poster": "" },
+  "mcp": { "id": "", "poster": "" },
+  "recording": { "id": "", "poster": "" },
+  "editor-formatting": { "id": "", "poster": "" },
+  "editor-lists": { "id": "", "poster": "" },
+  "editor-links-mentions": { "id": "", "poster": "" },
+  "editor-find-replace": { "id": "", "poster": "" },
+  "editor-tables-images": { "id": "", "poster": "" },
+  "editor-citations": { "id": "", "poster": "" }
+}

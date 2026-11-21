@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Must be the same as the Worker name in the Cloudflare dashboard, or the build fails.
+  "name": "moxie-docs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./dist",
+    // The files in dist/ are served below this URL path.
+    "base_path": "/moxie/docs",
+    "not_found_handling": "404-page"
+  },
+  // A route has priority over the custom domain of the main site Worker.
+  // The main site must not publish a path that starts with /moxie/docs.
+  "routes": [
+    { "pattern": "volantislabs.dev/moxie/docs*", "zone_name": "volantislabs.dev" },
+    { "pattern": "www.volantislabs.dev/moxie/docs*", "zone_name": "volantislabs.dev" }
+  ]
+}

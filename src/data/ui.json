@@ -1,0 +1,26 @@
+{
+  "en": {
+    "license": "Moxie is free and open source under GPL 3.0.",
+    "videoNote": "Videos load from YouTube only after you click play.",
+    "playVideo": "Play video",
+    "privacy": "Privacy"
+  },
+  "de": {
+    "license": "Moxie ist kostenlos und Open Source unter GPL 3.0.",
+    "videoNote": "Videos werden erst von YouTube geladen, wenn Sie auf Wiedergabe klicken.",
+    "playVideo": "Video abspielen",
+    "privacy": "Datenschutz"
+  },
+  "fr": {
+    "license": "Moxie est gratuit et open source sous licence GPL 3.0.",
+    "videoNote": "Les vidéos se chargent depuis YouTube uniquement après un clic sur Lecture.",
+    "playVideo": "Lire la vidéo",
+    "privacy": "Confidentialité"
+  },
+  "nl": {
+    "license": "Moxie is gratis en open source onder GPL 3.0.",
+    "videoNote": "Video's worden pas van YouTube geladen nadat u op afspelen klikt.",
+    "playVideo": "Video afspelen",
+    "privacy": "Privacy"
+  }
+}

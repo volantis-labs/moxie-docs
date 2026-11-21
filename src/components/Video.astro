@@ -1,0 +1,132 @@
+---
+// A tutorial video from YouTube. Use in a page: <Video feature="recording" />
+// - The id and the poster come from src/data/videos.json. An empty id shows nothing.
+// - Before the click, the page has only a local poster image. No request goes to YouTube.
+// - After the click, the YouTube player loads and starts with subtitles in the page language.
+import { Image } from 'astro:assets';
+import videos from '../data/videos.json';
+import ui from '../data/ui.json';
+
+interface Props {
+  feature: keyof typeof videos;
+}
+
+const { feature } = Astro.props;
+const video = videos[feature];
+if (!video) throw new Error(`<Video>: no feature "${feature}" in src/data/videos.json`);
+
+const { lang, entry } = Astro.locals.starlightRoute;
+const code = lang.split('-')[0];
+const t = ui[code as keyof typeof ui] ?? ui.en;
+
+const posters = import.meta.glob<{ default: ImageMetadata }>('../assets/posters/*.{jpg,jpeg,png,webp}', { eager: true });
+const poster = posters[`../assets/posters/${video.poster}`]?.default;
+if (video.id && !poster) {
+  throw new Error(`<Video>: feature "${feature}" has an id but no poster file in src/assets/posters/`);
+}
+---
+
+{
+  video.id && poster && (
+    <moxie-video data-id={video.id} data-lang={code}>
+      <button type="button" aria-label={`${t.playVideo}: ${entry.data.title}`}>
+        <Image src={poster} alt="" widths={[720, 1440]} sizes="(min-width: 50em) 45rem, 100vw" />
+        <svg viewBox="0 0 68 68" aria-hidden="true">
+          <circle cx="34" cy="34" r="34" />
+          <path d="M27 21v26l22-13z" />
+        </svg>
+      </button>
+    </moxie-video>
+  )
+}
+
+<script>
+  declare const YT: any;
+
+  let api: Promise<void> | undefined;
+
+  // The first click on a video loads the YouTube IFrame API. Not before.
+  function loadApi() {
+    api ??= new Promise((resolve) => {
+      (window as any).onYouTubeIframeAPIReady = () => resolve();
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      document.head.append(script);
+    });
+    return api;
+  }
+
+  class MoxieVideo extends HTMLElement {
+    connectedCallback() {
+      this.querySelector('button')?.addEventListener(
+        'click',
+        async () => {
+          const { id, lang } = this.dataset;
+          const target = document.createElement('div');
+          this.replaceChildren(target);
+          await loadApi();
+          new YT.Player(target, {
+            videoId: id,
+            host: 'https://www.youtube-nocookie.com',
+            width: '100%',
+            height: '100%',
+            playerVars: { autoplay: 1, playsinline: 1, rel: 0, hl: lang, cc_lang_pref: lang, cc_load_policy: 1 },
+            // playVideo() from the API starts the video in Safari with one click.
+            events: { onReady: (event: any) => event.target.playVideo() },
+          });
+        },
+        { once: true },
+      );
+    }
+  }
+
+  customElements.define('moxie-video', MoxieVideo);
+</script>
+
+<style>
+  moxie-video {
+    display: block;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #000;
+  }
+  moxie-video :global(iframe) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  button svg {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+  button circle {
+    fill: rgb(0 0 0 / 0.65);
+  }
+  button:hover circle,
+  button:focus-visible circle {
+    fill: #f5a516;
+  }
+  button path {
+    fill: #fff;
+  }
+</style>

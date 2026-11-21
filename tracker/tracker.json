@@ -61,68 +61,68 @@
       "key": "DOCS-2",
       "title": "Scaffold Starlight with 4 locales and the site style",
       "description": "Goal: Astro Starlight at base /moxie/docs with en (root), de, fr, nl, flag labels, sidebar, edit link, link validator, colours of volantislabs.dev. Accept: npm run build passes; switcher shows 4 languages.",
-      "status": "in_progress",
+      "status": "done",
       "type": "story",
       "epic_id": 1,
       "themes": [
         "infra"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: astro.config.mjs (site volantislabs.dev, base /moxie/docs, locales root en, de, fr, nl with flag labels, sidebar group helper with translated labels, edit link, link validator), src/content.config.ts with sourceHash, src/styles/custom.css with the colours of volantislabs.dev, Footer override with licence and video note in 4 languages, logo and favicon, welcome page in 4 languages. Verified: npm run build passes (5 pages, links valid, Pagefind, sitemap); headless Chrome screenshots of light and dark; the language select changes /de/ to /nl/.",
       "created_at": "2026-11-21T14:44:59.278Z",
-      "updated_at": "2026-11-21T14:46:14.390Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T14:51:06.234Z",
+      "closed_at": "2026-11-21T14:51:06.234Z"
     },
     {
       "id": 3,
       "key": "DOCS-3",
       "title": "Add the Worker config and test it with wrangler dev",
       "description": "Goal: wrangler.jsonc (name moxie-docs, assets base_path /moxie/docs, 2 routes). Accept: wrangler dev serves /moxie/docs/, redirects /moxie/docs, shows the docs 404 page. Fallback: nested outDir.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 1,
       "themes": [
         "infra"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: wrangler.jsonc with assets.base_path /moxie/docs and 2 routes; npm run preview runs wrangler dev. Verified on the local Cloudflare runtime: /moxie/docs gives 307 to /moxie/docs/ (query string kept); /moxie/docs/, /de/, /fr/, /nl/ give 200; a wrong path below /moxie/docs/ gives the docs 404 page with status 404; favicon, sitemap and Pagefind files give 200. The nested outDir fallback is not necessary. Not verified until DOCS-6: zone_name with the build token.",
       "created_at": "2026-11-21T14:44:59.325Z",
-      "updated_at": "2026-11-21T14:44:59.325Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T14:51:06.311Z",
+      "closed_at": "2026-11-21T14:51:06.311Z"
     },
     {
       "id": 4,
       "key": "DOCS-4",
       "title": "Build the Video component",
       "description": "Goal: <Video feature=...> reads src/data/videos.json; empty id shows nothing; local poster; YouTube IFrame API loads only after a click; subtitles in the page language. Accept: no request to YouTube or Google before the click.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 1,
       "themes": [
         "video"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: src/components/Video.astro and src/data/videos.json (14 feature keys, all ids empty). Use: import Video from '~/components/Video.astro'. Verified in headless Chrome with a public test video: before the click the page makes requests to its own host only and has no iframe; after one click the player loads from www.youtube-nocookie.com with hl=de, cc_lang_pref=de, cc_load_policy=1 and the video plays (screenshot). An empty id renders nothing. An id with no poster file stops the build. Not verified: Safari. The test page, test id and test poster are removed.",
       "created_at": "2026-11-21T14:44:59.365Z",
-      "updated_at": "2026-11-21T14:44:59.365Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T14:51:06.388Z",
+      "closed_at": "2026-11-21T14:51:06.387Z"
     },
     {
       "id": 5,
       "key": "DOCS-5",
       "title": "Write the docs check script",
       "description": "Goal: scripts/check-docs.mjs. Fail on a missing translation or a stale sourceHash. Warn above 300 words. Accept: npm run check passes on the skeleton and fails on a changed English page.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 1,
       "themes": [
         "i18n"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: scripts/check-docs.mjs (npm run check). Verified: passes on the skeleton; exit 1 with 3 errors after a change of the English page; exit 1 when nl/index.mdx is missing; --stamp writes sourceHash; --hash prints the hash.",
       "created_at": "2026-11-21T14:44:59.405Z",
-      "updated_at": "2026-11-21T14:44:59.405Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T14:51:06.461Z",
+      "closed_at": "2026-11-21T14:51:06.461Z"
     },
     {
       "id": 6,
