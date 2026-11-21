@@ -1,0 +1,42 @@
+---
+title: Commande d’enregistrement
+description: Suivez et arrêtez un enregistrement depuis n’importe quelle app avec la petite commande flottante.
+sourceHash: 4925a807e609
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Pendant un enregistrement, une petite commande reste visible au-dessus des autres apps. Elle affiche la durée, les niveaux du micro et du son de la réunion ainsi que le bouton **Arrêter**.
+
+| Action | Résultat |
+| --- | --- |
+| Cliquer sur **Arrêter** | Moxie arrête et sauvegarde l’enregistrement. Votre app reste au premier plan. |
+| Cliquer sur le corps de la commande | Moxie ouvre la note de l’enregistrement. |
+| Faire glisser la commande | La commande se déplace. Moxie mémorise sa position pour chaque écran. |
+
+La commande reste invisible dans les partages et les captures d’écran.
+
+Quand la fenêtre de Moxie est au premier plan, la commande se masque. Le volet de transcription affiche alors les mêmes informations. Si le volet est fermé, la ligne **En cours de réunion.** propose les boutons **Ouvrir la note** et **Arrêter** en haut de la fenêtre.
+
+## Problèmes
+
+En cas de problème, la commande affiche un message et un bouton.
+
+| Texte | Bouton |
+| --- | --- |
+| Votre microphone est silencieux | **Choisir le micro** |
+| Aucun son de la réunion | **Vérifier la sortie** |
+| Disque presque plein | **Libérer de l'espace** |
+| Périphérique remplacé par AirPods | **OK** |
+
+## Exemple
+
+Vous partagez votre écran dans Zoom. Les participants ne voient pas la commande. À la fin, cliquez sur **Arrêter** dans la commande. Zoom reste au premier plan.
+
+## Voir aussi
+
+- [Démarrer et arrêter un enregistrement](/moxie/docs/fr/record/start-stop/)
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)
+- [Dépannage](/moxie/docs/fr/help/troubleshooting/)

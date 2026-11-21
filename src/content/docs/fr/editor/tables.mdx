@@ -1,0 +1,58 @@
+---
+title: Tableaux
+description: Créez un tableau dans une note et modifiez ses lignes et ses colonnes.
+sourceHash: 35cd2440b7de
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Pour créer un tableau, saisissez une ligne en séparant les cellules par des barres verticales.
+
+1. Saisissez au moins deux titres de colonne entre des barres verticales, par exemple `| Article | Prix |`.
+2. Appuyez sur <kbd>Enter</kbd>. Moxie crée un tableau avec une ligne d’en-tête et une ligne vide.
+
+Vous pouvez aussi créer un tableau de deux façons :
+
+- Saisissez `/table` et appuyez sur <kbd>Enter</kbd>. Moxie ajoute un tableau de 3 colonnes et 3 lignes.
+- Collez un tableau Markdown ou un tableau provenant d’une page web.
+
+## Se déplacer dans un tableau
+
+| Touches | Résultat |
+| --- | --- |
+| <kbd>Tab</kbd> | Cellule suivante. Dans la dernière cellule, <kbd>Tab</kbd> ajoute une ligne. |
+| <kbd>⇧Tab</kbd> | Cellule précédente |
+| <kbd>Enter</kbd> | Cellule du dessous |
+
+Une cellule contient une ligne de texte.
+
+## Ajouter et supprimer des lignes et des colonnes
+
+1. Cliquez dans une cellule. Le bouton **⋯** apparaît.
+2. Cliquez sur le bouton.
+3. Sélectionnez une commande.
+
+| Action | Commandes |
+| --- | --- |
+| Ajouter | **Insérer une ligne au-dessus**, **Insérer une ligne en dessous**, **Insérer une colonne à gauche**, **Insérer une colonne à droite** |
+| Supprimer | **Supprimer la ligne**, **Supprimer la colonne**, **Supprimer le tableau** |
+
+Vous ne pouvez pas supprimer la ligne d’en-tête.
+
+## Exemple
+
+Saisissez cette ligne et appuyez sur <kbd>Enter</kbd> :
+
+```text
+| Article | Prix |
+```
+
+Saisissez « Café ». Appuyez sur <kbd>Tab</kbd>. Saisissez « 4,50 ». Appuyez à nouveau sur <kbd>Tab</kbd>. Moxie ajoute une ligne.
+
+## Voir aussi
+
+- [Menu barre oblique](/moxie/docs/fr/editor/slash-menu/)
+- [Coller](/moxie/docs/fr/editor/paste/)
+- [Images](/moxie/docs/fr/editor/images/)

@@ -1,0 +1,51 @@
+---
+title: Activer l’accès des agents
+description: Autorisez les agents IA de votre Mac à lire vos notes.
+sourceHash: 85a016f9d524
+---
+
+Un agent IA sur votre Mac peut lire vos notes avec la commande `moxie` ou le serveur MCP. Cet accès est désactivé par défaut.
+
+## Étapes
+
+1. Appuyez sur <kbd>⌘,</kbd> pour ouvrir les réglages.
+2. Ouvrez **Fonctions IA**.
+3. Activez l’option **Autoriser les agents IA de ce Mac à lire vos notes ?**
+4. Sous **Comment souhaitez-vous vous connecter ?**, choisissez un mode de connexion :
+
+| Ligne | Bouton | Résultat |
+| --- | --- | --- |
+| **Ajouter à une application IA** | **Copier MCP de configuration** | Copie la configuration pour un client MCP |
+| **Utiliser depuis le terminal** | **Installer la commande** | Installe la commande `moxie` |
+| **Instructions pour les agents (SKILL.md)** | **Copier** | Copie les instructions que l’agent peut lire |
+
+## Installer la commande
+
+1. Cliquez sur **Installer la commande**.
+2. Cliquez sur **Installer**.
+
+Moxie crée un lien vers la commande dans `/usr/local/bin`. Si ce dossier exige des droits d’administration, Moxie utilise `~/.local/bin` sans demander de mot de passe. Dans ce cas, ajoutez `~/.local/bin` à votre `PATH`.
+
+Pour supprimer la commande, cliquez sur **Supprimer le commandement**.
+
+## Ce que peut faire un agent
+
+- Afficher la liste des notes et des dossiers.
+- Lire les détails et la transcription d’une note.
+- Ajouter une note à un dossier ou la retirer d’un dossier.
+
+L’agent ne voit pas les notes dans la corbeille. Moxie doit être ouvert. La commande utilise un socket local que seul votre compte utilisateur peut ouvrir. Moxie n’ouvre aucun port réseau.
+
+## Exemple
+
+```sh
+moxie notes list --limit 5
+```
+
+Cette commande affiche vos 5 notes les plus récentes.
+
+## Voir aussi
+
+- [Référence de la CLI](/moxie/docs/fr/agents/cli/)
+- [Serveur MCP](/moxie/docs/fr/agents/mcp/)
+- [Réglages](/moxie/docs/fr/reference/settings/)

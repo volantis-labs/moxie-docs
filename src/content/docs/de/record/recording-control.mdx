@@ -1,0 +1,42 @@
+---
+title: Die Aufnahmesteuerung
+description: Mit der kleinen schwebenden Steuerung überwachen und stoppen Sie eine Aufnahme aus allen Apps.
+sourceHash: 4925a807e609
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Während einer Aufnahme bleibt eine kleine Steuerung über Ihren anderen Apps. Sie zeigt die Zeit, einen Pegel für Ihr Mikrofon, einen Pegel für den Ton des Meetings und **Stopp**.
+
+| Aktion | Ergebnis |
+| --- | --- |
+| Auf **Stopp** klicken | Moxie stoppt und sichert die Aufnahme. Moxie kommt nicht in den Vordergrund. |
+| Auf die Fläche der Steuerung klicken | Moxie öffnet die Notiz der Aufnahme. |
+| Die Steuerung ziehen | Die Steuerung bewegt sich. Moxie merkt sich die Position für jedes Display. |
+
+Die Steuerung erscheint nicht in einer Bildschirmfreigabe und nicht in einem Bildschirmfoto.
+
+Wenn das Moxie-Fenster im Vordergrund ist, wird die Steuerung ausgeblendet. Der Transkriptbereich der Notiz zeigt dann dieselben Daten. Wenn der Bereich geschlossen ist, hat die Zeile **Gemeinschaftsmeeting im Gange.** oben die Tasten **Notiz öffnen** und **Stopp**.
+
+## Probleme
+
+Bei einem Problem zeigt die Steuerung eine Textzeile und eine Taste.
+
+| Text | Taste |
+| --- | --- |
+| Ihr Mikrofon ist stumm | **Microphone auswählen** |
+| Kein Besprechungston | **Ausgabe prüfen** |
+| Laufwerk fast voll | **Raum freimachen** |
+| Gerät gewechselt zu AirPods | **OK** |
+
+## Beispiel
+
+Sie geben Ihren Bildschirm in Zoom frei. Die Teilnehmer sehen die Steuerung nicht. Klicken Sie am Ende auf der Steuerung auf **Stopp**. Zoom bleibt im Vordergrund.
+
+## Siehe auch
+
+- [Aufnahme starten und stoppen](/moxie/docs/de/record/start-stop/)
+- [Live-Transkript](/moxie/docs/de/notes/transcript/)
+- [Fehlerbehebung](/moxie/docs/de/help/troubleshooting/)

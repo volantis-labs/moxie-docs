@@ -1,0 +1,55 @@
+---
+title: Diagnostics
+description: Consultez les diagnostics envoyés par Moxie et désactivez leur envoi.
+sourceHash: edf99ebe5bcc
+---
+
+Les diagnostics comprennent les rapports de plantage et les statistiques d’utilisation. Ils ne contiennent ni audio, ni transcription, ni texte de note, ni titre, ni nom issus de vos réunions.
+
+Les diagnostics sont activés par défaut. Dans les régions où votre accord est demandé, comme l’Union européenne, le Royaume-Uni et le Canada, Moxie n’envoie rien avant votre accord. Dans les autres régions, si les diagnostics sont activés, Moxie peut aussi envoyer l’adresse e-mail du compte connecté.
+
+## Désactiver les diagnostics
+
+1. Appuyez sur <kbd>⌘,</kbd> pour ouvrir les réglages.
+2. Ouvrez **Vos données**.
+3. Désactivez l’option **Envoyer des diagnostics pour résoudre les problèmes ?**
+
+Moxie supprime alors les événements en attente d’envoi.
+
+## Consulter les données envoyées
+
+1. Ouvrez **Réglages → Vos données**.
+2. Ouvrez **Quel message a été envoyé**.
+3. Sélectionnez une liste.
+
+| Liste | Contenu |
+| --- | --- |
+| **Envoyé** | Chaque message tel qu’il a été envoyé depuis votre Mac |
+| **Conserver sur ce Mac** | Rapports que Moxie n’a pas envoyés |
+| **Pas encore envoyé** | Événements en attente du prochain envoi groupé |
+
+Cliquez sur une ligne pour voir son contenu JSON.
+
+## Réinitialiser l’identifiant de l’installation
+
+Moxie envoie un identifiant d’installation aléatoire avec chaque événement. Dans **Quel message a été envoyé**, cliquez sur **Réinitialiser** à côté du champ **Installer l'ID**. Moxie crée un nouvel identifiant à la prochaine activation des diagnostics.
+
+## Exemple
+
+Un événement d’utilisation contient uniquement des nombres et des valeurs prédéfinies. Après un export, Moxie envoie cet événement :
+
+```text
+export_done
+  format: md | json | html | pdf
+  notes:  nombre de notes
+  bulk:   true ou false
+  ms:     durée en millisecondes
+```
+
+Une fois par jour, Moxie envoie aussi les totaux et l’état de FileVault (activé ou désactivé).
+
+## Voir aussi
+
+- [Confidentialité](/moxie/docs/fr/data/privacy/)
+- [Signaler un problème](/moxie/docs/fr/help/report-problem/)
+- [Réglages](/moxie/docs/fr/reference/settings/)

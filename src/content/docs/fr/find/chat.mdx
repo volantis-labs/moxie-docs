@@ -1,0 +1,56 @@
+---
+title: Chat
+description: Posez une question et obtenez une réponse à partir de vos notes.
+sourceHash: b160b070e4f0
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="chat" />
+
+Le chat répond à vos questions à partir de vos notes et transcriptions. Le modèle fonctionne sur votre Mac. Moxie ne conserve pas la conversation.
+
+## Poser une question sur une note
+
+1. Ouvrez une note.
+2. Saisissez votre question dans le champ **Demander des informations sur cette note**.
+3. Appuyez sur <kbd>Return</kbd>.
+
+Moxie propose aussi une question. Cliquez dessus pour la poser.
+
+## Poser une question sur toutes les notes
+
+1. Cliquez sur **Chat** dans la barre latérale.
+2. Saisissez votre question dans le champ **Demander à travers vos notes**.
+3. Appuyez sur <kbd>Return</kbd>.
+
+Cliquez sur **Nouvelle conversation** pour recommencer.
+
+## Lire la réponse
+
+| Dans la réponse | Fonction |
+| --- | --- |
+| Un numéro | Affiche la citation tirée de la transcription |
+| **Afficher dans la transcription** | Ouvre la transcription à cette ligne |
+| **Questions complémentaires** | Propose des questions pour poursuivre |
+| **Copier avec la citation** | Copie la réponse et ses citations |
+
+Cliquez sur **Arrêter** pour interrompre la réponse.
+
+## Poser une question pendant une réunion
+
+Pendant l’enregistrement, le champ affiche **Poser une question sur cette réunion**. Moxie répond à partir de la transcription disponible à cet instant. Vous seul voyez la réponse. Moxie ne la conserve pas.
+
+## Exemple
+
+```text
+Qu’est-ce qui a été décidé pendant cette réunion ?
+```
+
+Moxie indique les décisions. Un numéro après une affirmation renvoie à sa source. Cliquez dessus pour lire la ligne de transcription.
+
+## Voir aussi
+
+- [Recherche](/moxie/docs/fr/find/search/)
+- [Citations et recherche dans la transcription](/moxie/docs/fr/editor/citations/)
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)

@@ -15,7 +15,7 @@ moxie notes list --limit 5
 moxie notes list --folder FOLDER_ID
 ```
 
-Each line shows the id, the creation time in milliseconds, the title and the folder:
+Each line shows the id, the creation time in milliseconds, the title and the folder (if the note has one):
 
 ```text
 00000000-0000-4000-8000-000000000001	1790000000000	Example note	[Work]
@@ -35,7 +35,7 @@ moxie notes get ID
 moxie notes get ID1 ID2
 ```
 
-Print the transcript of a note. Each line starts with the name of the speaker.
+Print the transcript of a note. Each line starts with the name of the speaker, if Moxie knows it.
 
 ```sh
 moxie notes transcript ID

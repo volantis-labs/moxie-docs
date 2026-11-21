@@ -1,0 +1,49 @@
+---
+title: Menu barre oblique
+description: Saisissez une barre oblique pour insérer un bloc, un tableau, une image, une mention ou un modèle de note.
+sourceHash: ae850cbf9c2c
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Saisissez `/` dans une note. Le menu affiche les éléments que vous pouvez insérer au point d’insertion.
+
+1. Saisissez `/` en début de ligne ou après une espace.
+2. Saisissez quelques lettres pour filtrer la liste.
+3. Appuyez sur <kbd>↓</kbd> ou <kbd>↑</kbd> pour choisir un élément.
+4. Appuyez sur <kbd>Enter</kbd> ou <kbd>Tab</kbd> pour insérer l’élément.
+
+Appuyez sur <kbd>Esc</kbd> pour fermer le menu. Le texte saisi reste dans la note.
+
+## Éléments
+
+| Groupe | Éléments |
+| --- | --- |
+| **Blocs** | **Texte**, **Titre 1**, **Titre 2**, **Titre 3**, **Liste à puces**, **Liste numérotée**, **Liste de tâches**, **Citation**, **Bloc de code**, **Séparateur** |
+| **Personnes** | **Mentionner une personne** |
+| **Insérer** | **Image**, **Tableau** |
+| **Modèles de note** | **Un seul participant**, **Appel client** |
+
+- L’option **Tableau** ajoute un tableau de 3 colonnes et 3 lignes.
+- L’option **Image** apparaît uniquement dans **Mes notes**.
+- Un modèle insère ses titres au point d’insertion. Votre texte reste en place. Appuyez une fois sur <kbd>⌘Z</kbd> pour retirer le modèle.
+- Le menu ne s’ouvre pas dans un bloc de code.
+
+## Exemple
+
+Saisissez ce texte en début de ligne :
+
+```text
+/todo
+```
+
+La liste affiche **Liste de tâches**. Appuyez sur <kbd>Enter</kbd>. La ligne devient une tâche à cocher.
+
+## Voir aussi
+
+- [Mettre en forme pendant la saisie](/moxie/docs/fr/editor/formatting/)
+- [Tableaux](/moxie/docs/fr/editor/tables/)
+- [Images](/moxie/docs/fr/editor/images/)
+- [Mentionner des personnes](/moxie/docs/fr/editor/mentions/)

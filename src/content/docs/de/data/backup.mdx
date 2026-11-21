@@ -1,0 +1,54 @@
+---
+title: Sichern und wiederherstellen
+description: Sichern Sie alle Notizen in einer Datei und stellen Sie sie auf einem Mac wieder her.
+sourceHash: 9e940cacdb0e
+---
+
+Eine Sicherung speichert alle Notizen in einer `.zep`-Datei. Mit dieser Datei können Sie Ihre Notizen auf einen anderen Mac übertragen.
+
+:::caution
+Die Datei ist unverschlüsselt. Wer sie öffnen kann, kann alle Ihre Notizen lesen. Speichern Sie die Datei in einem synchronisierten Ordner, erhält der Dienst eine Kopie.
+:::
+
+## Sicherung erstellen
+
+1. Drücken Sie <kbd>⌘,</kbd>, um die Einstellungen zu öffnen.
+2. Gehen Sie zu **Ihre Daten → Alles sichern**.
+3. Klicken Sie auf **Backup erstellen…**.
+4. Wählen Sie einen Speicherort und klicken Sie auf **Sichern**.
+
+Während einer Aufnahme können Sie keine Sicherung erstellen.
+
+| In der Datei | Nicht in der Datei |
+| --- | --- |
+| Alle Notizen, auch die im Papierkorb | Ihr Stimmprofil |
+| Transkripte, Zusammenfassungen und Meetingdetails | Kalenderverbindungen |
+| Ordner | Geladene Modelle |
+| Einstellungen für Sprache, Meetingbeginn und Agentenzugriff | Audioaufnahmen der Meetings |
+| Gelernte Wörter und gesperrte Vorschläge | |
+
+## Sicherung wiederherstellen
+
+Bei der Wiederherstellung werden die Notizen, Ordner und Kalenderereignisse auf diesem Mac ersetzt. Während Moxie ein Meeting aufnimmt oder verarbeitet, ist keine Wiederherstellung möglich.
+
+1. Gehen Sie zu **Einstellungen → Ihre Daten → Aus Backup wiederherstellen**.
+2. Klicken Sie auf **Backup wiederherstellen…**.
+3. Wählen Sie die `.zep`-Datei aus.
+4. Lesen Sie die Meldung **Die Notizen auf diesem Mac ersetzen?**.
+5. Klicken Sie auf **Wiederherstellen und neu starten**.
+
+Moxie startet neu und zeigt die wiederhergestellten Notizen. Stimmprofil, Mikrofoneinstellung und Start bei der Anmeldung bleiben auf diesem Mac erhalten.
+
+## Beispiel
+
+Der Dateiname enthält Datum und Uhrzeit:
+
+```text
+Moxie backup 2026-10-06 1530.zep
+```
+
+## Siehe auch
+
+- [Exportieren](/moxie/docs/de/data/export/)
+- [Datenschutz](/moxie/docs/de/data/privacy/)
+- [Einstellungen](/moxie/docs/de/reference/settings/)

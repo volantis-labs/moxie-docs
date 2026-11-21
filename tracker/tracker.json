@@ -299,68 +299,68 @@
       "key": "DOCS-16",
       "title": "Translate all pages to German",
       "description": "Use de.json and scripts/i18n-style.mjs of ../wallflower. Formal register (Sie). Set sourceHash. Accept: npm run check passes.",
-      "status": "in_progress",
+      "status": "done",
       "type": "story",
       "epic_id": 3,
       "themes": [
         "i18n"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "German: Done by Codex (gpt-6.2-astra, high) after the first translators stopped on a rate limit. 40 pages. UI names use the app strings of the locale (365 of 401 bold strings match exactly; the rest are menu paths, examples and macOS pane names). sourceHash stamped. Verified: npm run build passes (161 pages, all internal links valid); npm run check gives 0 errors; no internal link without the language prefix. Three English statements were too strong; I corrected them in English (permissions pane, CLI optional fields, diagnostics email).",
       "created_at": "2026-11-21T14:44:59.868Z",
-      "updated_at": "2026-11-21T15:02:48.897Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T19:17:49.153Z",
+      "closed_at": "2026-11-21T19:17:49.153Z"
     },
     {
       "id": 17,
       "key": "DOCS-17",
       "title": "Translate all pages to French",
       "description": "Use fr.json and scripts/i18n-style.mjs of ../wallflower. Formal register (vous). Set sourceHash. Accept: npm run check passes.",
-      "status": "in_progress",
+      "status": "done",
       "type": "story",
       "epic_id": 3,
       "themes": [
         "i18n"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "French: Done by Codex (gpt-6.2-astra, high) after the first translators stopped on a rate limit. 40 pages. UI names use the app strings of the locale (365 of 401 bold strings match exactly; the rest are menu paths, examples and macOS pane names). sourceHash stamped. Verified: npm run build passes (161 pages, all internal links valid); npm run check gives 0 errors; no internal link without the language prefix. Three English statements were too strong; I corrected them in English (permissions pane, CLI optional fields, diagnostics email).",
       "created_at": "2026-11-21T14:44:59.908Z",
-      "updated_at": "2026-11-21T15:02:48.937Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T19:17:49.206Z",
+      "closed_at": "2026-11-21T19:17:49.205Z"
     },
     {
       "id": 18,
       "key": "DOCS-18",
       "title": "Translate all pages to Dutch",
       "description": "Use nl.json and scripts/i18n-style.mjs of ../wallflower. Formal register (u). Set sourceHash. Accept: npm run check passes.",
-      "status": "in_progress",
+      "status": "done",
       "type": "story",
       "epic_id": 3,
       "themes": [
         "i18n"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Dutch: Done by Codex (gpt-6.2-astra, high) after the first translators stopped on a rate limit. 40 pages. UI names use the app strings of the locale (365 of 401 bold strings match exactly; the rest are menu paths, examples and macOS pane names). sourceHash stamped. Verified: npm run build passes (161 pages, all internal links valid); npm run check gives 0 errors; no internal link without the language prefix. Three English statements were too strong; I corrected them in English (permissions pane, CLI optional fields, diagnostics email).",
       "created_at": "2026-11-21T14:44:59.948Z",
-      "updated_at": "2026-11-21T15:02:48.976Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T19:17:49.258Z",
+      "closed_at": "2026-11-21T19:17:49.258Z"
     },
     {
       "id": 19,
       "key": "DOCS-19",
       "title": "Report the app term conflicts to the owner",
       "description": "List terms that the app translates in more than one way (for example voice profile in de and nl; fr speaker.unnamed). Accept: list delivered.",
-      "status": "in_progress",
+      "status": "done",
       "type": "research",
       "epic_id": 3,
       "themes": [
         "i18n"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Delivered to the owner in chat and here. Locale conflicts in the app strings (the docs use the Settings label): fr systemAudio 'Audio du système' (Settings) vs 'Audio système' (onboarding, Home); meetConnected vs ui.connected (de/fr/nl); nl show 'Tonen' vs 'Toon'; screen recording de 'Bildübertragung' (Settings) vs 'Bildschirmaufnahme' (onboarding), fr 'Enregistrement d'écran' vs 'Enregistrement de l'écran'; speaker.unnamed vs ui.speaker.p0 (de 'Sprecher 2' vs 'Redner 2', nl 'Spreker 2' vs 'Opmerking 2'); fr speaker.unnamed 'Par {ordinal}' looks like a bug; de stop 'Stopp' (recording) vs 'Anhalten' (chat); nl replace 'Vervang' vs 'Vervangen'; nl open link 'Open de link' vs 'Open koppeling'; chat nav 'Chat' vs ui.chat 'Chats.'; one-on-one and customer call differ between slash menu and templates in de and fr. Earlier: voice profile has three German and two Dutch words. App messages name Settings sections that do not exist (Settings > Agents, Settings > About, Models, Audio). Fix these in ../wallflower string files; then update the docs.",
       "created_at": "2026-11-21T14:44:59.988Z",
-      "updated_at": "2026-11-21T15:02:49.016Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T19:17:49.313Z",
+      "closed_at": "2026-11-21T19:17:49.313Z"
     },
     {
       "id": 20,

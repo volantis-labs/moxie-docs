@@ -1,0 +1,68 @@
+---
+title: Exporteren
+description: Bewaar één notitie of al uw notities als bestanden op uw Mac.
+sourceHash: cb0d2f810a47
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="export" />
+
+Moxie bewaart de notitie als bestand. Dat bestand bevat uw eigen notities, de verbeterde notities en het transcript. Moxie stuurt het bestand niet naar een server.
+
+## Eén notitie exporteren
+
+1. Open de notitie.
+2. Klik op **Exporteer**.
+3. Kies onder **Exporteer notitie als** een formaat.
+4. Kies een locatie en klik op **Exporteer**.
+
+| Formaat | Bestand | Gebruik |
+| --- | --- | --- |
+| **Markdown** | `.md` | Tekst voor andere apps |
+| **PDF** | `.pdf` | Document om af te drukken of te versturen |
+| **HTML** | `.html` | Pagina voor een browser |
+| **JSON** | `.json` | Gegevens voor een script of import |
+
+## Exporteer alle notities
+
+1. Druk op <kbd>⌘,</kbd> om de instellingen te openen.
+2. Ga naar **Uw gegevens → Notities exporteren of importeren**.
+3. Klik op **Exporteer…**.
+4. Kies een map.
+
+Moxie maakt daar een map met voor elke notitie een `.json`-bestand en een `.md`-bestand. Ook notities uit de prullenmand staan erin.
+
+Klik op **Importeer…** en kies die map om de notities terug te halen.
+
+## Voorbeeld
+
+Een Markdown-export ziet er als volgt uit:
+
+```markdown
+# Planningsbespreking
+
+*Zoom · 26 sep 2026, 10:00, 45 min · Met U, Dana Okonkwo*
+
+## Mijn notities
+
+- [x] **ruimte** reserveren
+
+## Samenvatting
+
+- De levering is vrijdag[^1]
+
+## Transcriptie
+
+**U** (0:00): Laten we beginnen.
+
+**Dana Okonkwo** (4:10): We leveren vrijdag.
+
+[^1]: 4:10, Dana Okonkwo: "We leveren vrijdag."
+```
+
+## Zie ook
+
+- [Reservekopieën maken en terugzetten](/moxie/docs/nl/data/backup/)
+- [Bronverwijzingen en Zoek in transcript](/moxie/docs/nl/editor/citations/)
+- [Privacy](/moxie/docs/nl/data/privacy/)

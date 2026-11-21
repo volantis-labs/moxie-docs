@@ -1,0 +1,63 @@
+---
+title: Serveur MCP
+description: Connectez un client MCP à vos notes.
+sourceHash: c8344d19e89a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="mcp" />
+
+Le serveur MCP permet à une app d’IA de lire vos notes via le Model Context Protocol. Il fonctionne sur votre Mac et utilise l’entrée et la sortie standard. Il n’ouvre aucun port réseau.
+
+## Étapes
+
+1. Suivez les étapes de la page [Activer l’accès des agents](/moxie/docs/fr/agents/access/). Installez la commande `moxie`.
+2. Ouvrez **Réglages → Fonctions IA → Ajouter à une application IA**.
+3. Cliquez sur **Copier MCP de configuration**.
+4. Collez la configuration dans les réglages MCP de votre app d’IA.
+
+Moxie copie cette configuration :
+
+```json
+{"command":"moxie","args":["mcp"]}
+```
+
+Cette configuration demande au client de lancer le serveur avec cette commande :
+
+```sh
+moxie mcp
+```
+
+## Outils
+
+| Outil | Fonction | Paramètres |
+| --- | --- | --- |
+| `list_notes` | Liste les notes, les plus récentes en premier | `limit` (de 1 à 100), `cursor`, `folderId` |
+| `get_notes` | Lit les détails des notes | `ids` (de 1 à 50) |
+| `get_transcript` | Lit la transcription d’une note | `id` |
+| `list_folders` | Liste vos dossiers | Aucun |
+| `add_to_folder` | Ajoute une note à un dossier | `noteId`, `folderId` |
+| `remove_from_folder` | Retire une note d’un dossier | `noteId`, `folderId` |
+
+Pour `list_notes`, tous les paramètres sont facultatifs. Tous les autres paramètres indiqués sont obligatoires.
+
+Si Moxie est fermé ou si l’accès des agents est désactivé, l’outil renvoie une erreur.
+
+L’app d’IA reçoit le texte qu’elle lit. Elle peut l’envoyer à ses propres serveurs.
+
+## Exemple
+
+Posez cette question à votre app d’IA :
+
+```text
+Qu’avons-nous décidé lors de ma dernière réunion ?
+```
+
+L’app peut appeler `list_notes` pour trouver la note, puis `get_transcript` pour lire sa transcription.
+
+## Voir aussi
+
+- [Activer l’accès des agents](/moxie/docs/fr/agents/access/)
+- [Référence de la CLI](/moxie/docs/fr/agents/cli/)
+- [Confidentialité](/moxie/docs/fr/data/privacy/)

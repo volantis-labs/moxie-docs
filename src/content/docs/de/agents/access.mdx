@@ -1,0 +1,51 @@
+---
+title: Agentenzugriff aktivieren
+description: Erlauben Sie KI-Agenten auf Ihrem Mac, Ihre Notizen zu lesen.
+sourceHash: 85a016f9d524
+---
+
+Mit dem Agentenzugriff kann ein KI-Agent auf Ihrem Mac Ihre Notizen über den Befehl `moxie` oder den MCP-Server lesen. Der Zugriff ist standardmäßig deaktiviert.
+
+## Schritte
+
+1. Drücken Sie <kbd>⌘,</kbd>, um die Einstellungen zu öffnen.
+2. Gehen Sie zu **KI-Funktionen**.
+3. Aktivieren Sie die Option **Dürfen KI-Agenten auf diesem Mac Ihre Notizen lesen?**.
+4. Wählen Sie unter **Wie möchten Sie eine Verbindung herstellen?** eine Verbindung aus:
+
+| Zeile | Taste | Ergebnis |
+| --- | --- | --- |
+| **Zu einer KI-App hinzufügen** | **Konfiguration MCP kopieren** | Kopiert die Konfiguration für einen MCP-Client |
+| **Im Terminal verwenden** | **Installationsbefehl** | Installiert den Befehl `moxie` |
+| **Anleitung für Agenten (SKILL.md)** | **Kopieren** | Kopiert Anweisungen für den Agenten |
+
+## Befehl installieren
+
+1. Klicken Sie auf **Installationsbefehl**.
+2. Klicken Sie auf **Installieren**.
+
+Moxie legt in `/usr/local/bin` einen Link zum Befehl an. Sind dafür Administratorrechte nötig, verwendet Moxie `~/.local/bin` und fragt nicht nach einem Passwort. Fügen Sie dann `~/.local/bin` zu Ihrem `PATH` hinzu.
+
+Klicken Sie auf **Befehl entfernen**, um den Befehl zu entfernen.
+
+## Funktionen eines Agenten
+
+- Notizen und Ordner auflisten.
+- Details und Transkript einer Notiz lesen.
+- Eine Notiz zu einem Ordner hinzufügen oder daraus entfernen.
+
+Ein Agent sieht keine Notizen im Papierkorb. Moxie muss geöffnet sein. Der Befehl verwendet einen lokalen Socket, den nur Ihr Benutzerkonto öffnen kann. Moxie öffnet keinen Netzwerkport.
+
+## Beispiel
+
+```sh
+moxie notes list --limit 5
+```
+
+Dieser Befehl zeigt Ihre 5 neuesten Notizen an.
+
+## Siehe auch
+
+- [CLI-Referenz](/moxie/docs/de/agents/cli/)
+- [MCP-Server](/moxie/docs/de/agents/mcp/)
+- [Einstellungen](/moxie/docs/de/reference/settings/)

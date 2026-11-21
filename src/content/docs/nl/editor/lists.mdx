@@ -1,0 +1,46 @@
+---
+title: Lijsten en takenlijsten
+description: Maak opsommingen, genummerde lijsten en takenlijsten met het toetsenbord.
+sourceHash: d6186cff862a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-lists" />
+
+Typ een lijstteken aan het begin van een regel om een lijst te starten. Wijzig de lijst daarna met het toetsenbord.
+
+| Typ of druk op | Resultaat |
+| --- | --- |
+| `- ` | Opsomming |
+| `1. ` | Genummerde lijst |
+| `[ ] ` | Takenlijst |
+| `[x] ` | Takenlijstonderdeel met een vinkje |
+| <kbd>Enter</kbd> | Nieuw onderdeel |
+| <kbd>Tab</kbd> | Het onderdeel laten inspringen |
+| <kbd>⇧Tab</kbd> | Het onderdeel minder laten inspringen |
+| <kbd>⌘Enter</kbd> | Het takenlijstonderdeel bij het invoegpunt aan- of afvinken |
+
+## Een geneste lijst inklappen
+
+1. Zet de aanwijzer op een onderdeel met een geneste lijst. Naast het onderdeel verschijnt een pijltje.
+2. Klik op het pijltje. Moxie verbergt de geneste lijst.
+3. Klik opnieuw op het pijltje. Moxie toont de geneste lijst.
+
+Moxie bewaart niet of een lijst is ingeklapt. Wanneer u de notitie opnieuw opent, zijn alle lijsten uitgeklapt.
+
+## Voorbeeld
+
+Typ deze regel:
+
+```text
+- Lanceringsplan
+```
+
+Druk op <kbd>Enter</kbd> en daarna op <kbd>Tab</kbd>. Typ "Reserveer de ruimte". "Reserveer de ruimte" is een genest onderdeel onder "Lanceringsplan".
+
+## Zie ook
+
+- [Opmaken terwijl u typt](/moxie/docs/nl/editor/formatting/)
+- [Slashmenu](/moxie/docs/nl/editor/slash-menu/)
+- [Toetscombinaties en tips](/moxie/docs/nl/reference/shortcuts/)

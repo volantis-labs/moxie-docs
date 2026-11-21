@@ -1,0 +1,55 @@
+---
+title: Diagnosedaten
+description: Prüfen Sie die gesendeten Diagnosedaten und schalten Sie den Versand aus.
+sourceHash: edf99ebe5bcc
+---
+
+Zu den Diagnosedaten gehören Absturzberichte und Nutzungszahlen. Sie enthalten weder Ton noch Transkripte, Notiztexte, Titel oder Namen aus Ihren Meetings.
+
+Diagnosedaten sind standardmäßig aktiviert. In Regionen mit vorheriger Zustimmung, etwa der EU, dem Vereinigten Königreich und Kanada, sendet Moxie erst nach Ihrer Zustimmung Daten. In anderen Regionen kann Moxie bei aktivierter Diagnose auch die E-Mail-Adresse des angemeldeten Kontos senden.
+
+## Diagnosedaten ausschalten
+
+1. Drücken Sie <kbd>⌘,</kbd>, um die Einstellungen zu öffnen.
+2. Gehen Sie zu **Ihre Daten**.
+3. Deaktivieren Sie die Option **Diagnosedaten senden, um Probleme zu beheben?**.
+
+Moxie verwirft anschließend die noch nicht gesendeten Ereignisse.
+
+## Gesendete Daten ansehen
+
+1. Gehen Sie zu **Einstellungen → Ihre Daten**.
+2. Öffnen Sie **Was gesendet wurde**.
+3. Wählen Sie eine Liste.
+
+| Liste | Inhalt |
+| --- | --- |
+| **Gesendet** | Jede Nachricht in der tatsächlich gesendeten Form |
+| **Erhalten auf diesem Mac** | Berichte, die Moxie nicht gesendet hat |
+| **Nicht gesendet** | Ereignisse, die auf den nächsten Versand warten |
+
+Klicken Sie auf eine Zeile, um ihre JSON-Daten zu sehen.
+
+## Installations-ID zurücksetzen
+
+Die Installations-ID ist eine zufällige Kennung, die Moxie mit jedem Ereignis sendet. Klicken Sie in **Was gesendet wurde** auf **Zurücksetzen** neben **Installations-ID**. Beim nächsten Aktivieren der Diagnose erstellt Moxie eine neue ID.
+
+## Beispiel
+
+Eine Nutzungsstatistik enthält nur Zahlen und festgelegte Werte. Nach einem Export sendet Moxie dieses Ereignis:
+
+```text
+export_done
+  format: md | json | html | pdf
+  notes:  Anzahl der Notizen
+  bulk:   true oder false
+  ms:     Dauer in Millisekunden
+```
+
+Einmal täglich sendet Moxie auch Gesamtzahlen und den FileVault-Status (ein oder aus).
+
+## Siehe auch
+
+- [Datenschutz](/moxie/docs/de/data/privacy/)
+- [Problem melden](/moxie/docs/de/help/report-problem/)
+- [Einstellungen](/moxie/docs/de/reference/settings/)

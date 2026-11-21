@@ -1,0 +1,111 @@
+---
+title: CLI-referentie
+description: De commando’s, opties en afsluitcodes van moxie.
+sourceHash: dc60a3292cde
+---
+
+Met het commando `moxie` leest u uw notities vanuit een terminal of script. Open Moxie en volg de stappen in [Toegang voor agents inschakelen](/moxie/docs/nl/agents/access/).
+
+## Notities
+
+Toon de notities met de nieuwste bovenaan. Standaard ziet u 40 notities, maximaal 100.
+
+```sh
+moxie notes list
+moxie notes list --limit 5
+moxie notes list --folder FOLDER_ID
+```
+
+Elke regel toont de ID, het aanmaaktijdstip in milliseconden, de titel en, indien aanwezig, de map:
+
+```text
+00000000-0000-4000-8000-000000000001	1790000000000	Example note	[Work]
+more: --cursor 1790000000000:00000000-0000-4000-8000-000000000001
+```
+
+Zijn er meer notities, dan staat op de laatste regel een cursor. Gebruik die voor de volgende pagina.
+
+```sh
+moxie notes list --cursor CURSOR
+```
+
+Toon de details van een of meer notities. U kunt maximaal 50 ID’s opgeven.
+
+```sh
+moxie notes get ID
+moxie notes get ID1 ID2
+```
+
+Toon het transcript van een notitie. Als de naam van de spreker bekend is, staat deze aan het begin van de regel.
+
+```sh
+moxie notes transcript ID
+```
+
+```text
+Me: hello
+```
+
+## Mappen
+
+Toon de mappen met hun ID’s.
+
+```sh
+moxie folders list
+```
+
+Voeg een notitie toe aan een map.
+
+```sh
+moxie folders add NOTE_ID FOLDER_ID
+```
+
+Verwijder een notitie uit een map.
+
+```sh
+moxie folders remove NOTE_ID FOLDER_ID
+```
+
+## JSON-uitvoer
+
+Voeg `--json` toe om het antwoord van de app als JSON te krijgen. Gebruik deze optie in scripts.
+
+```sh
+moxie --json folders list
+```
+
+```json
+{
+  "folders": [
+    {
+      "id": "f1",
+      "name": "Work"
+    }
+  ]
+}
+```
+
+Met `--json` geeft `notes list` de waarde `nextCursor` terug als er meer notities zijn.
+
+## Andere commando’s
+
+| Commando | Resultaat |
+| --- | --- |
+| `moxie mcp` | Start de server (zie [MCP-server](/moxie/docs/nl/agents/mcp/)) |
+| `moxie skill` | Toont een `SKILL.md`-bestand met instructies voor agents |
+| `moxie help` | Toont de hulp |
+| `moxie --version` | Toont de versie |
+
+## Afsluitcodes
+
+| Code | Betekenis |
+| --- | --- |
+| `0` | Geslaagd |
+| `2` | Moxie heeft het verzoek geweigerd of is niet open |
+| `64` | Gebruiksfout |
+
+## Zie ook
+
+- [Toegang voor agents inschakelen](/moxie/docs/nl/agents/access/)
+- [MCP-server](/moxie/docs/nl/agents/mcp/)
+- [Mappen en prullenmand](/moxie/docs/nl/notes/folders-trash/)

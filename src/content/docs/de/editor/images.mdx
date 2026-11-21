@@ -1,0 +1,42 @@
+---
+title: Bilder
+description: Fügen Sie Bildschirmfotos und Bilddateien in eine Notiz ein.
+sourceHash: 34f63ede05a1
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Fügen Sie unter **Meine Notizen** ein PNG- oder JPEG-Bild ein. Moxie speichert das Bild mit der Notiz auf Ihrem Mac.
+
+| Aktion | Ergebnis |
+| --- | --- |
+| Bildschirmfoto kopieren und in der Notiz <kbd>⌘V</kbd> drücken | Das Bild erscheint an der Einfügemarke |
+| Bilddatei in die Notiz ziehen | Das Bild erscheint an der Stelle, an der Sie es ablegen |
+| `/image` eingeben und <kbd>Enter</kbd> drücken | Ein Dateifenster öffnet sich. Wählen Sie eine oder mehrere Dateien. |
+
+- Eine Datei darf maximal 20 MB groß sein.
+- Moxie verkleinert große Bilder auf maximal 1600 Pixel an der längsten Seite.
+- Wenn Moxie die Datei nicht verwenden kann, erscheint „Dieses Bild ist zu groß oder konnte nicht gelesen werden.“.
+
+## Beschreibung hinzufügen
+
+1. Klicken Sie auf das Bild. Darunter erscheint ein Textfeld.
+2. Geben Sie die Beschreibung ein.
+
+## Text in einem Bild finden
+
+Moxie liest den Text in jedem Bild. Die Suche findet eine Notiz auch dann, wenn das gesuchte Wort nur in einem ihrer Bilder steht.
+
+## Beispiel
+
+1. Drücken Sie <kbd>⌃⇧⌘4</kbd> und wählen Sie einen Bildschirmbereich. macOS kopiert das Bildschirmfoto.
+2. Klicken Sie in **Meine Notizen**.
+3. Drücken Sie <kbd>⌘V</kbd>.
+
+## Siehe auch
+
+- [Einsetzen](/moxie/docs/de/editor/paste/)
+- [Schrägstrichmenü](/moxie/docs/de/editor/slash-menu/)
+- [Suche](/moxie/docs/de/find/search/)

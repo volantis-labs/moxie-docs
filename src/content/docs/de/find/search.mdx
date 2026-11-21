@@ -1,0 +1,49 @@
+---
+title: Suche
+description: Finden Sie eine Notiz, eine Person oder eine Transkriptzeile.
+sourceHash: 1bb169bfd24c
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="search" />
+
+Die Suche durchsucht alle Ihre Notizen und Transkripte. Ergebnisse erscheinen schon während der Eingabe.
+
+## Schritte
+
+1. Drücken Sie <kbd>⌘K</kbd>. Sie können auch in das Suchfeld in der Seitenleiste klicken.
+2. Geben Sie ein oder mehrere Wörter ein.
+3. Wählen Sie mit <kbd>↓</kbd> oder <kbd>↑</kbd> ein Ergebnis aus.
+4. Drücken Sie <kbd>Return</kbd>, um das Ergebnis zu öffnen.
+
+Drücken Sie <kbd>Esc</kbd>, um die Suche zu schließen.
+
+Auch <kbd>⌘F</kbd> öffnet die Suche. Steht die Einfügemarke in einer Notiz, öffnet <kbd>⌘F</kbd> die Suchleiste. Siehe [Suchen und ersetzen](/moxie/docs/de/editor/find-replace/).
+
+Wenn Sie Text in einer Notiz markieren, öffnet <kbd>⌘K</kbd> das Feld für Verknüpfungen. Siehe [Links](/moxie/docs/de/editor/links/).
+
+## Was die Suche findet
+
+Eine Kennzeichnung zeigt, wo Moxie die Wörter gefunden hat.
+
+| Kennzeichnung | Fundstelle |
+| --- | --- |
+| **Personen** | Name einer Person |
+| **Titel** | Titel einer Notiz |
+| **Meine Notizen** | Ihre eigenen Notizen |
+| **Zusammenfassung** | Die verbesserten Notizen |
+| **Bild** | Wörter in einem Bild in einer Notiz |
+| **Matched Speaker** | Wörter in einer Bildschirmaufnahme |
+| **Matched Speaker** | Name eines Sprechers in einer Notiz |
+| Sprechername und Zeitangabe | Zeile im Transkript |
+
+## Beispiel
+
+Geben Sie `budget` ein. Moxie zeigt alle Notizen mit dem Wort „budget“. Wählen Sie eine Transkriptzeile. Die Notiz öffnet sich an dieser Stelle.
+
+## Siehe auch
+
+- [Chat](/moxie/docs/de/find/chat/)
+- [Suchen und ersetzen](/moxie/docs/de/editor/find-replace/)
+- [Personen](/moxie/docs/de/notes/people/)

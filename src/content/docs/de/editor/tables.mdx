@@ -1,0 +1,58 @@
+---
+title: Tabellen
+description: Erstellen Sie eine Tabelle in einer Notiz und ändern Sie ihre Zeilen und Spalten.
+sourceHash: 35cd2440b7de
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Geben Sie eine Zeile mit senkrechten Strichen als Trennzeichen ein, um eine Tabelle zu erstellen.
+
+1. Geben Sie mindestens zwei Spaltentitel zwischen senkrechten Strichen ein, zum Beispiel `| Artikel | Preis |`.
+2. Drücken Sie <kbd>Enter</kbd>. Moxie erstellt eine Tabelle mit einer Kopfzeile und einer leeren Zeile.
+
+Zwei weitere Möglichkeiten führen zu einer Tabelle:
+
+- Geben Sie `/table` ein und drücken Sie <kbd>Enter</kbd>. Moxie fügt eine Tabelle mit 3 Spalten und 3 Zeilen ein.
+- Setzen Sie eine Markdown-Tabelle oder eine Tabelle von einer Webseite ein.
+
+## In einer Tabelle navigieren
+
+| Taste | Ergebnis |
+| --- | --- |
+| <kbd>Tab</kbd> | Nächste Zelle. In der letzten Zelle fügt <kbd>Tab</kbd> eine Zeile hinzu. |
+| <kbd>⇧Tab</kbd> | Vorherige Zelle |
+| <kbd>Enter</kbd> | Zelle darunter |
+
+Eine Zelle enthält eine Textzeile.
+
+## Zeilen und Spalten hinzufügen und löschen
+
+1. Klicken Sie in eine Zelle. Die Taste **⋯** erscheint in der Zelle.
+2. Klicken Sie auf die Taste.
+3. Wählen Sie einen Befehl.
+
+| Ziel | Befehle |
+| --- | --- |
+| Hinzufügen | **Zeile darüber einfügen**, **Zeile darunter einfügen**, **Spalte links einfügen**, **Spalte rechts einfügen** |
+| Löschen | **Zeile löschen**, **Spalte löschen**, **Tabelle löschen** |
+
+Die Kopfzeile lässt sich nicht löschen.
+
+## Beispiel
+
+Geben Sie diese Zeile ein und drücken Sie <kbd>Enter</kbd>:
+
+```text
+| Artikel | Preis |
+```
+
+Geben Sie „Kaffee“ ein. Drücken Sie <kbd>Tab</kbd>. Geben Sie „4,50“ ein. Drücken Sie erneut <kbd>Tab</kbd>. Moxie fügt eine Zeile hinzu.
+
+## Siehe auch
+
+- [Schrägstrichmenü](/moxie/docs/de/editor/slash-menu/)
+- [Einsetzen](/moxie/docs/de/editor/paste/)
+- [Bilder](/moxie/docs/de/editor/images/)

@@ -1,0 +1,38 @@
+---
+title: Zoeken en vervangen
+description: Zoek woorden in een notitie en vervang ze.
+sourceHash: 29b795bd0394
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-find-replace" />
+
+Zoek elke plaats waar een woord in een notitie staat. Vervang daarna één overeenkomst of alle overeenkomsten.
+
+1. Klik in de tekst van de notitie.
+2. Druk op <kbd>⌘F</kbd>. De zoekbalk opent. Als u woorden hebt geselecteerd, staan deze in het veld **Zoek in notitie**.
+3. Typ de woorden. Moxie markeert elke overeenkomst en toont een telling, bijvoorbeeld "Uw 2 5".
+4. Typ de nieuwe woorden in het veld **Vervangen door**.
+5. Klik op **Vervang** om de huidige overeenkomst te wijzigen. Klik op **Vervang alles** om alle overeenkomsten te wijzigen.
+
+| Druk op | Resultaat |
+| --- | --- |
+| <kbd>Enter</kbd> of <kbd>⌘G</kbd> | Volgende overeenkomst |
+| <kbd>⇧Enter</kbd> of <kbd>⇧⌘G</kbd> | Vorige overeenkomst |
+| <kbd>Esc</kbd> | De zoekbalk sluiten. De huidige overeenkomst blijft geselecteerd. |
+
+- Zet **Hoofdlettergevoelig** aan om alleen tekst met dezelfde hoofdletters te vinden.
+- Eén keer ongedaan maken verwijdert één **Vervang** of één **Vervang alles**.
+- Als een overeenkomst in een ingeklapte lijst staat, klapt Moxie de lijst uit.
+- Wanneer het transcriptpaneel de focus heeft, verplaatst <kbd>⌘F</kbd> het invoegpunt naar het veld **Zoek in transcriptie**.
+
+## Voorbeeld
+
+Selecteer "Q3" in een notitie. Druk op <kbd>⌘F</kbd>. Typ "Q4" in het veld **Vervangen door**. Klik op **Vervang alles**.
+
+## Zie ook
+
+- [Zoeken](/moxie/docs/nl/find/search/)
+- [Live transcript](/moxie/docs/nl/notes/transcript/)
+- [Toetscombinaties en tips](/moxie/docs/nl/reference/shortcuts/)

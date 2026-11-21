@@ -1,0 +1,38 @@
+---
+title: Rechercher et remplacer
+description: Recherchez des mots dans une note et remplacez-les.
+sourceHash: 29b795bd0394
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-find-replace" />
+
+Repérez toutes les occurrences d’un mot dans la note. Remplacez une occurrence ou toutes à la fois.
+
+1. Cliquez dans le texte de la note.
+2. Appuyez sur <kbd>⌘F</kbd>. La barre de recherche s’ouvre. Si vous aviez sélectionné des mots, le champ **Rechercher dans la note** les contient.
+3. Saisissez les mots. Moxie surligne chaque occurrence et indique sa position, par exemple « 2 sur 5 ».
+4. Saisissez les nouveaux mots dans le champ **Remplacer par**.
+5. Cliquez sur **Remplacer** pour modifier l’occurrence sélectionnée. Cliquez sur **Tout remplacer** pour les modifier toutes.
+
+| Touches | Résultat |
+| --- | --- |
+| <kbd>Enter</kbd> ou <kbd>⌘G</kbd> | Résultat suivant |
+| <kbd>⇧Enter</kbd> ou <kbd>⇧⌘G</kbd> | Résultat précédent |
+| <kbd>Esc</kbd> | Fermer la barre de recherche. L’occurrence en cours reste sélectionnée. |
+
+- Activez **Respecter la casse** pour distinguer les majuscules des minuscules.
+- Une seule annulation suffit pour revenir sur une opération effectuée avec **Remplacer** ou **Tout remplacer**.
+- Si une occurrence se trouve dans une liste repliée, Moxie la déplie.
+- Si le volet de transcription est actif, <kbd>⌘F</kbd> place le curseur dans le champ **Rechercher dans la transcription**.
+
+## Exemple
+
+Sélectionnez « Q3 » dans une note. Appuyez sur <kbd>⌘F</kbd>. Saisissez « Q4 » dans le champ **Remplacer par**. Cliquez sur **Tout remplacer**.
+
+## Voir aussi
+
+- [Recherche](/moxie/docs/fr/find/search/)
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)
+- [Raccourcis et astuces](/moxie/docs/fr/reference/shortcuts/)

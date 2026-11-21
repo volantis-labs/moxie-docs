@@ -1,0 +1,42 @@
+---
+title: Images
+description: Ajoutez des captures d’écran et des fichiers image à une note.
+sourceHash: 34f63ede05a1
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Ajoutez une image PNG ou JPEG dans **Mes notes**. Moxie conserve l’image avec la note sur votre Mac.
+
+| Action | Résultat |
+| --- | --- |
+| Copier une capture d’écran et appuyer sur <kbd>⌘V</kbd> dans la note | L’image apparaît au point d’insertion |
+| Faire glisser un fichier image dans la note | L’image apparaît à l’endroit où vous la déposez |
+| Saisir `/image`, puis appuyer sur <kbd>Enter</kbd> | Une fenêtre s’ouvre. Sélectionnez un ou plusieurs fichiers. |
+
+- La taille maximale est de 20 Mo par fichier.
+- Moxie réduit les grandes images. Leur côté le plus long mesure alors au maximum 1 600 pixels.
+- Si Moxie ne peut pas utiliser le fichier, le message « Cette image est trop grande ou illisible. » apparaît.
+
+## Ajouter une description
+
+1. Cliquez sur l’image. Un champ de texte apparaît en dessous.
+2. Saisissez la description.
+
+## Rechercher du texte dans une image
+
+Moxie lit le texte de chaque image. La recherche retrouve la note même si les mots figurent uniquement dans l’une de ses images.
+
+## Exemple
+
+1. Appuyez sur <kbd>⌃⇧⌘4</kbd> et sélectionnez une zone de l’écran. macOS copie la capture.
+2. Cliquez dans **Mes notes**.
+3. Appuyez sur <kbd>⌘V</kbd>.
+
+## Voir aussi
+
+- [Coller](/moxie/docs/fr/editor/paste/)
+- [Menu barre oblique](/moxie/docs/fr/editor/slash-menu/)
+- [Recherche](/moxie/docs/fr/find/search/)

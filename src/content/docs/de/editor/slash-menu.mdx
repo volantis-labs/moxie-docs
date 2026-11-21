@@ -1,0 +1,49 @@
+---
+title: Schrägstrichmenü
+description: Geben Sie einen Schrägstrich ein, um einen Block, eine Tabelle, ein Bild, eine Erwähnung oder eine Notizvorlage einzufügen.
+sourceHash: ae850cbf9c2c
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Geben Sie `/` in einer Notiz ein. Im Menü sehen Sie, was Sie an der Einfügemarke einfügen können.
+
+1. Geben Sie `/` am Zeilenanfang oder nach einem Leerzeichen ein.
+2. Geben Sie einige Buchstaben ein, um die Liste zu filtern.
+3. Wählen Sie mit <kbd>↓</kbd> oder <kbd>↑</kbd> einen Eintrag.
+4. Drücken Sie <kbd>Enter</kbd> oder <kbd>Tab</kbd>, um den Eintrag einzufügen.
+
+Drücken Sie <kbd>Esc</kbd>, um das Menü zu schließen. Der eingegebene Text bleibt in der Notiz.
+
+## Einträge
+
+| Gruppe | Einträge |
+| --- | --- |
+| **Blöcke** | **Fließtext**, **Überschrift 1**, **Überschrift 2**, **Überschrift 3**, **Aufzählung**, **Nummerierte Liste**, **Checkliste**, **Zitat**, **Codeblock**, **Trennlinie** |
+| **Personen** | **Person erwähnen** |
+| **Einfügen** | **Bild**, **Tabelle** |
+| **Notizvorlagen** | **Einzelperson**, **Kundenanruf** |
+
+- **Tabelle** fügt eine Tabelle mit 3 Spalten und 3 Zeilen ein.
+- **Bild** erscheint nur in **Meine Notizen**.
+- Eine Notizvorlage fügt ihre Überschriften an der Einfügemarke ein. Ihr Text bleibt erhalten. Drücken Sie einmal <kbd>⌘Z</kbd>, um die Vorlage zu entfernen.
+- In einem Codeblock öffnet sich das Menü nicht.
+
+## Beispiel
+
+Geben Sie diesen Text am Zeilenanfang ein:
+
+```text
+/todo
+```
+
+Die Liste zeigt **Checkliste**. Drücken Sie <kbd>Enter</kbd>. Die Zeile wird zu einem Checklistenpunkt.
+
+## Siehe auch
+
+- [Beim Schreiben formatieren](/moxie/docs/de/editor/formatting/)
+- [Tabellen](/moxie/docs/de/editor/tables/)
+- [Bilder](/moxie/docs/de/editor/images/)
+- [Personen erwähnen](/moxie/docs/de/editor/mentions/)

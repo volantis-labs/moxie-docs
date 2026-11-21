@@ -1,0 +1,48 @@
+---
+title: Liens
+description: Liez des mots de la note à une adresse web ou à une autre note.
+sourceHash: 7823c3cac4d8
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-links-mentions" />
+
+Liez des mots de la note à une adresse web ou à une autre note.
+
+1. Sélectionnez les mots.
+2. Appuyez sur <kbd>⌘K</kbd>. Le champ **URL ou titre de note** s’ouvre.
+3. Saisissez ou collez une adresse web. Vous pouvez aussi saisir les premières lettres d’un mot du titre d’une note.
+4. Si la liste contient plusieurs notes, utilisez <kbd>↓</kbd> ou <kbd>↑</kbd> pour sélectionner celle qui convient.
+5. Appuyez sur <kbd>Enter</kbd>.
+
+Les mots deviennent un lien. Leur texte reste le même.
+
+## Autres méthodes
+
+| Action | Résultat |
+| --- | --- |
+| Saisir une adresse web, puis une espace | L’adresse devient un lien |
+| Coller une adresse web | L’adresse devient un lien |
+| Sélectionner des mots, puis coller une adresse web | Les mots deviennent un lien |
+| Cliquer sur un lien | Une adresse web s’ouvre dans le navigateur. Un lien vers une note ouvre cette note. |
+| <kbd>⌘K</kbd> avec le curseur dans un lien | Un menu avec **Ouvrir le lien** et **Supprimer le lien** |
+| Faire un clic droit sur un lien | Un menu propose **Copier le lien**. Pour une adresse web, il propose aussi **Ouvrir le lien**. |
+
+Si rien n’est sélectionné et que le curseur est en dehors d’un lien, <kbd>⌘K</kbd> ouvre la recherche.
+
+## Exemple
+
+Sélectionnez « notes sur les tarifs ». Appuyez sur <kbd>⌘K</kbd>. Saisissez ce texte :
+
+```text
+example.com/pricing
+```
+
+La liste affiche **Lien vers https://example.com/pricing**. Appuyez sur <kbd>Enter</kbd>.
+
+## Voir aussi
+
+- [Mentionner des personnes](/moxie/docs/fr/editor/mentions/)
+- [Coller](/moxie/docs/fr/editor/paste/)
+- [Recherche](/moxie/docs/fr/find/search/)

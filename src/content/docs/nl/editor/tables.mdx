@@ -1,0 +1,58 @@
+---
+title: Tabellen
+description: Maak een tabel in een notitie en wijzig de rijen en kolommen.
+sourceHash: 35cd2440b7de
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Typ één rij tussen verticale strepen om een tabel te maken.
+
+1. Typ minimaal 2 kolomtitels tussen verticale strepen, bijvoorbeeld `| Item | Prijs |`.
+2. Druk op <kbd>Enter</kbd>. Moxie maakt een tabel met een koprij en één lege rij.
+
+Er zijn nog 2 manieren om een tabel te maken:
+
+- Typ `/tabel` en druk op <kbd>Enter</kbd>. Moxie voegt een tabel met 3 kolommen en 3 rijen toe.
+- Plak een Markdown-tabel of een tabel van een webpagina.
+
+## Door een tabel bewegen
+
+| Druk op | Resultaat |
+| --- | --- |
+| <kbd>Tab</kbd> | Volgende cel. In de laatste cel voegt <kbd>Tab</kbd> een rij toe. |
+| <kbd>⇧Tab</kbd> | Vorige cel |
+| <kbd>Enter</kbd> | De cel eronder |
+
+Een cel bevat één regel tekst.
+
+## Rijen en kolommen toevoegen en verwijderen
+
+1. Klik in een cel. In de cel verschijnt een knop **⋯**.
+2. Klik op de knop.
+3. Selecteer een commando.
+
+| Doel | Commando's |
+| --- | --- |
+| Toevoegen | **Rij erboven invoegen**, **Rij eronder invoegen**, **Kolom links invoegen**, **Kolom rechts invoegen** |
+| Verwijderen | **Rij verwijderen**, **Kolom verwijderen**, **Tabel verwijderen** |
+
+U kunt de koprij niet verwijderen.
+
+## Voorbeeld
+
+Typ deze regel en druk op <kbd>Enter</kbd>:
+
+```text
+| Item | Prijs |
+```
+
+Typ "Koffie". Druk op <kbd>Tab</kbd>. Typ "4,50". Druk opnieuw op <kbd>Tab</kbd>. Moxie voegt een nieuwe rij toe.
+
+## Zie ook
+
+- [Slashmenu](/moxie/docs/nl/editor/slash-menu/)
+- [Plakken](/moxie/docs/nl/editor/paste/)
+- [Afbeeldingen](/moxie/docs/nl/editor/images/)

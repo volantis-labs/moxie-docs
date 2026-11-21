@@ -1,0 +1,68 @@
+---
+title: Exporter les notes
+description: Enregistrez une note ou toutes vos notes sous forme de fichiers sur votre Mac.
+sourceHash: cb0d2f810a47
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="export" />
+
+L’export crée un fichier avec vos propres notes, les notes enrichies et la transcription. Moxie n’envoie ce fichier à aucun serveur.
+
+## Exporter une note
+
+1. Ouvrez la note.
+2. Cliquez sur **Exporter**.
+3. Sous **Exporter la note au format**, choisissez un format.
+4. Choisissez un emplacement et cliquez sur **Exporter**.
+
+| Format | Fichier | Utilisation |
+| --- | --- | --- |
+| **Markdown** | `.md` | Texte pour d’autres apps |
+| **PDF** | `.pdf` | Document à imprimer ou à envoyer |
+| **HTML** | `.html` | Page à ouvrir dans un navigateur |
+| **JSON** | `.json` | Données pour un script ou un import |
+
+## Exporter toutes les notes
+
+1. Appuyez sur <kbd>⌘,</kbd> pour ouvrir les réglages.
+2. Ouvrez **Vos données → Exporter ou importer des notes**.
+3. Cliquez sur **Exporter…**.
+4. Choisissez un dossier.
+
+Moxie y crée un dossier avec un fichier `.json` et un fichier `.md` pour chaque note, y compris celles de la corbeille.
+
+Pour récupérer les notes, cliquez sur **Importer…** et choisissez ce dossier.
+
+## Exemple
+
+Voici un exemple d’export Markdown :
+
+```markdown
+# Revue du calendrier
+
+*Zoom · 26 sept. 2026, 10:00, 45 min · Avec Je, Dana Okonkwo*
+
+## Mes notes
+
+- [x] Réserver la **salle**
+
+## Résumé
+
+- La livraison est prévue vendredi[^1]
+
+## Transcription
+
+**Je** (0:00): Commençons.
+
+**Dana Okonkwo** (4:10): Nous livrons vendredi.
+
+[^1]: 4:10, Dana Okonkwo: "Nous livrons vendredi."
+```
+
+## Voir aussi
+
+- [Sauvegarder et restaurer les notes](/moxie/docs/fr/data/backup/)
+- [Citations et recherche dans la transcription](/moxie/docs/fr/editor/citations/)
+- [Confidentialité](/moxie/docs/fr/data/privacy/)

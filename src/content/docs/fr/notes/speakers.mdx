@@ -1,0 +1,53 @@
+---
+title: Intervenants et profil vocal
+description: Nommez les intervenants dans une transcription et enregistrez votre profil vocal.
+sourceHash: a41b05499fa6
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="speakers" />
+
+Après la réunion, Moxie attribue les passages de la transcription aux différents intervenants. Vous pouvez attribuer un nom à chaque intervenant. En présentiel, Moxie utilise votre profil vocal pour identifier vos interventions par **Je**.
+
+## Nommer un intervenant
+
+1. Ouvrez le volet de transcription de la note.
+2. Cliquez sur l’étiquette d’un intervenant, par exemple **Par 2**.
+3. Saisissez un nom. La liste affiche les noms correspondants.
+4. Cliquez sur une ligne de la liste. La dernière ligne reprend le nom saisi.
+
+Moxie modifie toutes les lignes de cet intervenant dans la note. La liste indique la source de chaque nom :
+
+| Source | Signification |
+| --- | --- |
+| **Calendrier** | Une personne invitée dans l’événement du calendrier |
+| **De la réunion** | Un nom affiché par l’app de réunion |
+| **Dans cette réunion** | Un autre intervenant de cette note |
+| **Personnes** | Une personne connue de Moxie |
+
+Si l’étiquette **Je** apparaît sur les interventions de quelqu’un d’autre, cliquez sur **Pas moi**.
+
+## Enregistrer votre profil vocal
+
+1. Ouvrez **Réglages → Général**.
+2. Sous **Moxie doit-il reconnaître votre voix ?**, cliquez sur **● Enregistrer**.
+3. Lisez à voix haute la phrase sur la fiche.
+4. Répétez les étapes 2 et 3 pour chacune des 3 fiches.
+
+Si le bouton **● Enregistrer** est indisponible, cliquez d’abord sur **Télécharger**.
+
+## Exemple
+
+Après la troisième fiche, Moxie affiche cette ligne :
+
+```text
+Tout est prêt. Les transcriptions vous indiquent maintenant comme « Je ».
+```
+
+## Voir aussi
+
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)
+- [Personnes](/moxie/docs/fr/notes/people/)
+- [Réunions en présentiel](/moxie/docs/fr/record/in-person/)
+- [Extension Google Meet](/moxie/docs/fr/record/google-meet/)

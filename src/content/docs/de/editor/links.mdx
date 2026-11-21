@@ -1,0 +1,48 @@
+---
+title: Links
+description: Verknüpfen Sie Wörter in einer Notiz mit einer Webadresse oder einer anderen Notiz.
+sourceHash: 7823c3cac4d8
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-links-mentions" />
+
+Verknüpfen Sie Wörter in einer Notiz mit einer Webadresse oder einer anderen Notiz.
+
+1. Markieren Sie die Wörter.
+2. Drücken Sie <kbd>⌘K</kbd>. Das Feld **URL oder Notiztitel** öffnet sich.
+3. Geben Sie eine Webadresse ein oder setzen Sie sie ein. Sie können auch die ersten Buchstaben eines Wortes aus einem Notiztitel eingeben.
+4. Zeigt die Liste mehrere Notizen, wählen Sie mit <kbd>↓</kbd> oder <kbd>↑</kbd> die richtige aus.
+5. Drücken Sie <kbd>Enter</kbd>.
+
+Die Wörter werden zu einem Link. Ihr Text bleibt gleich.
+
+## Weitere Möglichkeiten
+
+| Aktion | Ergebnis |
+| --- | --- |
+| Webadresse und dann ein Leerzeichen eingeben | Die Adresse wird zum Link |
+| Webadresse einsetzen | Die Adresse wird zum Link |
+| Wörter markieren, dann eine Webadresse einsetzen | Die Wörter werden zum Link |
+| Auf einen Link klicken | Eine Webadresse öffnet sich im Browser. Ein Notizlink öffnet die verknüpfte Notiz. |
+| <kbd>⌘K</kbd> mit der Einfügemarke im Link | Ein Menü mit **Link öffnen** und **Link entfernen** |
+| Rechtsklick auf einen Link | Ein Menü mit **Link kopieren**. Bei einer Webadresse enthält es auch **Link öffnen**. |
+
+Ist nichts markiert und steht die Einfügemarke außerhalb eines Links, öffnet <kbd>⌘K</kbd> die Suche.
+
+## Beispiel
+
+Markieren Sie „Preisnotizen“. Drücken Sie <kbd>⌘K</kbd>. Geben Sie diesen Text ein:
+
+```text
+example.com/pricing
+```
+
+Die Liste zeigt **Link zu https://example.com/pricing**. Drücken Sie <kbd>Enter</kbd>.
+
+## Siehe auch
+
+- [Personen erwähnen](/moxie/docs/de/editor/mentions/)
+- [Einsetzen](/moxie/docs/de/editor/paste/)
+- [Suche](/moxie/docs/de/find/search/)

@@ -1,0 +1,53 @@
+---
+title: Sprecher und Stimmprofil
+description: Geben Sie den Sprechern in einem Transkript Namen und nehmen Sie Ihr Stimmprofil auf.
+sourceHash: a41b05499fa6
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="speakers" />
+
+Nach einem Meeting teilt Moxie das Transkript in Sprecher auf. Sie geben jedem Sprecher einen Namen. In einem Meeting vor Ort verwendet Moxie Ihr Stimmprofil, um Ihre Stimme mit **Ich** zu kennzeichnen.
+
+## Sprecher benennen
+
+1. Öffnen Sie den Transkriptbereich der Notiz.
+2. Klicken Sie auf eine Sprecherbezeichnung, zum Beispiel **Sprecher 2**.
+3. Geben Sie einen Namen ein. Die Liste zeigt die passenden Namen.
+4. Klicken Sie auf eine Zeile in der Liste. Die letzte Zeile verwendet den Namen, den Sie eingegeben haben.
+
+Moxie ändert alle Zeilen dieses Sprechers in dieser Notiz. Die Liste nennt die Quelle jedes Namens:
+
+| Quelle | Bedeutung |
+| --- | --- |
+| **Kalender** | Eine Person im Kalenderereignis |
+| **Aus dem Meeting-App** | Ein Name, den die Meeting-App zeigt |
+| **In diesem Meeting** | Ein anderer Sprecher dieser Notiz |
+| **Personen** | Eine Person, die Moxie kennt |
+
+Wenn die Bezeichnung **Ich** auf der Stimme einer anderen Person steht, klicken Sie auf **Nicht ich**.
+
+## Stimmprofil aufnehmen
+
+1. Öffnen Sie **Einstellungen → Allgemein**.
+2. Klicken Sie unter **Soll Moxie Ihre Stimme erkennen?** auf **● Aufnehmen**.
+3. Lesen Sie die Zeile auf der Karte laut vor.
+4. Wiederholen Sie die Schritte 2 und 3 für jede der 3 Karten.
+
+Wenn **● Aufnehmen** nicht verfügbar ist, klicken Sie zuerst auf **Laden**.
+
+## Beispiel
+
+Nach der dritten Karte zeigt Moxie diese Zeile:
+
+```text
+Alles bereit. Transkripte markieren Ihre Stimme jetzt als „Ich“.
+```
+
+## Siehe auch
+
+- [Live-Transkript](/moxie/docs/de/notes/transcript/)
+- [Personen](/moxie/docs/de/notes/people/)
+- [Meetings vor Ort](/moxie/docs/de/record/in-person/)
+- [Erweiterung für Google Meet](/moxie/docs/de/record/google-meet/)

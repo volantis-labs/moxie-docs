@@ -1,0 +1,38 @@
+---
+title: Suchen und ersetzen
+description: Suchen und ersetzen Sie Wörter in einer Notiz.
+sourceHash: 29b795bd0394
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-find-replace" />
+
+Suchen Sie alle Vorkommen eines Wortes in einer Notiz. Ersetzen Sie einen einzelnen Treffer oder alle Treffer.
+
+1. Klicken Sie in den Text der Notiz.
+2. Drücken Sie <kbd>⌘F</kbd>. Die Suchleiste öffnet sich. Markierte Wörter stehen bereits im Feld **Notiz durchsuchen**.
+3. Geben Sie die Wörter ein. Moxie hebt jeden Treffer hervor und zeigt seine Position an, zum Beispiel „2 von 5“.
+4. Geben Sie die neuen Wörter in das Feld **Ersetzen durch** ein.
+5. Klicken Sie für den aktuellen Treffer auf **Ersetzen**. Klicken Sie für alle Treffer auf **Alle ersetzen**.
+
+| Taste | Ergebnis |
+| --- | --- |
+| <kbd>Enter</kbd> oder <kbd>⌘G</kbd> | Nächster Treffer |
+| <kbd>⇧Enter</kbd> oder <kbd>⇧⌘G</kbd> | Vorheriger Treffer |
+| <kbd>Esc</kbd> | Suchleiste schließen. Der aktuelle Treffer bleibt markiert. |
+
+- Aktivieren Sie **Groß-/Kleinschreibung beachten**, um die Groß- und Kleinschreibung zu berücksichtigen.
+- Mit einmaligem Widerrufen machen Sie einen Vorgang mit **Ersetzen** oder **Alle ersetzen** rückgängig.
+- Liegt ein Treffer in einer eingeklappten Liste, klappt Moxie sie auf.
+- Ist der Transkriptbereich aktiv, springt die Einfügemarke mit <kbd>⌘F</kbd> in das Feld **Transkript durchsuchen**.
+
+## Beispiel
+
+Markieren Sie „Q3“ in einer Notiz. Drücken Sie <kbd>⌘F</kbd>. Geben Sie „Q4“ in das Feld **Ersetzen durch** ein. Klicken Sie auf **Alle ersetzen**.
+
+## Siehe auch
+
+- [Suche](/moxie/docs/de/find/search/)
+- [Live-Transkript](/moxie/docs/de/notes/transcript/)
+- [Tastenkürzel und Tipps](/moxie/docs/de/reference/shortcuts/)

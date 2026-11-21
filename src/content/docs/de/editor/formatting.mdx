@@ -1,0 +1,50 @@
+---
+title: Beim Schreiben formatieren
+description: Formatieren Sie Ihre Notiz mit Markdown oder einem Tastenkürzel.
+sourceHash: a1937c4ddc4b
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Geben Sie Markdown in eine Notiz ein. Moxie formatiert den Text beim Schreiben.
+
+## Blöcke
+
+Geben Sie diese Zeichen am Zeilenanfang ein.
+
+| Eingabe | Ergebnis |
+| --- | --- |
+| `# ` | Überschrift |
+| `- ` | Aufzählung |
+| `1. ` | Nummerierte Liste |
+| `[ ] ` | Checkliste |
+| `> ` | Zitat |
+| Drei Backticks, dann ein Leerzeichen | Codeblock |
+| `---` | Trennlinie |
+
+## Fließtext
+
+| Eingabe | Oder Tastenkürzel | Ergebnis |
+| --- | --- | --- |
+| `**fett**` | <kbd>⌘B</kbd> | **fett** |
+| `*kursiv*` | <kbd>⌘I</kbd> | _kursiv_ |
+| `~~durchgestrichen~~` | <kbd>⇧⌘S</kbd> | ~~durchgestrichen~~ |
+| `` `code` `` | <kbd>⌘E</kbd> | `code` |
+
+## Beispiel
+
+Geben Sie diese Zeile ein:
+
+```text
+- Das **Budget** an *Sam* schicken
+```
+
+Moxie zeigt einen Aufzählungspunkt. „Budget“ ist fett und „Sam“ kursiv.
+
+## Siehe auch
+
+- [Schrägstrichmenü](/moxie/docs/de/editor/slash-menu/)
+- [Listen und Checklisten](/moxie/docs/de/editor/lists/)
+- [Einsetzen](/moxie/docs/de/editor/paste/)

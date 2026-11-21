@@ -1,9 +1,21 @@
 ---
 title: Moxie-Dokumentation
-description: So zeichnen Sie Meetings mit Moxie auf Ihrem Mac auf und erstellen Notizen.
-sourceHash: de74d48ebc29
+description: So nehmen Sie Meetings mit Moxie auf Ihrem Mac auf und erstellen Notizen.
+sourceHash: 320312c265cc
 ---
 
-Moxie zeichnet Ihre Meetings auf Ihrem Mac auf. Moxie schreibt das Transkript, benennt die Sprecher und erstellt Notizen. Ihre Meetings und Notizen bleiben auf Ihrem Mac.
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-Weitere Seiten folgen in Kürze.
+Moxie nimmt Ihre Meetings auf Ihrem Mac auf, schreibt das Transkript, benennt die Sprecher und erstellt Notizen. Ihre Meetings und Notizen bleiben auf Ihrem Mac.
+
+<CardGrid>
+  <LinkCard title="Moxie installieren" description="Installieren Sie Moxie und nehmen Sie Ihr erstes Meeting auf." href="/moxie/docs/de/get-started/install/" />
+  <LinkCard title="Aufnahme starten und stoppen" description="Starten und stoppen Sie eine Aufnahme." href="/moxie/docs/de/record/start-stop/" />
+  <LinkCard title="Live-Transkript" description="Lesen Sie das Transkript und die verbesserten Notizen." href="/moxie/docs/de/notes/transcript/" />
+  <LinkCard title="Beim Schreiben formatieren" description="Formatieren Sie eine Notiz beim Schreiben." href="/moxie/docs/de/editor/formatting/" />
+  <LinkCard title="Suche" description="Durchsuchen Sie Ihre Notizen und stellen Sie Fragen dazu." href="/moxie/docs/de/find/search/" />
+  <LinkCard title="Exportieren" description="Exportieren Sie Ihre Notizen und erstellen Sie ein Backup." href="/moxie/docs/de/data/export/" />
+  <LinkCard title="Agentenzugriff aktivieren" description="Lassen Sie KI-Agenten auf Ihrem Mac Ihre Notizen lesen." href="/moxie/docs/de/agents/access/" />
+  <LinkCard title="Einstellungen" description="Finden Sie jede Einstellung und jeden Kurzbefehl." href="/moxie/docs/de/reference/settings/" />
+  <LinkCard title="Fehlerbehebung" description="Beheben Sie ein Problem oder melden Sie es." href="/moxie/docs/de/help/troubleshooting/" />
+</CardGrid>

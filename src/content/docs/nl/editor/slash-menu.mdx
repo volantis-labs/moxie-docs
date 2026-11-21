@@ -1,0 +1,49 @@
+---
+title: Slashmenu
+description: Typ een schuine streep om een blok, een tabel, een afbeelding, een vermelding of een notitiesjabloon toe te voegen.
+sourceHash: ae850cbf9c2c
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Typ `/` in een notitie. Een menu toont de onderdelen die u bij het invoegpunt kunt toevoegen.
+
+1. Typ `/` aan het begin van een regel of na een spatie.
+2. Typ enkele letters om de lijst te filteren.
+3. Druk op <kbd>↓</kbd> of <kbd>↑</kbd> om een onderdeel te selecteren.
+4. Druk op <kbd>Enter</kbd> of <kbd>Tab</kbd> om het onderdeel toe te voegen.
+
+Druk op <kbd>Esc</kbd> om het menu te sluiten. De tekst die u hebt getypt, blijft in de notitie.
+
+## Onderdelen
+
+| Groep | Onderdelen |
+| --- | --- |
+| **Blokken** | **Tekst**, **Kop 1**, **Kop 2**, **Kop 3**, **Opsomming**, **Genummerde lijst**, **Takenlijst**, **Citaat**, **Codeblok**, **Scheidingslijn** |
+| **Personen** | **Een persoon vermelden** |
+| **Invoegen** | **Afbeelding**, **Tabel** |
+| **Notitiesjablonen** | **Eén op één**, **Klantgesprek** |
+
+- **Tabel** voegt een tabel met 3 kolommen en 3 rijen toe.
+- **Afbeelding** is alleen zichtbaar in **Mijn notities**.
+- Een notitiesjabloon voegt zijn koppen toe bij het invoegpunt. Uw tekst blijft staan. Druk één keer op <kbd>⌘Z</kbd> om het sjabloon te verwijderen.
+- Het menu opent niet in een codeblok.
+
+## Voorbeeld
+
+Typ deze tekst aan het begin van een regel:
+
+```text
+/todo
+```
+
+De lijst toont **Takenlijst**. Druk op <kbd>Enter</kbd>. De regel wordt een takenlijstonderdeel.
+
+## Zie ook
+
+- [Opmaken terwijl u typt](/moxie/docs/nl/editor/formatting/)
+- [Tabellen](/moxie/docs/nl/editor/tables/)
+- [Afbeeldingen](/moxie/docs/nl/editor/images/)
+- [Personen vermelden](/moxie/docs/nl/editor/mentions/)

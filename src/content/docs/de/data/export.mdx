@@ -1,0 +1,68 @@
+---
+title: Exportieren
+description: Speichern Sie eine oder alle Notizen als Dateien auf Ihrem Mac.
+sourceHash: cb0d2f810a47
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="export" />
+
+Beim Export wird eine Notiz als Datei gespeichert. Sie enthält Ihre eigenen Notizen, die verbesserten Notizen und das Transkript. Moxie sendet die Datei an keinen Server.
+
+## Eine Notiz exportieren
+
+1. Öffnen Sie die Notiz.
+2. Klicken Sie auf **Exportieren**.
+3. Wählen Sie unter **Notiz exportieren als** ein Format aus.
+4. Wählen Sie einen Speicherort und klicken Sie auf **Exportieren**.
+
+| Format | Datei | Verwendung |
+| --- | --- | --- |
+| **Markdown** | `.md` | Text für andere Apps |
+| **PDF** | `.pdf` | Dokument zum Drucken oder Versenden |
+| **HTML** | `.html` | Eine Seite für den Browser |
+| **JSON** | `.json` | Daten für ein Skript oder einen Import |
+
+## Alle Notizen exportieren
+
+1. Drücken Sie <kbd>⌘,</kbd>, um die Einstellungen zu öffnen.
+2. Gehen Sie zu **Ihre Daten → Notizen exportieren oder importieren**.
+3. Klicken Sie auf **Exportieren…**.
+4. Wählen Sie einen Ordner.
+
+Moxie erstellt dort einen Ordner. Er enthält für jede Notiz eine `.json`-Datei und eine `.md`-Datei, auch für Notizen im Papierkorb.
+
+Klicken Sie zum Importieren auf **Importieren…** und wählen Sie diesen Ordner.
+
+## Beispiel
+
+So sieht ein Markdown-Export aus:
+
+```markdown
+# Projektplanung
+
+*Zoom · 26.09.2026, 10:00, 45 min · Mit Ich, Dana Okonkwo*
+
+## Meine Notizen
+
+- [x] **Raum** buchen
+
+## Zusammenfassung
+
+- Liefertermin ist Freitag[^1]
+
+## Transkript
+
+**Ich** (0:00): Fangen wir an.
+
+**Dana Okonkwo** (4:10): Wir liefern am Freitag.
+
+[^1]: 4:10, Dana Okonkwo: "Wir liefern am Freitag."
+```
+
+## Siehe auch
+
+- [Sichern und wiederherstellen](/moxie/docs/de/data/backup/)
+- [Belege und Suche im Transkript](/moxie/docs/de/editor/citations/)
+- [Datenschutz](/moxie/docs/de/data/privacy/)

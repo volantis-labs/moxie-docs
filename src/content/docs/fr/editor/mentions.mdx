@@ -1,0 +1,47 @@
+---
+title: Mentionner des personnes
+description: Utilisez l’arobase pour mentionner une personne dans une note.
+sourceHash: 2eb2da9e855d
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-links-mentions" />
+
+Saisissez `@` dans une note pour mentionner une personne. La mention renvoie à la page de cette personne.
+
+1. Saisissez `@` en début de ligne ou après une espace. La liste affiche d’abord les personnes associées à cette note.
+2. Saisissez les premières lettres d’un nom ou d’une adresse e-mail pour trouver d’autres personnes.
+3. Appuyez sur <kbd>↓</kbd> ou <kbd>↑</kbd> pour sélectionner une personne.
+4. Appuyez sur <kbd>Enter</kbd>.
+
+La liste affiche uniquement les noms. Si deux personnes portent le même nom, elle affiche aussi leurs adresses e-mail.
+
+Dans le menu barre oblique, **Mentionner une personne** ouvre la même liste.
+
+## Ajouter une personne
+
+1. Saisissez `@`, puis le nom de la personne.
+2. Sélectionnez **Ajouter la personne « Kim Lee »**. La ligne reprend le nom saisi.
+3. Appuyez sur <kbd>Enter</kbd>.
+
+## Ouvrir la page d’une personne
+
+1. Cliquez sur une mention. La page de la personne s’ouvre avec les rubriques **Mentions dans les notes** et **Réunions**.
+2. Cliquez sur une ligne sous **Mentions dans les notes**. La note s’ouvre à cette ligne.
+
+## Exemple
+
+Saisissez ce texte :
+
+```text
+@pri
+```
+
+La liste affiche les personnes dont le nom commence par « pri », par exemple « Priya Shah ». Appuyez sur <kbd>Enter</kbd>. La mention « @Priya Shah » apparaît dans la note.
+
+## Voir aussi
+
+- [Personnes](/moxie/docs/fr/notes/people/)
+- [Liens](/moxie/docs/fr/editor/links/)
+- [Menu barre oblique](/moxie/docs/fr/editor/slash-menu/)

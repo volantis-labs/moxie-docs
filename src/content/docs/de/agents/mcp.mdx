@@ -1,0 +1,63 @@
+---
+title: MCP-Server
+description: Verbinden Sie einen MCP-Client mit Ihren Notizen.
+sourceHash: c8344d19e89a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="mcp" />
+
+Über den MCP-Server kann eine KI-App Ihre Notizen mit dem Model Context Protocol lesen. Der Server läuft auf Ihrem Mac und verwendet die Standardein- und -ausgabe. Er öffnet keinen Netzwerkport.
+
+## Schritte
+
+1. Folgen Sie der Anleitung [Agentenzugriff aktivieren](/moxie/docs/de/agents/access/). Installieren Sie den Befehl `moxie`.
+2. Gehen Sie zu **Einstellungen → KI-Funktionen → Zu einer KI-App hinzufügen**.
+3. Klicken Sie auf **Konfiguration MCP kopieren**.
+4. Fügen Sie die Konfiguration in die MCP-Einstellungen Ihrer KI-App ein.
+
+Moxie kopiert diese Konfiguration:
+
+```json
+{"command":"moxie","args":["mcp"]}
+```
+
+Der Client führt diesen Befehl aus, um den Server zu starten:
+
+```sh
+moxie mcp
+```
+
+## Werkzeuge
+
+| Werkzeug | Funktion | Eingabe |
+| --- | --- | --- |
+| `list_notes` | Listet Notizen auf, die neuesten zuerst | `limit` (1 bis 100), `cursor`, `folderId` |
+| `get_notes` | Ruft die Details von Notizen ab | `ids` (1 bis 50) |
+| `get_transcript` | Liest das Transkript einer Notiz | `id` |
+| `list_folders` | Listet Ihre Ordner auf | Keine |
+| `add_to_folder` | Fügt eine Notiz zu einem Ordner hinzu | `noteId`, `folderId` |
+| `remove_from_folder` | Entfernt eine Notiz aus einem Ordner | `noteId`, `folderId` |
+
+Für `list_notes` sind alle Eingaben optional. Alle anderen aufgeführten Eingaben sind erforderlich.
+
+Ist Moxie geschlossen oder der Agentenzugriff deaktiviert, meldet das Werkzeug einen Fehler.
+
+Die KI-App erhält den Text, den sie liest. Sie kann ihn an ihre eigenen Server senden.
+
+## Beispiel
+
+Stellen Sie Ihrer KI-App diese Frage:
+
+```text
+Was haben wir in meinem letzten Meeting beschlossen?
+```
+
+Die App kann mit `list_notes` die Notiz finden und mit `get_transcript` das Transkript lesen.
+
+## Siehe auch
+
+- [Agentenzugriff aktivieren](/moxie/docs/de/agents/access/)
+- [CLI-Referenz](/moxie/docs/de/agents/cli/)
+- [Datenschutz](/moxie/docs/de/data/privacy/)

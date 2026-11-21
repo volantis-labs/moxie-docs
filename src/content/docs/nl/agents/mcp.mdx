@@ -1,0 +1,63 @@
+---
+title: MCP-server
+description: Verbind een MCP-client met uw notities.
+sourceHash: c8344d19e89a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="mcp" />
+
+Via de MCP-server kan een AI-app uw notities lezen met het Model Context Protocol. De server draait op uw Mac en gebruikt de standaardinvoer en -uitvoer. Hij opent geen netwerkpoort.
+
+## Stappen
+
+1. Volg de stappen in [Toegang voor agents inschakelen](/moxie/docs/nl/agents/access/). Installeer het commando `moxie`.
+2. Ga naar **Instellingen → AI-functies → Toevoegen aan een AI-app**.
+3. Klik op **Kopieer de config voor MCP**.
+4. Plak de configuratie in de MCP-instellingen van uw AI-app.
+
+Moxie kopieert deze configuratie:
+
+```json
+{"command":"moxie","args":["mcp"]}
+```
+
+Met deze configuratie voert de client het volgende commando uit om de server te starten:
+
+```sh
+moxie mcp
+```
+
+## Hulpmiddelen
+
+| Hulpmiddel | Functie | Invoer |
+| --- | --- | --- |
+| `list_notes` | Toont de notities met de nieuwste bovenaan | `limit` (1 tot 100), `cursor`, `folderId` |
+| `get_notes` | Haalt de details van notities op | `ids` (1 tot 50) |
+| `get_transcript` | Leest het transcript van een notitie | `id` |
+| `list_folders` | Toont uw mappen | Geen |
+| `add_to_folder` | Voegt een notitie toe aan een map | `noteId`, `folderId` |
+| `remove_from_folder` | Verwijdert een notitie uit een map | `noteId`, `folderId` |
+
+Voor `list_notes` zijn alle invoervelden optioneel. Alle andere vermelde velden zijn verplicht.
+
+Als Moxie gesloten is of de agenttoegang uitstaat, geeft het hulpmiddel een foutmelding.
+
+De AI-app ontvangt de tekst die ze leest. Ze kan die tekst naar haar eigen servers sturen.
+
+## Voorbeeld
+
+Stel uw AI-app deze vraag:
+
+```text
+Wat hebben we in mijn laatste vergadering besloten?
+```
+
+De app kan met `list_notes` de notitie vinden en met `get_transcript` het transcript lezen.
+
+## Zie ook
+
+- [Toegang voor agents inschakelen](/moxie/docs/nl/agents/access/)
+- [CLI-referentie](/moxie/docs/nl/agents/cli/)
+- [Privacy](/moxie/docs/nl/data/privacy/)

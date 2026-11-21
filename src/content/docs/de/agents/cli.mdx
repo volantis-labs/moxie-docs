@@ -1,0 +1,111 @@
+---
+title: CLI-Referenz
+description: Befehle, Optionen und Exitcodes des Befehls moxie.
+sourceHash: dc60a3292cde
+---
+
+Mit dem Befehl `moxie` lesen Sie Ihre Notizen im Terminal oder in einem Skript. Öffnen Sie Moxie und folgen Sie der Anleitung [Agentenzugriff aktivieren](/moxie/docs/de/agents/access/).
+
+## Notizen
+
+Listen Sie die Notizen auf, die neuesten zuerst. Standardmäßig erscheinen 40 Notizen, maximal 100.
+
+```sh
+moxie notes list
+moxie notes list --limit 5
+moxie notes list --folder FOLDER_ID
+```
+
+Jede Zeile zeigt die ID, den Erstellungszeitpunkt in Millisekunden, den Titel und gegebenenfalls den Ordner:
+
+```text
+00000000-0000-4000-8000-000000000001	1790000000000	Example note	[Work]
+more: --cursor 1790000000000:00000000-0000-4000-8000-000000000001
+```
+
+Gibt es weitere Notizen, enthält die letzte Zeile einen Cursor. Rufen Sie damit die nächste Seite ab.
+
+```sh
+moxie notes list --cursor CURSOR
+```
+
+Zeigen Sie die Details einer oder mehrerer Notizen an. Sie können bis zu 50 IDs angeben.
+
+```sh
+moxie notes get ID
+moxie notes get ID1 ID2
+```
+
+Geben Sie das Transkript einer Notiz aus. Wenn der Sprechername vorliegt, steht er am Zeilenanfang.
+
+```sh
+moxie notes transcript ID
+```
+
+```text
+Me: hello
+```
+
+## Ordner
+
+Listen Sie die Ordner mit ihren IDs auf.
+
+```sh
+moxie folders list
+```
+
+Fügen Sie eine Notiz zu einem Ordner hinzu.
+
+```sh
+moxie folders add NOTE_ID FOLDER_ID
+```
+
+Entfernen Sie eine Notiz aus einem Ordner.
+
+```sh
+moxie folders remove NOTE_ID FOLDER_ID
+```
+
+## JSON-Ausgabe
+
+Fügen Sie `--json` hinzu, um die Antwort der App als JSON zu erhalten. Verwenden Sie diese Option in Skripten.
+
+```sh
+moxie --json folders list
+```
+
+```json
+{
+  "folders": [
+    {
+      "id": "f1",
+      "name": "Work"
+    }
+  ]
+}
+```
+
+Mit `--json` liefert `notes list` bei weiteren Notizen den Wert `nextCursor`.
+
+## Weitere Befehle
+
+| Befehl | Ergebnis |
+| --- | --- |
+| `moxie mcp` | Startet den Server (siehe [MCP-Server](/moxie/docs/de/agents/mcp/)) |
+| `moxie skill` | Gibt eine `SKILL.md`-Datei mit Anweisungen für Agenten aus |
+| `moxie help` | Zeigt die Hilfe an |
+| `moxie --version` | Zeigt die Version an |
+
+## Exitcodes
+
+| Code | Bedeutung |
+| --- | --- |
+| `0` | Erfolg |
+| `2` | Moxie hat die Anfrage abgelehnt oder ist nicht geöffnet |
+| `64` | Fehler beim Aufruf |
+
+## Siehe auch
+
+- [Agentenzugriff aktivieren](/moxie/docs/de/agents/access/)
+- [MCP-Server](/moxie/docs/de/agents/mcp/)
+- [Ordner und Papierkorb](/moxie/docs/de/notes/folders-trash/)

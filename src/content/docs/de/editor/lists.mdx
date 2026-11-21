@@ -1,0 +1,46 @@
+---
+title: Listen und Checklisten
+description: Erstellen Sie Aufzählungen, nummerierte Listen und Checklisten mit der Tastatur.
+sourceHash: d6186cff862a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-lists" />
+
+Geben Sie am Zeilenanfang ein Listenzeichen ein. Bearbeiten Sie die Liste anschließend mit der Tastatur.
+
+| Eingabe oder Taste | Ergebnis |
+| --- | --- |
+| `- ` | Aufzählung |
+| `1. ` | Nummerierte Liste |
+| `[ ] ` | Checkliste |
+| `[x] ` | Abgehakter Checklistenpunkt |
+| <kbd>Enter</kbd> | Neuer Eintrag |
+| <kbd>Tab</kbd> | Eintrag einrücken |
+| <kbd>⇧Tab</kbd> | Eintrag ausrücken |
+| <kbd>⌘Enter</kbd> | Häkchen am aktuellen Checklistenpunkt setzen oder entfernen |
+
+## Unterliste einklappen
+
+1. Bewegen Sie den Zeiger auf einen Eintrag mit einer Unterliste. Neben dem Eintrag erscheint ein Pfeil.
+2. Klicken Sie auf den Pfeil. Moxie blendet die Unterliste aus.
+3. Klicken Sie erneut auf den Pfeil. Moxie zeigt die Unterliste wieder an.
+
+Moxie speichert den Klappzustand nicht. Wenn Sie die Notiz erneut öffnen, sind alle Listen aufgeklappt.
+
+## Beispiel
+
+Geben Sie diese Zeile ein:
+
+```text
+- Einführungsplan
+```
+
+Drücken Sie <kbd>Enter</kbd>, dann <kbd>Tab</kbd>. Geben Sie „Raum buchen“ ein. Der Eintrag steht nun in einer Unterliste unter „Einführungsplan“.
+
+## Siehe auch
+
+- [Beim Schreiben formatieren](/moxie/docs/de/editor/formatting/)
+- [Schrägstrichmenü](/moxie/docs/de/editor/slash-menu/)
+- [Tastenkürzel und Tipps](/moxie/docs/de/reference/shortcuts/)

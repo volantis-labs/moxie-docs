@@ -1,0 +1,56 @@
+---
+title: Chat
+description: Stellen Sie eine Frage zu Ihren Notizen.
+sourceHash: b160b070e4f0
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="chat" />
+
+Der Chat beantwortet Fragen anhand Ihrer Notizen und Transkripte. Das Modell läuft auf Ihrem Mac. Moxie speichert das Gespräch nicht.
+
+## Frage zu einer Notiz stellen
+
+1. Öffnen Sie eine Notiz.
+2. Geben Sie Ihre Frage in das Feld **Über diese Notiz fragen** ein.
+3. Drücken Sie <kbd>Return</kbd>.
+
+Moxie schlägt auch eine Frage vor. Klicken Sie darauf, um sie zu stellen.
+
+## Alle Notizen befragen
+
+1. Klicken Sie in der Seitenleiste auf **Chat**.
+2. Geben Sie Ihre Frage in das Feld **Frage über alle Ihre Notizen** ein.
+3. Drücken Sie <kbd>Return</kbd>.
+
+Klicken Sie für einen neuen Chat auf **Neue Konversation**.
+
+## Antwort lesen
+
+| In der Antwort | Funktion |
+| --- | --- |
+| Eine Zahl | Zeigt das Zitat aus dem Transkript |
+| **Im Transkript anzeigen** | Öffnet das Transkript an dieser Zeile |
+| **Nachfragen** | Zeigt mögliche Anschlussfragen |
+| **Mit Zitat kopieren** | Kopiert die Antwort mit ihren Zitaten |
+
+Klicken Sie auf **Anhalten**, um die Antwort zu stoppen.
+
+## Während eines Meetings fragen
+
+Während der Aufnahme zeigt das Feld **Frage zu diesem Meeting stellen**. Moxie antwortet anhand des bisherigen Transkripts. Nur Sie sehen die Antwort. Moxie speichert sie nicht.
+
+## Beispiel
+
+```text
+Was wurde in diesem Meeting entschieden?
+```
+
+Moxie nennt die Entscheidungen. Eine Zahl nach einer Aussage verweist auf eine Quelle. Klicken Sie darauf, um die Transkriptzeile zu sehen.
+
+## Siehe auch
+
+- [Suche](/moxie/docs/de/find/search/)
+- [Belege und Suche im Transkript](/moxie/docs/de/editor/citations/)
+- [Live-Transkript](/moxie/docs/de/notes/transcript/)

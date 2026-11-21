@@ -1,0 +1,49 @@
+---
+title: Recherche
+description: Retrouvez une note, une personne ou une ligne de transcription.
+sourceHash: 1bb169bfd24c
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="search" />
+
+La recherche porte sur toutes vos notes et transcriptions. Les résultats apparaissent pendant la saisie.
+
+## Étapes
+
+1. Appuyez sur <kbd>⌘K</kbd>. Vous pouvez aussi cliquer dans le champ de recherche de la barre latérale.
+2. Saisissez un ou plusieurs mots.
+3. Utilisez <kbd>↓</kbd> ou <kbd>↑</kbd> pour sélectionner un résultat.
+4. Appuyez sur <kbd>Return</kbd> pour ouvrir le résultat.
+
+Appuyez sur <kbd>Esc</kbd> pour fermer la recherche.
+
+Le raccourci <kbd>⌘F</kbd> ouvre aussi la recherche. Dans une note, <kbd>⌘F</kbd> ouvre la barre de recherche. Consultez [Rechercher et remplacer](/moxie/docs/fr/editor/find-replace/).
+
+Si du texte est sélectionné dans une note, <kbd>⌘K</kbd> ouvre le champ de création de lien. Consultez [Liens](/moxie/docs/fr/editor/links/).
+
+## Éléments trouvés par la recherche
+
+Une étiquette indique où Moxie a trouvé les mots.
+
+| Étiquette | Emplacement des mots |
+| --- | --- |
+| **Personnes** | Nom d’une personne |
+| **Titre** | Titre d’une note |
+| **Mes notes** | Notes que vous avez rédigées |
+| **Résumé** | Notes enrichies |
+| **Image** | Mots dans une image de la note |
+| **Écran** | Mots dans une capture d’écran |
+| **Nom de l'interlocuteur** | Nom d’un intervenant dans la note |
+| Nom d’un intervenant et horodatage | Ligne de transcription |
+
+## Exemple
+
+Saisissez `budget`. Moxie affiche les notes contenant « budget ». Sélectionnez une ligne de transcription. Moxie ouvre la note à cette ligne.
+
+## Voir aussi
+
+- [Chat](/moxie/docs/fr/find/chat/)
+- [Rechercher et remplacer](/moxie/docs/fr/editor/find-replace/)
+- [Personnes](/moxie/docs/fr/notes/people/)

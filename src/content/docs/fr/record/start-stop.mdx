@@ -1,0 +1,59 @@
+---
+title: Démarrer et arrêter un enregistrement
+description: Laissez Moxie lancer l’enregistrement au début d’une réunion ou démarrez-le vous-même.
+sourceHash: 28f2bdfce834
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Moxie enregistre votre micro et le son de la réunion. La transcription apparaît dans une note.
+
+## Démarrer
+
+Moxie détecte les réunions dans Zoom, Microsoft Teams et Google Meet. Un compte à rebours apparaît sur la commande d’enregistrement ou en haut de la fenêtre de Moxie :
+
+```text
+Réunion détectée · début dans 10 s
+```
+
+| Commande | Résultat |
+| --- | --- |
+| Aucune action | L’enregistrement démarre à la fin du compte à rebours. |
+| **Démarrer maintenant** | L’enregistrement démarre immédiatement. |
+| **Ce n'est pas cette réunion** | Moxie ignore cette réunion. |
+
+Pour lancer vous-même un enregistrement, cliquez sur **Démarrer la capture** à l’un des emplacements suivants :
+
+- Dans **Accueil**, sur la fiche de votre prochaine réunion.
+- Dans une note sans enregistrement.
+- Dans le menu de l’icône de Moxie dans la barre des menus.
+
+## Arrêter
+
+Cliquez sur **Arrêter** dans le volet de transcription de la note ou sur la commande d’enregistrement. Moxie sauvegarde l’enregistrement.
+
+À la fin d’une réunion détectée, Moxie affiche cette ligne :
+
+```text
+Réunion terminée · arrêt dans 10 s
+```
+
+Cliquez sur **Continuer à enregistrer** pour poursuivre l’enregistrement.
+
+## Exemple
+
+Pour que Moxie vous demande de confirmer au lieu de lancer le compte à rebours :
+
+1. Ouvrez **Réglages → Enregistrement**.
+2. Sous **Que doit faire Moxie au début d’une réunion ?**, sélectionnez **Me demander**.
+
+Moxie affiche alors **Réunion détectée** et attend que vous cliquiez sur **Commencer**. Les autres choix sont **Décompter 10 s** (par défaut) et **Décompter 5 s**.
+
+## Voir aussi
+
+- [Commande d’enregistrement](/moxie/docs/fr/record/recording-control/)
+- [Réunions en présentiel](/moxie/docs/fr/record/in-person/)
+- [Prévenir les participants](/moxie/docs/fr/record/participant-notice/)
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)

@@ -1,0 +1,73 @@
+---
+title: Réglages
+description: Les réglages de Moxie, leur fonction et leur valeur par défaut.
+sourceHash: 629d4d4eb35e
+---
+
+Appuyez sur <kbd>⌘,</kbd> pour ouvrir les réglages. Chaque tableau correspond à l’un des cinq onglets.
+
+## Général
+
+| Réglage | Fonction | Par défaut |
+| --- | --- | --- |
+| **Quelle langue Moxie doit-il utiliser ?** | Définit la langue de l’app, des résumés et du chat. La transcription conserve la langue parlée. | Anglais |
+| **Moxie doit-il reconnaître votre voix ?** | Enregistre trois échantillons de votre voix. Moxie indique ensuite vos interventions par « Je ». | Aucun profil vocal |
+| **Compte de calendrier** | Affiche votre compte Google ou Microsoft 365. Moxie accède au calendrier en lecture seule. Avec **Afficher les calendriers**, vous choisissez les calendriers à utiliser. Avec **Se déconnecter**, vous déconnectez le compte. | Compte utilisé pour la connexion |
+| **Ouvrir Moxie à la connexion ?** | Lance Moxie à l’ouverture de votre session sur le Mac. | Désactivé |
+| **Combien de temps les notes supprimées restent-elles dans la corbeille ?** | Indique la durée de conservation. Moxie supprime les notes de la corbeille après 30 jours. Ce délai est fixe. | 30 jours |
+
+## Enregistrement
+
+| Réglage | Fonction | Par défaut |
+| --- | --- | --- |
+| **macOS a-t-il autorisé Moxie ?** | Affiche les autorisations **Microphone**, **Audio du système**, **Enregistrement d'écran** et **Accessibilité**. Le bouton **Autoriser** ouvre le réglage macOS correspondant. | Refusé jusqu’à votre autorisation |
+| **Que doit faire Moxie au début d’une réunion ?** | **Me demander**, **Décompter 10 s** ou **Décompter 5 s**. | **Décompter 10 s** |
+| **Quel microphone Moxie doit-il utiliser ?** | Avec **Suivre le système**, Moxie utilise le micro par défaut de macOS. Vous pouvez aussi sélectionner un micro précis. | **Suivre le système** |
+| **Utilisez-vous Google Meet ?** | Indique si l’extension du navigateur est connectée. Le bouton **Installer pour Chrome ou Edge** ouvre la page de l’extension. | Non installée |
+
+## Fonctions IA
+
+| Réglage | Fonction | Par défaut |
+| --- | --- | --- |
+| **Les notes enrichies doivent-elles utiliser vos propres notes ?** | Transmet vos propres notes au modèle qui rédige les notes enrichies. | Désactivé |
+| **Autoriser les agents IA de ce Mac à lire vos notes ?** | Active l’accès des agents. Consultez [Activer l’accès des agents](/moxie/docs/fr/agents/access/). | Désactivé |
+| **Ajouter à une application IA** | Le bouton **Copier MCP de configuration** copie la configuration pour un client MCP. | Aucun |
+| **Utiliser depuis le terminal** | Le bouton **Installer la commande** installe la commande `moxie`. Le bouton **Supprimer le commandement** la supprime. | Non installée |
+| **Instructions pour les agents (SKILL.md)** | Le bouton **Afficher** affiche les instructions. Le bouton **Copier** les copie. | Aucun |
+| **Afficher les détails techniques** | Affiche le matériel, les modèles et leurs téléchargements. | Fermé |
+
+## Vos données
+
+| Réglage | Fonction | Par défaut |
+| --- | --- | --- |
+| **Tout sauvegarder** | Le bouton **Sauvegarder…** sauvegarde toutes les notes dans un fichier `.zep`. | Aucun |
+| **Restaurer une sauvegarde** | Le bouton **Restaurer une sauvegarde…** remplace les notes du Mac par celles de la sauvegarde. | Aucun |
+| **Exporter ou importer des notes** | Le bouton **Exporter…** enregistre chaque note aux formats JSON et Markdown. Le bouton **Importer…** lit les notes exportées. | Aucun |
+| **Mots appris** | Affiche les mots que vous avez confirmés. Le bouton **Supprimer** supprime un mot. Moxie retire les mots inutilisés depuis 90 jours. | Vide |
+| **Envoyer des diagnostics pour résoudre les problèmes ?** | Envoie des rapports de plantage et des statistiques d’utilisation sans contenu de réunion. | Activé. Dans les régions où votre accord est demandé, désactivé jusqu’à votre accord. |
+| **Notice sur la confidentialité** | Affiche la notice de confidentialité. | Fermé |
+| **Quel message a été envoyé** | Affiche chaque message de diagnostic. Le bouton **Réinitialiser** renouvelle l’identifiant affiché sous **Installer l'ID**. | Fermé |
+| **Vous utilisez Moxie au travail ?** | Le bouton **Partager votre e-mail professionnel…** ouvre un formulaire. Si vous l’envoyez, Moxie reçoit votre adresse e-mail professionnelle pour vous contacter au sujet des fonctions d’équipe. | Non envoyé |
+
+Si FileVault est désactivé, cet onglet affiche aussi **FileVault est désactivé** et le bouton **Vérifiez FileVault**.
+
+## Aide et informations
+
+| Réglage | Fonction | Par défaut |
+| --- | --- | --- |
+| **Signaler un problème** | Le bouton **Signaler…** ouvre un ticket GitHub avec les détails de l’appareil et les codes d’erreur, sans contenu de réunion. | Aucun |
+| **Signaler un problème de sécurité** | Le bouton **Signaler…** ouvre la page GitHub de signalement privé des vulnérabilités. | Aucun |
+| **Revérifier le matériel** | Le bouton **Vérifier** vérifie à nouveau si le matériel de votre Mac permet d’utiliser Moxie. | Aucun |
+| **Licences** | Le bouton **Consulter** affiche les licences des composants tiers. Moxie est un logiciel libre sous licence GPL 3.0. | Fermé |
+| **Afficher les détails du dossier de diagnostic** | Le bouton **Examinez le fichier de support** affiche les journaux locaux avant leur enregistrement dans un fichier ZIP. Moxie n’envoie rien. | Fermé |
+
+## Exemple
+
+Pour modifier le compte à rebours, ouvrez **Réglages → Enregistrement → Que doit faire Moxie au début d’une réunion ?** et sélectionnez **Décompter 5 s**.
+
+## Voir aussi
+
+- [Raccourcis et astuces](/moxie/docs/fr/reference/shortcuts/)
+- [Sauvegarder et restaurer les notes](/moxie/docs/fr/data/backup/)
+- [Diagnostics](/moxie/docs/fr/data/diagnostics/)
+- [Autorisations](/moxie/docs/fr/get-started/permissions/)

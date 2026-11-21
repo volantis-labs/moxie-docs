@@ -1,0 +1,59 @@
+---
+title: Een opname starten en stoppen
+description: Laat Moxie een opname starten wanneer een vergadering begint, of start er zelf een.
+sourceHash: 28f2bdfce834
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Moxie neemt uw microfoon en het vergadergeluid op. Het transcript komt in een notitie.
+
+## Starten
+
+Moxie detecteert een vergadering in Zoom, Microsoft Teams en Google Meet. Daarna verschijnt een aftelling op de opnamebediening, of boven in het Moxie-venster:
+
+```text
+Vergadering gedetecteerd · start over 10 s
+```
+
+| Klik op | Resultaat |
+| --- | --- |
+| Niets | De opname start na het aftellen. |
+| **Start nu** | De opname start direct. |
+| **Dit is geen vergadering** | Moxie neemt deze vergadering niet op. |
+
+Klik op **Start opname** op een van deze plaatsen om zelf een opname te starten:
+
+- Op de **Startpagina**, op de kaart van uw volgende vergadering.
+- In een notitie zonder opname.
+- In het menu van het Moxie-symbool in de menubalk.
+
+## Stoppen
+
+Klik op **Stop** in het transcriptpaneel van de notitie, of op de opnamebediening. Moxie bewaart de opname.
+
+Aan het einde van een gedetecteerde vergadering toont Moxie deze regel:
+
+```text
+Vergadering beëindigd · opname stopt over 10 s
+```
+
+Klik op **Blijf opnemen** om door te gaan.
+
+## Voorbeeld
+
+Zo krijgt u een vraag in plaats van het aftellen:
+
+1. Open **Instellingen → Opnemen**.
+2. Selecteer **Mij vragen** onder **Wat moet Moxie doen als een vergadering begint?**.
+
+Moxie toont dan **Vergadering gedetecteerd** en wacht op **Startpagina**. De andere waarden zijn **10 s aftellen** (de standaard) en **5 s aftellen**.
+
+## Zie ook
+
+- [De opnamebediening](/moxie/docs/nl/record/recording-control/)
+- [Fysieke vergaderingen](/moxie/docs/nl/record/in-person/)
+- [Deelnemers informeren](/moxie/docs/nl/record/participant-notice/)
+- [Live transcript](/moxie/docs/nl/notes/transcript/)

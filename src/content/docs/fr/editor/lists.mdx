@@ -1,0 +1,46 @@
+---
+title: Listes et listes de tâches
+description: Créez des listes à puces, des listes numérotées et des listes de tâches au clavier.
+sourceHash: d6186cff862a
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-lists" />
+
+Saisissez un marqueur de liste en début de ligne. Utilisez ensuite le clavier pour modifier la liste.
+
+| Saisie ou touche | Résultat |
+| --- | --- |
+| `- ` | Liste à puces |
+| `1. ` | Liste numérotée |
+| `[ ] ` | Liste de tâches |
+| `[x] ` | Tâche cochée |
+| <kbd>Enter</kbd> | Nouvel élément |
+| <kbd>Tab</kbd> | Augmenter le retrait |
+| <kbd>⇧Tab</kbd> | Réduire le retrait |
+| <kbd>⌘Enter</kbd> | Cocher ou décocher la tâche au point d’insertion |
+
+## Replier une sous-liste
+
+1. Placez le pointeur sur un élément contenant une sous-liste. Un chevron apparaît à côté de l’élément.
+2. Cliquez sur le chevron. Moxie masque la sous-liste.
+3. Cliquez à nouveau sur le chevron. Moxie affiche la sous-liste.
+
+Moxie ne mémorise pas les listes repliées. Quand vous rouvrez la note, toutes les listes sont dépliées.
+
+## Exemple
+
+Saisissez cette ligne :
+
+```text
+- Plan de lancement
+```
+
+Appuyez sur <kbd>Enter</kbd>, puis sur <kbd>Tab</kbd>. Saisissez « Réserver la salle ». Cette tâche apparaît en retrait sous « Plan de lancement ».
+
+## Voir aussi
+
+- [Mettre en forme pendant la saisie](/moxie/docs/fr/editor/formatting/)
+- [Menu barre oblique](/moxie/docs/fr/editor/slash-menu/)
+- [Raccourcis et astuces](/moxie/docs/fr/reference/shortcuts/)

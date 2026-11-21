@@ -1,0 +1,59 @@
+---
+title: Aufnahme starten und stoppen
+description: Lassen Sie Moxie eine Aufnahme starten, wenn ein Meeting beginnt, oder starten Sie selbst eine Aufnahme.
+sourceHash: 28f2bdfce834
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Moxie nimmt Ihr Mikrofon und den Ton des Meetings auf. Das Transkript kommt in eine Notiz.
+
+## Starten
+
+Moxie erkennt ein Meeting in Zoom, Microsoft Teams und Google Meet. Dann erscheint ein Countdown auf der Aufnahmesteuerung oder oben im Moxie-Fenster:
+
+```text
+Meeting erkannt · Start in 10 s
+```
+
+| Klick | Ergebnis |
+| --- | --- |
+| Nichts | Die Aufnahme startet nach dem Countdown. |
+| **Jetzt aufnehmen** | Die Aufnahme startet sofort. |
+| **Dieses Meeting nicht** | Moxie nimmt dieses Meeting nicht auf. |
+
+Um eine Aufnahme selbst zu starten, klicken Sie an einer dieser Stellen auf **Aufnehmen starten**:
+
+- Auf der **Startseite**, auf der Karte Ihres nächsten Meetings.
+- In einer Notiz, die keine Aufnahme hat.
+- Im Menü des Moxie-Symbols in der Menüleiste.
+
+## Stoppen
+
+Klicken Sie im Transkriptbereich der Notiz oder auf der Aufnahmesteuerung auf **Stopp**. Moxie sichert die Aufnahme.
+
+Am Ende eines erkannten Meetings zeigt Moxie diese Zeile:
+
+```text
+Meeting beendet · Aufnahme endet in 10 s
+```
+
+Klicken Sie auf **Aufnahme fortsetzen**, um weiter aufzunehmen.
+
+## Beispiel
+
+So erhalten Sie statt des Countdowns eine Frage:
+
+1. Öffnen Sie **Einstellungen → Aufnahme**.
+2. Wählen Sie unter **Was soll Moxie tun, wenn ein Meeting beginnt?** die Option **Mich fragen**.
+
+Moxie zeigt dann **Meeting erkannt** und wartet auf **Start**. Die anderen Werte sind **10 s herunterzählen** (der Standard) und **5 s herunterzählen**.
+
+## Siehe auch
+
+- [Die Aufnahmesteuerung](/moxie/docs/de/record/recording-control/)
+- [Meetings vor Ort](/moxie/docs/de/record/in-person/)
+- [Teilnehmer informieren](/moxie/docs/de/record/participant-notice/)
+- [Live-Transkript](/moxie/docs/de/notes/transcript/)

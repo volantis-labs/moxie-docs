@@ -1,0 +1,111 @@
+---
+title: Référence de la CLI
+description: Les commandes, options et codes de sortie de moxie.
+sourceHash: dc60a3292cde
+---
+
+La commande `moxie` permet de lire vos notes dans un terminal ou un script. Moxie doit être ouvert. Suivez les étapes de la page [Activer l’accès des agents](/moxie/docs/fr/agents/access/).
+
+## Notes
+
+Affichez les notes, de la plus récente à la plus ancienne. La commande en affiche 40 par défaut, et 100 au maximum.
+
+```sh
+moxie notes list
+moxie notes list --limit 5
+moxie notes list --folder FOLDER_ID
+```
+
+Chaque ligne indique l’identifiant, l’heure de création en millisecondes, le titre et, le cas échéant, le dossier :
+
+```text
+00000000-0000-4000-8000-000000000001	1790000000000	Example note	[Work]
+more: --cursor 1790000000000:00000000-0000-4000-8000-000000000001
+```
+
+S’il reste des notes, la dernière ligne contient un curseur. Utilisez-le pour obtenir la page suivante.
+
+```sh
+moxie notes list --cursor CURSOR
+```
+
+Affichez les détails d’une ou de plusieurs notes. Vous pouvez fournir jusqu’à 50 identifiants.
+
+```sh
+moxie notes get ID
+moxie notes get ID1 ID2
+```
+
+Affichez la transcription d’une note. Le nom de la personne qui parle précède le texte lorsqu’il est disponible.
+
+```sh
+moxie notes transcript ID
+```
+
+```text
+Me: hello
+```
+
+## Dossiers
+
+Affichez les dossiers avec leurs identifiants.
+
+```sh
+moxie folders list
+```
+
+Ajoutez une note à un dossier.
+
+```sh
+moxie folders add NOTE_ID FOLDER_ID
+```
+
+Retirez une note d’un dossier.
+
+```sh
+moxie folders remove NOTE_ID FOLDER_ID
+```
+
+## Sortie JSON
+
+Ajoutez `--json` pour obtenir la réponse de l’app au format JSON. Utilisez cette option dans vos scripts.
+
+```sh
+moxie --json folders list
+```
+
+```json
+{
+  "folders": [
+    {
+      "id": "f1",
+      "name": "Work"
+    }
+  ]
+}
+```
+
+Avec `--json`, `notes list` renvoie `nextCursor` s’il reste des notes.
+
+## Autres commandes
+
+| Commande | Résultat |
+| --- | --- |
+| `moxie mcp` | Démarre le serveur (voir [Serveur MCP](/moxie/docs/fr/agents/mcp/)) |
+| `moxie skill` | Affiche un fichier `SKILL.md` contenant les instructions pour les agents |
+| `moxie help` | Affiche l’aide |
+| `moxie --version` | Affiche la version |
+
+## Codes de sortie
+
+| Code | Signification |
+| --- | --- |
+| `0` | Succès |
+| `2` | Moxie a refusé la demande ou n’est pas ouvert |
+| `64` | Erreur d’utilisation |
+
+## Voir aussi
+
+- [Activer l’accès des agents](/moxie/docs/fr/agents/access/)
+- [Serveur MCP](/moxie/docs/fr/agents/mcp/)
+- [Dossiers et corbeille](/moxie/docs/fr/notes/folders-trash/)

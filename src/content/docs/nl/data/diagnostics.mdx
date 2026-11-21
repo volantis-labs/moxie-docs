@@ -1,0 +1,55 @@
+---
+title: Diagnostische gegevens
+description: Bekijk welke diagnostische gegevens Moxie verstuurt en schakel de verzending uit.
+sourceHash: edf99ebe5bcc
+---
+
+Diagnostische gegevens omvatten crashrapporten en gebruiksaantallen. Ze bevatten geen vergadergeluid, transcripten, notitietekst, titels of namen.
+
+Diagnostiek staat standaard aan. In regio’s waar Moxie eerst toestemming vraagt, zoals de EU, het VK en Canada, verstuurt Moxie niets totdat u instemt. In andere regio’s kan Moxie ook het e-mailadres van het aangemelde account versturen als diagnostiek aanstaat.
+
+## Diagnostiek uitschakelen
+
+1. Druk op <kbd>⌘,</kbd> om de instellingen te openen.
+2. Ga naar **Uw gegevens**.
+3. Schakel de optie **Diagnostische gegevens verzenden om problemen op te lossen?** uit.
+
+Moxie verwijdert dan de gebeurtenissen die nog niet zijn verzonden.
+
+## Verzonden gegevens bekijken
+
+1. Ga naar **Instellingen → Uw gegevens**.
+2. Open **Wat is verzonden**.
+3. Selecteer een lijst.
+
+| Lijst | Inhoud |
+| --- | --- |
+| **Verzonden** | Elk bericht zoals het vanaf uw Mac is verzonden |
+| **Gekopieerd op deze Mac** | Rapporten die Moxie niet heeft verzonden |
+| **Niet verzonden** | Gebeurtenissen die op de volgende verzending wachten |
+
+Klik op een regel om de JSON-gegevens te bekijken.
+
+## De installatie-ID opnieuw instellen
+
+De installatie-ID is een willekeurige code die Moxie met elke gebeurtenis meestuurt. Klik in **Wat is verzonden** op **Stel opnieuw in** naast **Installatie-ID**. De volgende keer dat diagnostiek aanstaat, maakt Moxie een nieuwe ID.
+
+## Voorbeeld
+
+Een gebruiksgebeurtenis bevat alleen getallen en vaste waarden. Na een export verstuurt Moxie deze gebeurtenis:
+
+```text
+export_done
+  format: md | json | html | pdf
+  notes:  aantal notities
+  bulk:   true of false
+  ms:     tijd in milliseconden
+```
+
+Eenmaal per dag verstuurt Moxie ook totalen en de status van FileVault (aan of uit).
+
+## Zie ook
+
+- [Privacy](/moxie/docs/nl/data/privacy/)
+- [Een probleem melden](/moxie/docs/nl/help/report-problem/)
+- [Instellingen](/moxie/docs/nl/reference/settings/)

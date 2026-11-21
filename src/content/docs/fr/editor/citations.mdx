@@ -1,0 +1,40 @@
+---
+title: Citations et recherche dans la transcription
+description: Retrouvez la ligne de transcription à l’origine d’une phrase de la note.
+sourceHash: 08577c024114
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-citations" />
+
+Une citation est un petit lien après une phrase de la note. Elle indique un temps ou un numéro. Elle ouvre la transcription à la ligne dont provient la phrase.
+
+## Ouvrir une citation
+
+| Action | Résultat |
+| --- | --- |
+| Placer le pointeur sur une citation | Une fiche affiche la ligne citée. Le bouton **Afficher dans la transcription** ouvre la transcription. |
+| Cliquer sur une citation | Le volet de transcription s’ouvre à cette ligne |
+| Sélectionner une citation avec les flèches, puis appuyer sur <kbd>Enter</kbd> | Le volet de transcription s’ouvre à cette ligne |
+
+## Ajouter une citation avec la recherche dans la transcription
+
+1. Sélectionnez une phrase dans la note. Un menu apparaît près de la sélection.
+2. Cliquez sur **Rechercher dans le transcript**. La liste affiche jusqu’à 3 lignes avec le nom de la personne qui parle et l’horodatage.
+3. Cliquez sur la ligne qui convient.
+
+Moxie ajoute une citation après la sélection. Le volet de transcription s’ouvre à la ligne citée.
+
+- Si aucune ligne ne correspond à la phrase, la liste affiche **Aucune ligne correspondante**.
+- Le bouton **Rechercher dans le transcript** apparaît uniquement si la note a une transcription.
+
+## Exemple
+
+Sélectionnez « Sam enverra le budget vendredi ». Cliquez sur **Rechercher dans le transcript**. Cliquez sur la ligne « Sam · 12:04 ». La citation « 12:04 » apparaît après la phrase.
+
+## Voir aussi
+
+- [Transcription en direct](/moxie/docs/fr/notes/transcript/)
+- [Notes enrichies et modèles](/moxie/docs/fr/notes/enhanced-notes/)
+- [Liens](/moxie/docs/fr/editor/links/)

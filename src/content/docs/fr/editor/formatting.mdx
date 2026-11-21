@@ -1,0 +1,50 @@
+---
+title: Mettre en forme pendant la saisie
+description: Mettez une note en forme avec Markdown ou un raccourci clavier.
+sourceHash: a1937c4ddc4b
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Saisissez du Markdown dans une note. Moxie met le texte en forme à mesure que vous écrivez.
+
+## Blocs
+
+Saisissez ces caractères en début de ligne.
+
+| Saisie | Résultat |
+| --- | --- |
+| `# ` | Titre |
+| `- ` | Liste à puces |
+| `1. ` | Liste numérotée |
+| `[ ] ` | Liste de tâches |
+| `> ` | Citation |
+| Trois accents graves, puis une espace | Bloc de code |
+| `---` | Séparateur |
+
+## Texte
+
+| Saisie | Ou raccourci | Résultat |
+| --- | --- | --- |
+| `**gras**` | <kbd>⌘B</kbd> | **gras** |
+| `*italique*` | <kbd>⌘I</kbd> | _italique_ |
+| `~~barré~~` | <kbd>⇧⌘S</kbd> | ~~barré~~ |
+| `` `code` `` | <kbd>⌘E</kbd> | `code` |
+
+## Exemple
+
+Saisissez cette ligne :
+
+```text
+- Envoyer le **budget** à *Sam*
+```
+
+Moxie affiche une puce. Le mot « budget » est en gras et « Sam » en italique.
+
+## Voir aussi
+
+- [Menu barre oblique](/moxie/docs/fr/editor/slash-menu/)
+- [Listes et listes de tâches](/moxie/docs/fr/editor/lists/)
+- [Coller](/moxie/docs/fr/editor/paste/)

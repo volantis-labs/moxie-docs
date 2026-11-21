@@ -1,0 +1,50 @@
+---
+title: Opmaken terwijl u typt
+description: Typ Markdown of gebruik een toetscombinatie om een notitie op te maken.
+sourceHash: a1937c4ddc4b
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Typ Markdown in een notitie. Moxie zet het om in opgemaakte tekst terwijl u typt.
+
+## Blokken
+
+Typ deze tekens aan het begin van een regel.
+
+| Typ | Resultaat |
+| --- | --- |
+| `# ` | Kop |
+| `- ` | Opsomming |
+| `1. ` | Genummerde lijst |
+| `[ ] ` | Takenlijst |
+| `> ` | Citaat |
+| Drie backticks en daarna een spatie | Codeblok |
+| `---` | Scheidingslijn |
+
+## Tekst
+
+| Typ | Of druk op | Resultaat |
+| --- | --- | --- |
+| `**vet**` | <kbd>⌘B</kbd> | **vet** |
+| `*cursief*` | <kbd>⌘I</kbd> | _cursief_ |
+| `~~doorgehaald~~` | <kbd>⇧⌘S</kbd> | ~~doorgehaald~~ |
+| `` `code` `` | <kbd>⌘E</kbd> | `code` |
+
+## Voorbeeld
+
+Typ deze regel:
+
+```text
+- Stuur het **budget** naar *Sam*
+```
+
+Moxie toont een opsommingsteken. "budget" is vet en "Sam" is cursief.
+
+## Zie ook
+
+- [Slashmenu](/moxie/docs/nl/editor/slash-menu/)
+- [Lijsten en takenlijsten](/moxie/docs/nl/editor/lists/)
+- [Plakken](/moxie/docs/nl/editor/paste/)

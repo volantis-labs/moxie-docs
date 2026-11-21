@@ -1,0 +1,51 @@
+---
+title: Toegang voor agents inschakelen
+description: Geef AI-agents op uw Mac toegang tot uw notities.
+sourceHash: 85a016f9d524
+---
+
+Met agenttoegang kan een AI-agent op uw Mac uw notities lezen via het commando `moxie` of de MCP-server. Deze toegang staat standaard uit.
+
+## Stappen
+
+1. Druk op <kbd>⌘,</kbd> om de instellingen te openen.
+2. Ga naar **AI-functies**.
+3. Schakel de optie **Mogen AI-agents op deze Mac uw notities lezen?** in.
+4. Kies onder **Hoe wilt u verbinding maken?** een verbinding:
+
+| Rij | Knop | Resultaat |
+| --- | --- | --- |
+| **Toevoegen aan een AI-app** | **Kopieer de config voor MCP** | Kopieert de configuratie voor een MCP-client |
+| **Gebruiken vanuit Terminal** | **Installeer commando** | Installeert het commando `moxie` |
+| **Instructies voor agents (SKILL.md)** | **Kopiëren** | Kopieert instructies die een agent kan lezen |
+
+## Het commando installeren
+
+1. Klik op **Installeer commando**.
+2. Klik op **Installeer**.
+
+Moxie maakt in `/usr/local/bin` een koppeling naar het commando. Als voor die map beheerdersrechten nodig zijn, gebruikt Moxie `~/.local/bin` zonder om een wachtwoord te vragen. Voeg dan `~/.local/bin` toe aan uw `PATH`.
+
+Klik op **Verwijder commando** om het commando te verwijderen.
+
+## Wat een agent kan doen
+
+- Notities en mappen weergeven.
+- De details en het transcript van een notitie lezen.
+- Een notitie aan een map toevoegen of uit een map verwijderen.
+
+Een agent ziet geen notities in de prullenmand. Moxie moet open zijn. Het commando gebruikt een lokale socket die alleen uw gebruikersaccount kan openen. Moxie opent geen netwerkpoort.
+
+## Voorbeeld
+
+```sh
+moxie notes list --limit 5
+```
+
+Dit commando toont uw 5 nieuwste notities.
+
+## Zie ook
+
+- [CLI-referentie](/moxie/docs/nl/agents/cli/)
+- [MCP-server](/moxie/docs/nl/agents/mcp/)
+- [Instellingen](/moxie/docs/nl/reference/settings/)
