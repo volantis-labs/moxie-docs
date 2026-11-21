@@ -61,7 +61,14 @@ function send(res, status, body, type = 'application/json; charset=utf-8') {
   res.end(data);
 }
 
+// Local use only. A web page on another origin must not read or change the tracker:
+// the Host check stops DNS rebinding, the Origin check stops cross-site requests.
+const HOSTS = [`localhost:${PORT}`, `127.0.0.1:${PORT}`];
+const ORIGINS = HOSTS.map((h) => `http://${h}`);
+
 async function handle(req, res) {
+  if (!HOSTS.includes(req.headers.host)) throw new TrackerError(403, 'host not allowed');
+  if (req.headers.origin && !ORIGINS.includes(req.headers.origin)) throw new TrackerError(403, 'origin not allowed');
   const url = new URL(req.url, 'http://localhost');
   const path = url.pathname;
   if (req.method === 'GET' && (path === '/' || path === '/index.html')) {
@@ -94,7 +101,7 @@ const server = createServer(async (req, res) => {
   console.log(`${new Date().toISOString()} ${req.method} ${req.url} ${res.statusCode} ${Date.now() - started}ms`);
 });
 
-server.listen(PORT, () => console.log(`tracker listening on http://localhost:${PORT} (db: ${DEFAULT_DB_PATH}, prefix: ${PREFIX})`));
+server.listen(PORT, '127.0.0.1', () => console.log(`tracker listening on http://localhost:${PORT} (db: ${DEFAULT_DB_PATH}, prefix: ${PREFIX})`));
 
 for (const sig of ['SIGINT', 'SIGTERM']) {
   process.on(sig, () => {

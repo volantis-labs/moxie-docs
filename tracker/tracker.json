@@ -463,6 +463,23 @@
       "created_at": "2026-11-21T14:45:00.231Z",
       "updated_at": "2026-11-21T14:45:00.231Z",
       "closed_at": null
+    },
+    {
+      "id": 26,
+      "key": "DOCS-26",
+      "title": "Tracker server accepts requests from other hosts and origins",
+      "description": "Found by the commit security review. tracker/server.mjs listened on all interfaces and did not check Host or Origin. A web page could change or import tracker data (CSRF, DNS rebinding).",
+      "status": "done",
+      "type": "bug",
+      "epic_id": 1,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": "Fixed in tracker/server.mjs: listen on 127.0.0.1 only; 403 when Host is not localhost or 127.0.0.1 with the tracker port; 403 when an Origin header is not the tracker origin. Verified with curl: same host 200, wrong Host 403, wrong Origin POST 403, own Origin 200, socket on 127.0.0.1:4712; tracker tests 14 of 14 pass. The same code is in ../wallflower/tracker and is not changed there.",
+      "created_at": "2026-11-21T14:47:38.539Z",
+      "updated_at": "2026-11-21T14:47:38.584Z",
+      "closed_at": "2026-11-21T14:47:38.583Z"
     }
   ],
   "dependencies": [
