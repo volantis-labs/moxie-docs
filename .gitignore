@@ -1,0 +1,10 @@
+.env
+.env.*
+node_modules/
+dist/
+.astro/
+.wrangler/
+.DS_Store
+tracker/data/
+tracker/backup.json
+/tasks/

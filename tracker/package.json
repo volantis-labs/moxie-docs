@@ -1,0 +1,11 @@
+{
+  "name": "tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny single-user ticket tracker: SQLite, JSON API, one-page web app, CLI.",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings server.mjs",
+    "test": "TRACKER_PREFIX=WF node --no-warnings --test test.mjs"
+  }
+}

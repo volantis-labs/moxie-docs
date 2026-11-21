@@ -1,0 +1,674 @@
+{
+  "version": 2,
+  "prefix": "DOCS",
+  "epics": [
+    {
+      "id": 1,
+      "name": "Foundation",
+      "description": "Repo, tracker, Starlight skeleton, Worker config, checks, first deploy.",
+      "created_at": "2026-11-21T14:44:59.052Z",
+      "updated_at": "2026-11-21T14:44:59.052Z"
+    },
+    {
+      "id": 2,
+      "name": "English content",
+      "description": "The English pages. Rules: one task per page, about 200 words, example first, STE.",
+      "created_at": "2026-11-21T14:44:59.090Z",
+      "updated_at": "2026-11-21T14:44:59.090Z"
+    },
+    {
+      "id": 3,
+      "name": "Translation",
+      "description": "DE, FR, NL pages from the English source, with app glossary terms and sourceHash.",
+      "created_at": "2026-11-21T14:44:59.126Z",
+      "updated_at": "2026-11-21T14:44:59.126Z"
+    },
+    {
+      "id": 4,
+      "name": "Video",
+      "description": "Tutorial videos on YouTube, shown by the Video component after a click.",
+      "created_at": "2026-11-21T14:44:59.163Z",
+      "updated_at": "2026-11-21T14:44:59.163Z"
+    },
+    {
+      "id": 5,
+      "name": "Launch",
+      "description": "Links, sitemap, redirects and the final check.",
+      "created_at": "2026-11-21T14:44:59.201Z",
+      "updated_at": "2026-11-21T14:44:59.201Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "key": "DOCS-1",
+      "title": "Set up the repo and the tracker",
+      "description": "Goal: git repo, .gitignore, .env, tracker copy (prefix DOCS, port 4712), AGENTS.md and CLAUDE.md with the repo rules. Accept: tracker tests pass; tickets exist.",
+      "status": "done",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": "Done: git repo on main, .gitignore, empty .env, tracker copied from ../wallflower/tracker (prefix DOCS, port 4712, empty database), AGENTS.md with repo rules, CLAUDE.md imports it, 5 epics and 25 tickets. Verified: tracker tests 14 of 14 pass (cd tracker && npm test; jsdom comes from the root devDependencies).",
+      "created_at": "2026-11-21T14:44:59.239Z",
+      "updated_at": "2026-11-21T14:46:14.350Z",
+      "closed_at": "2026-11-21T14:46:14.350Z"
+    },
+    {
+      "id": 2,
+      "key": "DOCS-2",
+      "title": "Scaffold Starlight with 4 locales and the site style",
+      "description": "Goal: Astro Starlight at base /moxie/docs with en (root), de, fr, nl, flag labels, sidebar, edit link, link validator, colours of volantislabs.dev. Accept: npm run build passes; switcher shows 4 languages.",
+      "status": "in_progress",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.278Z",
+      "updated_at": "2026-11-21T14:46:14.390Z",
+      "closed_at": null
+    },
+    {
+      "id": 3,
+      "key": "DOCS-3",
+      "title": "Add the Worker config and test it with wrangler dev",
+      "description": "Goal: wrangler.jsonc (name moxie-docs, assets base_path /moxie/docs, 2 routes). Accept: wrangler dev serves /moxie/docs/, redirects /moxie/docs, shows the docs 404 page. Fallback: nested outDir.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.325Z",
+      "updated_at": "2026-11-21T14:44:59.325Z",
+      "closed_at": null
+    },
+    {
+      "id": 4,
+      "key": "DOCS-4",
+      "title": "Build the Video component",
+      "description": "Goal: <Video feature=...> reads src/data/videos.json; empty id shows nothing; local poster; YouTube IFrame API loads only after a click; subtitles in the page language. Accept: no request to YouTube or Google before the click.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "video"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.365Z",
+      "updated_at": "2026-11-21T14:44:59.365Z",
+      "closed_at": null
+    },
+    {
+      "id": 5,
+      "key": "DOCS-5",
+      "title": "Write the docs check script",
+      "description": "Goal: scripts/check-docs.mjs. Fail on a missing translation or a stale sourceHash. Warn above 300 words. Accept: npm run check passes on the skeleton and fails on a changed English page.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "i18n"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.405Z",
+      "updated_at": "2026-11-21T14:44:59.405Z",
+      "closed_at": null
+    },
+    {
+      "id": 6,
+      "key": "DOCS-6",
+      "title": "Deploy the skeleton site",
+      "description": "Goal: public repo volantis-labs/moxie-docs, Cloudflare Worker moxie-docs connected to it. Needs the owner: confirm repo creation and push; connect the repo in the Cloudflare dashboard. Accept: https://volantislabs.dev/moxie/docs/ is 200 and /moxie/ and /moxie/privacy/ did not change.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 1,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.447Z",
+      "updated_at": "2026-11-21T14:44:59.447Z",
+      "closed_at": null
+    },
+    {
+      "id": 7,
+      "key": "DOCS-7",
+      "title": "Write the English pages for Get started",
+      "description": "Pages: Welcome, Install Moxie, System requirements, Sign in and connect your calendar, Permissions, Your first meeting. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.499Z",
+      "updated_at": "2026-11-21T14:44:59.499Z",
+      "closed_at": null
+    },
+    {
+      "id": 8,
+      "key": "DOCS-8",
+      "title": "Write the English pages for Record",
+      "description": "Pages: Start and stop a recording, The recording control, In-person meetings, Google Meet extension, Tell participants. Source for the recording tricks: ../wallflower tracker ticket WF-775. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.542Z",
+      "updated_at": "2026-11-21T14:44:59.542Z",
+      "closed_at": null
+    },
+    {
+      "id": 9,
+      "key": "DOCS-9",
+      "title": "Write the English pages for Notes",
+      "description": "Pages: Live transcript, Speakers and voice profile, Enhanced notes and templates, People, Folders and Trash. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.586Z",
+      "updated_at": "2026-11-21T14:44:59.586Z",
+      "closed_at": null
+    },
+    {
+      "id": 10,
+      "key": "DOCS-10",
+      "title": "Write the English pages for Editor",
+      "description": "Pages: Format as you type, Slash menu, Lists and checklists, Links, Mention people, Find and replace, Tables, Images, Paste, Citations and Find in transcript. Source: ../wallflower tracker ticket WF-775 (the running list of editor tricks). Check each trick against the app. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.627Z",
+      "updated_at": "2026-11-21T14:44:59.627Z",
+      "closed_at": null
+    },
+    {
+      "id": 11,
+      "key": "DOCS-11",
+      "title": "Write the English pages for Find and ask",
+      "description": "Pages: Search, Chat. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.667Z",
+      "updated_at": "2026-11-21T14:44:59.667Z",
+      "closed_at": null
+    },
+    {
+      "id": 12,
+      "key": "DOCS-12",
+      "title": "Write the English pages for Your data",
+      "description": "Pages: Export, Backup and restore, Privacy, Diagnostics. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.706Z",
+      "updated_at": "2026-11-21T14:44:59.706Z",
+      "closed_at": null
+    },
+    {
+      "id": 13,
+      "key": "DOCS-13",
+      "title": "Write the English pages for Agents",
+      "description": "Pages: Turn on agent access, CLI reference, MCP server. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.746Z",
+      "updated_at": "2026-11-21T14:44:59.746Z",
+      "closed_at": null
+    },
+    {
+      "id": 14,
+      "key": "DOCS-14",
+      "title": "Write the English pages for Reference",
+      "description": "Pages: Settings, Shortcuts and tricks (one cheat sheet of all shortcuts and tricks from WF-775). Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.788Z",
+      "updated_at": "2026-11-21T14:44:59.788Z",
+      "closed_at": null
+    },
+    {
+      "id": 15,
+      "key": "DOCS-15",
+      "title": "Write the English pages for Help",
+      "description": "Pages: Troubleshooting, Report a problem, Updates. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 2,
+      "themes": [
+        "content"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.827Z",
+      "updated_at": "2026-11-21T14:44:59.827Z",
+      "closed_at": null
+    },
+    {
+      "id": 16,
+      "key": "DOCS-16",
+      "title": "Translate all pages to German",
+      "description": "Use de.json and scripts/i18n-style.mjs of ../wallflower. Formal register (Sie). Set sourceHash. Accept: npm run check passes.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 3,
+      "themes": [
+        "i18n"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.868Z",
+      "updated_at": "2026-11-21T14:44:59.868Z",
+      "closed_at": null
+    },
+    {
+      "id": 17,
+      "key": "DOCS-17",
+      "title": "Translate all pages to French",
+      "description": "Use fr.json and scripts/i18n-style.mjs of ../wallflower. Formal register (vous). Set sourceHash. Accept: npm run check passes.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 3,
+      "themes": [
+        "i18n"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.908Z",
+      "updated_at": "2026-11-21T14:44:59.908Z",
+      "closed_at": null
+    },
+    {
+      "id": 18,
+      "key": "DOCS-18",
+      "title": "Translate all pages to Dutch",
+      "description": "Use nl.json and scripts/i18n-style.mjs of ../wallflower. Formal register (u). Set sourceHash. Accept: npm run check passes.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 3,
+      "themes": [
+        "i18n"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.948Z",
+      "updated_at": "2026-11-21T14:44:59.948Z",
+      "closed_at": null
+    },
+    {
+      "id": 19,
+      "key": "DOCS-19",
+      "title": "Report the app term conflicts to the owner",
+      "description": "List terms that the app translates in more than one way (for example voice profile in de and nl; fr speaker.unnamed). Accept: list delivered.",
+      "status": "todo",
+      "type": "research",
+      "epic_id": 3,
+      "themes": [
+        "i18n"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:44:59.988Z",
+      "updated_at": "2026-11-21T14:44:59.988Z",
+      "closed_at": null
+    },
+    {
+      "id": 20,
+      "key": "DOCS-20",
+      "title": "Write the video brief for the media team",
+      "description": "One row for each video: feature key, pages, target length, what to show, subtitle files (en, de, fr, nl). Include the 7 trick videos of ../wallflower ticket WF-775 (formatting and slash menu; lists and checklists; links and mentions; find and replace; tables and images; transcript and citations; recording) and the feature videos (install and first meeting, speakers, enhanced notes, search, chat, export, MCP). Accept: brief in the repo.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 4,
+      "themes": [
+        "video"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.029Z",
+      "updated_at": "2026-11-21T14:45:00.029Z",
+      "closed_at": null
+    },
+    {
+      "id": 21,
+      "key": "DOCS-21",
+      "title": "Add video ids, posters and subtitles when videos arrive",
+      "description": "Needs the owner: YouTube ids. Add id and poster to src/data/videos.json. Accept: each video plays after one click with subtitles in the page language.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 4,
+      "themes": [
+        "video"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.069Z",
+      "updated_at": "2026-11-21T14:45:00.069Z",
+      "closed_at": null
+    },
+    {
+      "id": 22,
+      "key": "DOCS-22",
+      "title": "Add a Docs link to the Moxie page",
+      "description": "Repo volantislabs.github.io: add a Docs link to the nav and footer of public/moxie/index.html. Accept: link opens /moxie/docs/.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 5,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.108Z",
+      "updated_at": "2026-11-21T14:45:00.108Z",
+      "closed_at": null
+    },
+    {
+      "id": 23,
+      "key": "DOCS-23",
+      "title": "Add robots.txt with the docs sitemap to the site repo",
+      "description": "Repo volantislabs.github.io: public/robots.txt with Sitemap: https://volantislabs.dev/moxie/docs/sitemap-index.xml. Accept: file is live.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 5,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.148Z",
+      "updated_at": "2026-11-21T14:45:00.148Z",
+      "closed_at": null
+    },
+    {
+      "id": 24,
+      "key": "DOCS-24",
+      "title": "Add the /docs redirect rules on getmoxieapp.com and moxiememory.com",
+      "description": "Needs the owner (Cloudflare dashboard). Rule above the current rule: path eq /docs or starts_with /docs/ -> concat(https://volantislabs.dev/moxie, path), 301. Accept: curl -sI https://getmoxieapp.com/docs/de/ gives 301 to /moxie/docs/de/.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 5,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.190Z",
+      "updated_at": "2026-11-21T14:45:00.190Z",
+      "closed_at": null
+    },
+    {
+      "id": 25,
+      "key": "DOCS-25",
+      "title": "Do the final check before launch",
+      "description": "Run the Verification section of the plan (local and after deploy), in Chrome and Safari. Accept: all checks pass.",
+      "status": "todo",
+      "type": "story",
+      "epic_id": 5,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": null,
+      "created_at": "2026-11-21T14:45:00.231Z",
+      "updated_at": "2026-11-21T14:45:00.231Z",
+      "closed_at": null
+    }
+  ],
+  "dependencies": [
+    {
+      "ticket_id": 2,
+      "blocked_by_id": 1
+    },
+    {
+      "ticket_id": 3,
+      "blocked_by_id": 1
+    },
+    {
+      "ticket_id": 4,
+      "blocked_by_id": 1
+    },
+    {
+      "ticket_id": 5,
+      "blocked_by_id": 1
+    },
+    {
+      "ticket_id": 6,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 6,
+      "blocked_by_id": 3
+    },
+    {
+      "ticket_id": 7,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 8,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 9,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 10,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 11,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 12,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 13,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 14,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 15,
+      "blocked_by_id": 2
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 7
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 8
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 9
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 10
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 11
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 12
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 13
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 14
+    },
+    {
+      "ticket_id": 16,
+      "blocked_by_id": 15
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 7
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 8
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 9
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 10
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 11
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 12
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 13
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 14
+    },
+    {
+      "ticket_id": 17,
+      "blocked_by_id": 15
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 7
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 8
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 9
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 10
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 11
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 12
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 13
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 14
+    },
+    {
+      "ticket_id": 18,
+      "blocked_by_id": 15
+    },
+    {
+      "ticket_id": 21,
+      "blocked_by_id": 4
+    },
+    {
+      "ticket_id": 22,
+      "blocked_by_id": 6
+    },
+    {
+      "ticket_id": 23,
+      "blocked_by_id": 6
+    },
+    {
+      "ticket_id": 24,
+      "blocked_by_id": 6
+    },
+    {
+      "ticket_id": 25,
+      "blocked_by_id": 16
+    },
+    {
+      "ticket_id": 25,
+      "blocked_by_id": 17
+    },
+    {
+      "ticket_id": 25,
+      "blocked_by_id": 18
+    },
+    {
+      "ticket_id": 25,
+      "blocked_by_id": 22
+    },
+    {
+      "ticket_id": 25,
+      "blocked_by_id": 23
+    }
+  ]
+}
