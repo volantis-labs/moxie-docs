@@ -1,0 +1,62 @@
+---
+title: MCP server
+description: Connect an MCP client to your notes.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="mcp" />
+
+The MCP server lets an AI app read your notes through the Model Context Protocol. The server runs on your Mac and uses standard input and output. It opens no network port.
+
+## Steps
+
+1. [Turn on agent access](/moxie/docs/agents/access/) and install the `moxie` command.
+2. Go to **Settings → AI features → Add to an AI app**.
+3. Click **Copy MCP config**.
+4. Paste the config into the MCP settings of your AI app.
+
+Moxie copies this config:
+
+```json
+{"command":"moxie","args":["mcp"]}
+```
+
+The config tells the client to run this command, which starts the server:
+
+```sh
+moxie mcp
+```
+
+## Tools
+
+| Tool | What it does | Input |
+| --- | --- | --- |
+| `list_notes` | Lists notes, newest first | `limit` (1 to 100), `cursor`, `folderId` |
+| `get_notes` | Gets the details of notes | `ids` (1 to 50) |
+| `get_transcript` | Reads the transcript of a note | `id` |
+| `list_folders` | Lists your folders | None |
+| `add_to_folder` | Adds a note to a folder | `noteId`, `folderId` |
+| `remove_from_folder` | Removes a note from a folder | `noteId`, `folderId` |
+
+All inputs are optional for `list_notes`. All other inputs are necessary.
+
+If Moxie is not open or agent access is off, a tool gives an error.
+
+An AI app gets the text that it reads. The app can send that text to its own servers.
+
+## Example
+
+Ask your AI app this question:
+
+```text
+What did we decide in my last meeting?
+```
+
+The app can call `list_notes` to find the note and `get_transcript` to read it.
+
+## Related
+
+- [Turn on agent access](/moxie/docs/agents/access/)
+- [CLI reference](/moxie/docs/agents/cli/)
+- [Privacy](/moxie/docs/data/privacy/)

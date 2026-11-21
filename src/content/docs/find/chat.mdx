@@ -1,0 +1,55 @@
+---
+title: Chat
+description: Ask a question and get an answer from your notes.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="chat" />
+
+Chat answers a question from your notes and transcripts. The model runs on your Mac. Moxie does not save the conversation.
+
+## Ask about one note
+
+1. Open a note.
+2. Type a question in the **Ask about this note** field.
+3. Press <kbd>Return</kbd>.
+
+Moxie also shows a suggested question. Click the question to ask it.
+
+## Ask across all notes
+
+1. Click **Chat** in the sidebar.
+2. Type a question in the **Ask across your notes** field.
+3. Press <kbd>Return</kbd>.
+
+Click **New conversation** to start again.
+
+## Read the answer
+
+| In the answer | What it does |
+| --- | --- |
+| A number | Shows the quote from the transcript |
+| **Show in transcript** | Opens the transcript at that line |
+| **Follow up** | Shows questions that you can ask next |
+| **Copy with quote** | Copies the answer and its quotes |
+
+Click **Stop** to stop an answer.
+
+## Ask during a meeting
+
+While Moxie records, the field shows **Ask about this meeting**. Moxie answers from the transcript up to that moment. Only you see the answer. Moxie does not save it.
+
+## Example
+
+```text
+What was decided in this meeting?
+```
+
+Moxie gives the decisions. A number after a statement is a citation. Click the number to see the line from the transcript.
+
+## Related
+
+- [Search](/moxie/docs/find/search/)
+- [Citations](/moxie/docs/editor/citations/)
+- [Transcript](/moxie/docs/notes/transcript/)

@@ -1,0 +1,57 @@
+---
+title: Tables
+description: Make a table in a note and change its rows and columns.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-tables-images" />
+
+Type one row between pipes to make a table.
+
+1. Type a minimum of 2 column titles between pipes, for example `| Item | Price |`.
+2. Press <kbd>Enter</kbd>. Moxie makes a table with a header row and one empty row.
+
+There are 2 more ways to make a table:
+
+- Type `/table` and press <kbd>Enter</kbd>. Moxie adds a table with 3 columns and 3 rows.
+- Paste a Markdown table or a table from a web page.
+
+## Move in a table
+
+| Press | Result |
+| --- | --- |
+| <kbd>Tab</kbd> | Next cell. In the last cell, <kbd>Tab</kbd> adds a row. |
+| <kbd>⇧Tab</kbd> | Previous cell |
+| <kbd>Enter</kbd> | The cell below |
+
+A cell contains one line of text.
+
+## Add and delete rows and columns
+
+1. Click in a cell. A **⋯** button shows in the cell.
+2. Click the button.
+3. Select a command.
+
+| To | Commands |
+| --- | --- |
+| Add | **Add row above**, **Add row below**, **Add column left**, **Add column right** |
+| Delete | **Delete row**, **Delete column**, **Delete table** |
+
+You cannot delete the header row.
+
+## Example
+
+Type this line and press <kbd>Enter</kbd>:
+
+```text
+| Item | Price |
+```
+
+Type "Coffee". Press <kbd>Tab</kbd>. Type "4.50". Press <kbd>Tab</kbd> again. Moxie adds a new row.
+
+## Related
+
+- [Slash menu](/moxie/docs/editor/slash-menu/)
+- [Paste](/moxie/docs/editor/paste/)
+- [Images](/moxie/docs/editor/images/)

@@ -1,0 +1,110 @@
+---
+title: CLI reference
+description: The commands, options and exit codes of the moxie command.
+---
+
+The `moxie` command reads your notes from a terminal or a script. Moxie must be open and [agent access](/moxie/docs/agents/access/) must be on.
+
+## Notes
+
+List the notes, newest first. The default is 40 notes and the maximum is 100.
+
+```sh
+moxie notes list
+moxie notes list --limit 5
+moxie notes list --folder FOLDER_ID
+```
+
+Each line shows the id, the creation time in milliseconds, the title and the folder:
+
+```text
+00000000-0000-4000-8000-000000000001	1790000000000	Example note	[Work]
+more: --cursor 1790000000000:00000000-0000-4000-8000-000000000001
+```
+
+If there are more notes, the last line gives a cursor. Use the cursor to get the next page.
+
+```sh
+moxie notes list --cursor CURSOR
+```
+
+Show the details of one or more notes. The maximum is 50 ids.
+
+```sh
+moxie notes get ID
+moxie notes get ID1 ID2
+```
+
+Print the transcript of a note. Each line starts with the name of the speaker.
+
+```sh
+moxie notes transcript ID
+```
+
+```text
+Me: hello
+```
+
+## Folders
+
+List the folders with their ids.
+
+```sh
+moxie folders list
+```
+
+Add a note to a folder.
+
+```sh
+moxie folders add NOTE_ID FOLDER_ID
+```
+
+Remove a note from a folder.
+
+```sh
+moxie folders remove NOTE_ID FOLDER_ID
+```
+
+## JSON output
+
+Add `--json` to get the answer of the app as JSON. Use this option in scripts.
+
+```sh
+moxie --json folders list
+```
+
+```json
+{
+  "folders": [
+    {
+      "id": "f1",
+      "name": "Work"
+    }
+  ]
+}
+```
+
+With `--json`, `notes list` gives `nextCursor` when there are more notes.
+
+## Other commands
+
+| Command | Result |
+| --- | --- |
+| `moxie mcp` | Starts the [MCP server](/moxie/docs/agents/mcp/) |
+| `moxie skill` | Prints a `SKILL.md` file with instructions for agents |
+| `moxie help` | Shows the help |
+| `moxie --version` | Shows the version |
+
+## Exit codes
+
+| Code | Meaning |
+| --- | --- |
+| `0` | Success |
+| `2` | Moxie refused the request, or Moxie is not open |
+| `64` | Usage error |
+
+## Related
+
+- [Turn on agent access](/moxie/docs/agents/access/)
+- [MCP server](/moxie/docs/agents/mcp/)
+- [Folders and Trash](/moxie/docs/notes/folders-trash/)

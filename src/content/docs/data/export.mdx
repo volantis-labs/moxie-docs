@@ -1,0 +1,67 @@
+---
+title: Export
+description: Save one note or all notes as files on your Mac.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="export" />
+
+Export saves a note as a file. The file contains your notes, the enhanced notes and the transcript. Moxie does not send the file to a server.
+
+## Export one note
+
+1. Open the note.
+2. Click **Export**.
+3. Below **Export note as**, select a format.
+4. Select a location and click **Export**.
+
+| Format | File | Use |
+| --- | --- | --- |
+| **Markdown** | `.md` | Text for other apps |
+| **PDF** | `.pdf` | A document to print or send |
+| **HTML** | `.html` | One page for a browser |
+| **JSON** | `.json` | Data for a script, and for import |
+
+## Export all notes
+
+1. Press <kbd>⌘,</kbd> to open Settings.
+2. Go to **Your data → Export or import notes**.
+3. Click **Export…**.
+4. Select a folder.
+
+Moxie makes a new folder there. The folder contains one `.json` file and one `.md` file for each note. Notes in Trash are included.
+
+To get the notes back, click **Import…** and select that folder.
+
+## Example
+
+A Markdown export has this shape:
+
+```markdown
+# Roadmap review
+
+*Zoom · Sep 26, 2026, 10:00 AM, 45 min · With Me, Dana Okonkwo*
+
+## My notes
+
+- [x] Book **room**
+
+## Summary
+
+- Ship date is Friday[^1]
+
+## Transcript
+
+**Me** (0:00): Kick off.
+
+**Dana Okonkwo** (4:10): We ship Friday.
+
+[^1]: 4:10, Dana Okonkwo: "We ship Friday."
+```
+
+## Related
+
+- [Backup and restore](/moxie/docs/data/backup/)
+- [Citations](/moxie/docs/editor/citations/)
+- [Privacy](/moxie/docs/data/privacy/)

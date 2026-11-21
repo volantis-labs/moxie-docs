@@ -1,0 +1,45 @@
+---
+title: Lists and checklists
+description: Make bullet lists, numbered lists and checklists with the keyboard.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-lists" />
+
+Type a list marker at the start of a line to start a list. Then use the keyboard to change the list.
+
+| Type or press | Result |
+| --- | --- |
+| `- ` | Bullet list |
+| `1. ` | Numbered list |
+| `[ ] ` | Checklist |
+| `[x] ` | Checklist item with a tick |
+| <kbd>Enter</kbd> | New item |
+| <kbd>Tab</kbd> | Indent the item |
+| <kbd>⇧Tab</kbd> | Outdent the item |
+| <kbd>⌘Enter</kbd> | Tick or untick the checklist item at the caret |
+
+## Fold a nested list
+
+1. Move the pointer to an item that has a nested list. A chevron shows beside the item.
+2. Click the chevron. Moxie hides the nested list.
+3. Click the chevron again. Moxie shows the nested list.
+
+Moxie does not save a fold. When you open the note again, all lists are open.
+
+## Example
+
+Type this line:
+
+```text
+- Launch plan
+```
+
+Press <kbd>Enter</kbd>, then <kbd>Tab</kbd>. Type "Book the room". "Book the room" is a nested item below "Launch plan".
+
+## Related
+
+- [Format as you type](/moxie/docs/editor/formatting/)
+- [Slash menu](/moxie/docs/editor/slash-menu/)
+- [Shortcuts and tricks](/moxie/docs/reference/shortcuts/)

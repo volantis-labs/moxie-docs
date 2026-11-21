@@ -1,0 +1,48 @@
+---
+title: Slash menu
+description: Type a slash to add a block, a table, an image, a mention or a note template.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-formatting" />
+
+Type `/` in a note. A menu shows the items that you can add at the caret.
+
+1. Type `/` at the start of a line or after a space.
+2. Type some letters to filter the list.
+3. Press <kbd>↓</kbd> or <kbd>↑</kbd> to select an item.
+4. Press <kbd>Enter</kbd> or <kbd>Tab</kbd> to add the item.
+
+Press <kbd>Esc</kbd> to close the menu. The text that you typed stays in the note.
+
+## Items
+
+| Group | Items |
+| --- | --- |
+| **Blocks** | **Text**, **Heading 1**, **Heading 2**, **Heading 3**, **Bullet list**, **Numbered list**, **Checklist**, **Quote**, **Code block**, **Divider** |
+| **People** | **Mention a person** |
+| **Insert** | **Image**, **Table** |
+| **Note templates** | **One-on-one**, **Customer call** |
+
+- **Table** adds a table with 3 columns and 3 rows.
+- **Image** shows only in **My notes**.
+- A note template adds its headings at the caret. Your text stays. Press <kbd>⌘Z</kbd> one time to remove the template.
+- The menu does not open in a code block.
+
+## Example
+
+Type this text at the start of a line:
+
+```text
+/todo
+```
+
+The list shows **Checklist**. Press <kbd>Enter</kbd>. The line becomes a checklist item.
+
+## Related
+
+- [Format as you type](/moxie/docs/editor/formatting/)
+- [Tables](/moxie/docs/editor/tables/)
+- [Images](/moxie/docs/editor/images/)
+- [Mention people](/moxie/docs/editor/mentions/)

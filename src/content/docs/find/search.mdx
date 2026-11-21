@@ -1,0 +1,48 @@
+---
+title: Search
+description: Find a note, a person or a transcript line.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="search" />
+
+Search finds words in all your notes and transcripts. The results show while you type.
+
+## Steps
+
+1. Press <kbd>⌘K</kbd>. You can also click the search field in the sidebar.
+2. Type one or more words.
+3. Press <kbd>↓</kbd> or <kbd>↑</kbd> to select a result.
+4. Press <kbd>Return</kbd> to open the result.
+
+Press <kbd>Esc</kbd> to close the search.
+
+<kbd>⌘F</kbd> also opens the search. If the cursor is in a note, <kbd>⌘F</kbd> opens [Find and replace](/moxie/docs/editor/find-replace/) instead.
+
+If you select text in a note, <kbd>⌘K</kbd> opens the [link](/moxie/docs/editor/links/) field instead.
+
+## What search finds
+
+A label shows where Moxie found the words.
+
+| Label | Where the words are |
+| --- | --- |
+| **People** | The name of a person |
+| **Title** | The title of a note |
+| **My notes** | The notes that you wrote |
+| **Summary** | The enhanced notes |
+| **Image** | The words in an image in a note |
+| **Screen** | The words in a screen capture |
+| **Matched speaker name** | The name of a speaker in a note |
+| A speaker name and a time | A line of the transcript |
+
+## Example
+
+Type `budget`. Moxie shows each note that contains "budget". Select a transcript line. Moxie opens the note at that line.
+
+## Related
+
+- [Chat](/moxie/docs/find/chat/)
+- [Find and replace](/moxie/docs/editor/find-replace/)
+- [People](/moxie/docs/notes/people/)

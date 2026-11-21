@@ -33,6 +33,16 @@ starlight-lang-select select {
   width: 10.5em;
 }
 
+.sl-markdown-content kbd {
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.35em;
+  background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+  font-family: var(--sl-font);
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
 /* "System" (German, Dutch) does not fit in the default width. */
 starlight-theme-select select {
   width: 7.5em;

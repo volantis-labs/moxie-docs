@@ -1,0 +1,54 @@
+---
+title: Diagnostics
+description: See what diagnostics Moxie sends and turn them off.
+---
+
+Diagnostics are crash reports and usage counts. They never contain meeting content: no audio, transcript, note text, title or name.
+
+Diagnostics are on by default. In regions that ask first, for example the EU, the UK and Canada, Moxie sends nothing until you agree. In all other regions, diagnostics also send your account email address.
+
+## Turn diagnostics off
+
+1. Press <kbd>⌘,</kbd> to open Settings.
+2. Go to **Your data**.
+3. Turn off **Send diagnostics to help fix problems?**
+
+Moxie then discards the events that were not sent.
+
+## See what was sent
+
+1. Go to **Settings → Your data**.
+2. Open **What was sent**.
+3. Select a list.
+
+| List | Contents |
+| --- | --- |
+| **Sent** | Each message as it left your Mac |
+| **Kept on this Mac** | Reports that Moxie did not send |
+| **Not sent yet** | Events that wait for the next batch |
+
+Click a line to see its JSON.
+
+## Reset the install id
+
+The install id is a random id that Moxie sends with each event. In **What was sent**, click **Reset** next to **Install id**. Moxie makes a new id the next time diagnostics are on.
+
+## Example
+
+A usage event contains numbers and fixed values only. Moxie sends this event after an export:
+
+```text
+export_done
+  format: md | json | html | pdf
+  notes:  number of notes
+  bulk:   true or false
+  ms:     time in milliseconds
+```
+
+One time each day, Moxie also sends totals and the FileVault status (on or off).
+
+## Related
+
+- [Privacy](/moxie/docs/data/privacy/)
+- [Report a problem](/moxie/docs/help/report-problem/)
+- [Settings](/moxie/docs/reference/settings/)

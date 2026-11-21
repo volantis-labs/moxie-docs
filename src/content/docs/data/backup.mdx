@@ -1,0 +1,53 @@
+---
+title: Backup and restore
+description: Save all notes to one file and restore them on a Mac.
+---
+
+A backup saves all your notes to one `.zep` file. Use the file to move your notes to a different Mac.
+
+:::caution
+The file is not encrypted. A person who can open the file can read all your notes. If you save the file in a synced folder, that service gets a copy.
+:::
+
+## Back up
+
+1. Press <kbd>⌘,</kbd> to open Settings.
+2. Go to **Your data → Back up everything**.
+3. Click **Back up…**.
+4. Select a location and click **Save**.
+
+You cannot make a backup while Moxie records.
+
+| In the file | Not in the file |
+| --- | --- |
+| All notes, with the notes in Trash | Your voice profile |
+| Transcripts, summaries and meeting details | Calendar connections |
+| Folders | Downloaded models |
+| Language, meeting start and agent access settings | Meeting audio |
+| Learned words and blocked suggestions | |
+
+## Restore
+
+A restore replaces the notes, folders and calendar events on this Mac. You cannot restore while Moxie records or processes a meeting.
+
+1. Go to **Settings → Your data → Restore from backup**.
+2. Click **Restore backup…**.
+3. Select the `.zep` file.
+4. Read the message **Replace this Mac’s notes?**
+5. Click **Restore and restart**.
+
+Moxie restarts and shows the restored notes. This Mac keeps its voice profile, microphone and open-at-login settings.
+
+## Example
+
+Moxie gives the file a name with the date and time:
+
+```text
+Moxie backup 2026-10-06 1530.zep
+```
+
+## Related
+
+- [Export](/moxie/docs/data/export/)
+- [Privacy](/moxie/docs/data/privacy/)
+- [Settings](/moxie/docs/reference/settings/)

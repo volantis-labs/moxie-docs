@@ -1,0 +1,41 @@
+---
+title: The recording control
+description: Use the small floating control to monitor and stop a recording from all apps.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+During a recording, a small control stays above your other apps. It shows the time, a meter for your microphone, a meter for the meeting sound, and **Stop**.
+
+| Action | Result |
+| --- | --- |
+| Click **Stop** | Moxie stops and saves the recording. Moxie does not come to the front. |
+| Click the body of the control | Moxie opens the note of the recording. |
+| Drag the control | The control moves. Moxie remembers the position for each display. |
+
+The control does not show in a screen share or in a screenshot.
+
+When the Moxie window is in front, the control hides. The transcript pane of the note then shows the same data. If the pane is closed, a **Meeting in progress** line at the top has **Open note** and **Stop**.
+
+## Problems
+
+When there is a problem, the control shows one line of text and one button.
+
+| Text | Button |
+| --- | --- |
+| Your microphone is silent | **Choose microphone** |
+| Meeting sound not heard | **Check output** |
+| Disk almost full | **Free up space** |
+| Device changed to AirPods | **OK** |
+
+## Example
+
+You share your screen in Zoom. The participants do not see the control. At the end, click **Stop** on the control. Zoom stays in front.
+
+## Related
+
+- [Start and stop a recording](/moxie/docs/record/start-stop/)
+- [Live transcript](/moxie/docs/notes/transcript/)
+- [Troubleshooting](/moxie/docs/help/troubleshooting/)

@@ -1,0 +1,58 @@
+---
+title: Start and stop a recording
+description: Let Moxie start a recording when a meeting starts, or start one yourself.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="recording" />
+
+Moxie records your microphone and the meeting sound. The transcript goes into a note.
+
+## Start
+
+Moxie detects a meeting in Zoom, Microsoft Teams and Google Meet. Then a countdown shows on the recording control, or at the top of the Moxie window:
+
+```text
+Meeting detected · starts in 10 s
+```
+
+| Click | Result |
+| --- | --- |
+| Nothing | The recording starts after the countdown. |
+| **Start now** | The recording starts immediately. |
+| **Not this meeting** | Moxie does not record this meeting. |
+
+To start a recording yourself, click **Start capture** in one of these places:
+
+- On **Home**, on the card of your next meeting.
+- In a note that has no recording.
+- In the menu of the Moxie icon in the menu bar.
+
+## Stop
+
+Click **Stop** in the transcript pane of the note, or on the recording control. Moxie saves the recording.
+
+At the end of a detected meeting, Moxie shows this line:
+
+```text
+Meeting ended · stopping in 10 s
+```
+
+Click **Keep recording** to continue.
+
+## Example
+
+To get a question as an alternative to the countdown:
+
+1. Open **Settings → Recording**.
+2. Below **When a meeting starts, what should Moxie do?**, select **Ask me**.
+
+Moxie then shows **Meeting detected** and waits for **Start**. The other values are **Count down 10 s** (the default) and **Count down 5 s**.
+
+## Related
+
+- [The recording control](/moxie/docs/record/recording-control/)
+- [In-person meetings](/moxie/docs/record/in-person/)
+- [Tell participants](/moxie/docs/record/participant-notice/)
+- [Live transcript](/moxie/docs/notes/transcript/)

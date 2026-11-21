@@ -1,0 +1,72 @@
+---
+title: Settings
+description: Each setting of Moxie, what it does and its default.
+---
+
+Press <kbd>⌘,</kbd> to open Settings. Settings has five tabs. Each table below shows one tab.
+
+## General
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Which language should Moxie use?** | Sets the language of Moxie, the summaries and chat. A transcript keeps the spoken language. | English |
+| **Should Moxie recognise your voice?** | Records three samples of your voice. Moxie then labels your lines "Me". | No voice profile |
+| **Calendar account** | Shows the Google or Microsoft 365 account. Moxie reads the calendar read-only. **Show calendar choices** selects the calendars that Moxie uses. **Sign out** disconnects the account. | Your sign-in account |
+| **Open Moxie when you log in?** | Starts Moxie when you log in to your Mac. | Off |
+| **How long do deleted notes stay in Trash?** | Shows the time. Moxie deletes a note in Trash after 30 days. You cannot change this value. | 30 days |
+
+## Recording
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Has macOS given Moxie access?** | Shows the permissions: **Microphone**, **System audio**, **Screen Recording** and **Accessibility**. **Allow** opens the macOS settings for a permission. | Not allowed until you allow it |
+| **When a meeting starts, what should Moxie do?** | **Ask me**, **Count down 10 s** or **Count down 5 s**. | **Count down 10 s** |
+| **Which microphone should Moxie listen on?** | **Follow system** uses the default microphone of macOS. You can also select one microphone. | **Follow system** |
+| **Do you use Google Meet?** | Shows if the browser extension is connected. **Install for Chrome or Edge** opens the extension page. | Not installed |
+
+## AI features
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Should enhanced notes use your own notes?** | Gives the notes that you wrote to the model when it writes enhanced notes. | Off |
+| **Let AI agents on this Mac read your notes?** | Turns on [agent access](/moxie/docs/agents/access/). | Off |
+| **Add to an AI app** | **Copy MCP config** copies the config for an MCP client. | None |
+| **Use from Terminal** | **Install command** installs the `moxie` command. **Remove command** removes it. | Not installed |
+| **Instructions for agents (SKILL.md)** | **Show** shows the instructions. **Copy** copies them. | None |
+| **Show technical details** | Shows the hardware, the models and the model downloads. | Closed |
+
+## Your data
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Back up everything** | **Back up…** saves all notes to one `.zep` file. | None |
+| **Restore from backup** | **Restore backup…** replaces the notes on this Mac with a backup. | None |
+| **Export or import notes** | **Export…** saves each note as JSON and Markdown. **Import…** reads exported notes. | None |
+| **Learned words** | Shows the words that you confirmed. **Remove** deletes a word. Moxie removes a word that is not used for 90 days. | Empty |
+| **Send diagnostics to help fix problems?** | Sends crash reports and usage counts, never meeting content. | On. In regions that ask first, off until you agree. |
+| **Privacy notice** | Shows the privacy notice. | Closed |
+| **What was sent** | Shows each diagnostics message. **Reset** makes a new **Install id**. | Closed |
+| **Using Moxie at work?** | **Share work email…** opens a form. If you submit the form, Moxie gets your work email to contact you about team features. | Not sent |
+
+If FileVault is off, this tab also shows **FileVault is off** and the **Check FileVault** button.
+
+## Help & about
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Report an issue** | **Report…** opens a GitHub issue with device details and error codes, never meeting content. | None |
+| **Report a security issue** | **Report…** opens the private vulnerability report page of GitHub. | None |
+| **Check hardware again** | **Check** does the hardware check again. The check shows if this Mac can run Moxie. | None |
+| **Licences** | **View** shows the third-party licenses. Moxie is open source under GPL 3.0. | Closed |
+| **Show support bundle details** | **Review support bundle** shows local logs before you save them as a ZIP file. Moxie uploads nothing. | Closed |
+
+## Example
+
+To change the countdown, go to **Settings → Recording → When a meeting starts, what should Moxie do?** and select **Count down 5 s**.
+
+## Related
+
+- [Keyboard shortcuts](/moxie/docs/reference/shortcuts/)
+- [Backup and restore](/moxie/docs/data/backup/)
+- [Diagnostics](/moxie/docs/data/diagnostics/)
+- [Permissions](/moxie/docs/get-started/permissions/)

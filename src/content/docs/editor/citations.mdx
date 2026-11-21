@@ -1,0 +1,39 @@
+---
+title: Citations and Find in transcript
+description: Go from a sentence in a note to the transcript line that it comes from.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-citations" />
+
+A citation is a small link after a sentence in a note. It shows a time or a number. It opens the transcript at the line that the sentence comes from.
+
+## Open a citation
+
+| Action | Result |
+| --- | --- |
+| Move the pointer to a citation | A card shows the transcript line. **Show in transcript** opens the transcript. |
+| Click a citation | The transcript pane opens at that line |
+| Select a citation with the arrow keys, then press <kbd>Enter</kbd> | The transcript pane opens at that line |
+
+## Add a citation with Find in transcript
+
+1. Select a sentence in the note. A menu shows near the selection.
+2. Click **Find in transcript**. A list shows a maximum of 3 transcript lines, each with the speaker and the time.
+3. Click the correct line.
+
+Moxie adds a citation after the selection. The transcript pane opens at that line.
+
+- If no line agrees with the sentence, the list shows **No matching line**.
+- The **Find in transcript** button shows only when the note has a transcript.
+
+## Example
+
+Select "Sam sends the budget on Friday". Click **Find in transcript**. Click the line "Sam · 12:04". The note shows the citation "12:04" after the sentence.
+
+## Related
+
+- [Transcript](/moxie/docs/notes/transcript/)
+- [Enhanced notes](/moxie/docs/notes/enhanced-notes/)
+- [Links](/moxie/docs/editor/links/)

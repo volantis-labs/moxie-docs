@@ -1,0 +1,37 @@
+---
+title: Find and replace
+description: Find words in a note and replace them.
+---
+
+import Video from '~/components/Video.astro';
+
+<Video feature="editor-find-replace" />
+
+Find each place where a word shows in a note. Then replace one match or all matches.
+
+1. Click in the text of the note.
+2. Press <kbd>⌘F</kbd>. The find bar opens. If you selected words, the **Find in note** field contains them.
+3. Type the words. Moxie highlights each match and shows a count, for example "2 of 5".
+4. Type the new words in the **Replace with** field.
+5. Click **Replace** to change the current match. Click **Replace all** to change all matches.
+
+| Press | Result |
+| --- | --- |
+| <kbd>Enter</kbd> or <kbd>⌘G</kbd> | Next match |
+| <kbd>⇧Enter</kbd> or <kbd>⇧⌘G</kbd> | Previous match |
+| <kbd>Esc</kbd> | Close the find bar. The current match stays selected. |
+
+- Set **Match case** to on to find only text with the same capital letters.
+- One undo step removes one **Replace** or one **Replace all**.
+- If a match is in a folded list, Moxie opens the fold.
+- When the transcript pane has the focus, <kbd>⌘F</kbd> moves the caret to the **Search transcript** field.
+
+## Example
+
+Select "Q3" in a note. Press <kbd>⌘F</kbd>. Type "Q4" in the **Replace with** field. Click **Replace all**.
+
+## Related
+
+- [Search](/moxie/docs/find/search/)
+- [Transcript](/moxie/docs/notes/transcript/)
+- [Shortcuts and tricks](/moxie/docs/reference/shortcuts/)

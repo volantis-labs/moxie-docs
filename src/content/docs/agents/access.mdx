@@ -1,0 +1,50 @@
+---
+title: Turn on agent access
+description: Let AI agents on your Mac read your notes.
+---
+
+Agent access lets an AI agent on your Mac read your notes through the `moxie` command or the MCP server. Agent access is off by default.
+
+## Steps
+
+1. Press <kbd>⌘,</kbd> to open Settings.
+2. Go to **AI features**.
+3. Turn on **Let AI agents on this Mac read your notes?**
+4. Below **How do you want to connect?**, select a connection:
+
+| Row | Button | Result |
+| --- | --- | --- |
+| **Add to an AI app** | **Copy MCP config** | Copies the config for an MCP client |
+| **Use from Terminal** | **Install command** | Installs the `moxie` command |
+| **Instructions for agents (SKILL.md)** | **Copy** | Copies instructions that an agent can read |
+
+## Install the command
+
+1. Click **Install command**.
+2. Click **Install**.
+
+Moxie links the command into `/usr/local/bin`. If that folder needs admin rights, Moxie uses `~/.local/bin` and does not ask for a password. Then add `~/.local/bin` to your `PATH`.
+
+To remove the command, click **Remove command**.
+
+## What an agent can do
+
+- List notes and folders.
+- Read the details and the transcript of a note.
+- Add a note to a folder and remove a note from a folder.
+
+An agent cannot see the notes in Trash. Moxie must be open. The command uses a local socket that only your user account can open. Moxie opens no network port.
+
+## Example
+
+```sh
+moxie notes list --limit 5
+```
+
+This command lists your 5 newest notes.
+
+## Related
+
+- [CLI reference](/moxie/docs/agents/cli/)
+- [MCP server](/moxie/docs/agents/mcp/)
+- [Settings](/moxie/docs/reference/settings/)

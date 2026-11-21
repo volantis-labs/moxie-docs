@@ -50,6 +50,9 @@ Epics: E1 Foundation, E2 English content, E3 Translation, E4 Video, E5 Launch.
 - Order on a page: video (if there is one), one sentence that gives the result, numbered steps, example, related pages.
 - Each page has a minimum of one example: a code block, a key or menu path, or a screenshot.
 - Write UI names exactly as the app shows them, in bold: **Settings → Your data → Backup**.
+- Write a shortcut with key symbols in a `<kbd>` tag: `<kbd>⇧⌘S</kbd>`. Use the Apple order of modifier keys: ⌃ ⌥ ⇧ ⌘. Symbols need no translation.
+- Write a link to another docs page as an absolute path with the base and an end slash: `/moxie/docs/editor/tables/`. In a translated page, add the language: `/moxie/docs/de/editor/tables/`. The build fails on a broken link.
+- Model page: `src/content/docs/editor/formatting.mdx`.
 - Do not write "we collect no data". Write what stays on the Mac.
 - Do not document features that the app does not have. Check each statement against `../wallflower`.
 

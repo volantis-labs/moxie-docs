@@ -146,160 +146,160 @@
       "key": "DOCS-7",
       "title": "Write the English pages for Get started",
       "description": "Pages: Welcome, Install Moxie, System requirements, Sign in and connect your calendar, Permissions, Your first meeting. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: index (card grid), install, requirements, sign-in, permissions, first-meeting. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.499Z",
-      "updated_at": "2026-11-21T14:44:59.499Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.442Z",
+      "closed_at": "2026-11-21T15:02:48.442Z"
     },
     {
       "id": 8,
       "key": "DOCS-8",
       "title": "Write the English pages for Record",
       "description": "Pages: Start and stop a recording, The recording control, In-person meetings, Google Meet extension, Tell participants. Source for the recording tricks: ../wallflower tracker ticket WF-775. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: start-stop, recording-control, in-person, google-meet, participant-notice. Note: the button Install for Chrome or Edge does not show in the app until MEET_STORE_URL is set; the page has one conditional sentence. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.542Z",
-      "updated_at": "2026-11-21T14:44:59.542Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.484Z",
+      "closed_at": "2026-11-21T15:02:48.484Z"
     },
     {
       "id": 9,
       "key": "DOCS-9",
       "title": "Write the English pages for Notes",
       "description": "Pages: Live transcript, Speakers and voice profile, Enhanced notes and templates, People, Folders and Trash. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: transcript, speakers, enhanced-notes, people, folders-trash. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.586Z",
-      "updated_at": "2026-11-21T14:44:59.586Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.525Z",
+      "closed_at": "2026-11-21T15:02:48.524Z"
     },
     {
       "id": 10,
       "key": "DOCS-10",
       "title": "Write the English pages for Editor",
       "description": "Pages: Format as you type, Slash menu, Lists and checklists, Links, Mention people, Find and replace, Tables, Images, Paste, Citations and Find in transcript. Source: ../wallflower tracker ticket WF-775 (the running list of editor tricks). Check each trick against the app. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: formatting, slash-menu, lists, links, mentions, find-replace, tables, images, paste, citations, from WF-775 and the editor code. Differences from WF-775 are in the pages (for example Open link, 2-cell minimum for a typed table, images only in My notes). Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.627Z",
-      "updated_at": "2026-11-21T14:44:59.627Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.566Z",
+      "closed_at": "2026-11-21T15:02:48.565Z"
     },
     {
       "id": 11,
       "key": "DOCS-11",
       "title": "Write the English pages for Find and ask",
       "description": "Pages: Search, Chat. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: search, chat. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.667Z",
-      "updated_at": "2026-11-21T14:44:59.667Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.607Z",
+      "closed_at": "2026-11-21T15:02:48.606Z"
     },
     {
       "id": 12,
       "key": "DOCS-12",
       "title": "Write the English pages for Your data",
       "description": "Pages: Export, Backup and restore, Privacy, Diagnostics. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: export, backup, privacy, diagnostics. The diagnostics page says that the account email is sent outside the ask-first regions. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.706Z",
-      "updated_at": "2026-11-21T14:44:59.706Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.650Z",
+      "closed_at": "2026-11-21T15:02:48.650Z"
     },
     {
       "id": 13,
       "key": "DOCS-13",
       "title": "Write the English pages for Agents",
       "description": "Pages: Turn on agent access, CLI reference, MCP server. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: access, cli, mcp. All flags, tool names and exit codes agree with native/rust/cli. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.746Z",
-      "updated_at": "2026-11-21T14:44:59.746Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.695Z",
+      "closed_at": "2026-11-21T15:02:48.694Z"
     },
     {
       "id": 14,
       "key": "DOCS-14",
       "title": "Write the English pages for Reference",
       "description": "Pages: Settings, Shortcuts and tricks (one cheat sheet of all shortcuts and tricks from WF-775). Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: settings (one table for each tab) and shortcuts (cheat sheet of all tricks). The two pages are above 300 words by design. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.788Z",
-      "updated_at": "2026-11-21T14:44:59.788Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.736Z",
+      "closed_at": "2026-11-21T15:02:48.736Z"
     },
     {
       "id": 15,
       "key": "DOCS-15",
       "title": "Write the English pages for Help",
       "description": "Pages: Troubleshooting, Report a problem, Updates. Sources: ../wallflower app string files, settings.ts, CLI main.rs, README, CONTEXT. Accept: page rules in AGENTS.md; build and check pass.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 2,
       "themes": [
         "content"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: troubleshooting, report-problem, updates. Verified: npm run build passes with 40 English pages and all internal links valid. Each writer checked the UI names against en.json and the behaviour against the app code; statements with no confirmation in the code were left out. Translations are in DOCS-16, DOCS-17, DOCS-18.",
       "created_at": "2026-11-21T14:44:59.827Z",
-      "updated_at": "2026-11-21T14:44:59.827Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.779Z",
+      "closed_at": "2026-11-21T15:02:48.779Z"
     },
     {
       "id": 16,
       "key": "DOCS-16",
       "title": "Translate all pages to German",
       "description": "Use de.json and scripts/i18n-style.mjs of ../wallflower. Formal register (Sie). Set sourceHash. Accept: npm run check passes.",
-      "status": "todo",
+      "status": "in_progress",
       "type": "story",
       "epic_id": 3,
       "themes": [
@@ -308,7 +308,7 @@
       "labels": [],
       "resolution": null,
       "created_at": "2026-11-21T14:44:59.868Z",
-      "updated_at": "2026-11-21T14:44:59.868Z",
+      "updated_at": "2026-11-21T15:02:48.897Z",
       "closed_at": null
     },
     {
@@ -316,7 +316,7 @@
       "key": "DOCS-17",
       "title": "Translate all pages to French",
       "description": "Use fr.json and scripts/i18n-style.mjs of ../wallflower. Formal register (vous). Set sourceHash. Accept: npm run check passes.",
-      "status": "todo",
+      "status": "in_progress",
       "type": "story",
       "epic_id": 3,
       "themes": [
@@ -325,7 +325,7 @@
       "labels": [],
       "resolution": null,
       "created_at": "2026-11-21T14:44:59.908Z",
-      "updated_at": "2026-11-21T14:44:59.908Z",
+      "updated_at": "2026-11-21T15:02:48.937Z",
       "closed_at": null
     },
     {
@@ -333,7 +333,7 @@
       "key": "DOCS-18",
       "title": "Translate all pages to Dutch",
       "description": "Use nl.json and scripts/i18n-style.mjs of ../wallflower. Formal register (u). Set sourceHash. Accept: npm run check passes.",
-      "status": "todo",
+      "status": "in_progress",
       "type": "story",
       "epic_id": 3,
       "themes": [
@@ -342,7 +342,7 @@
       "labels": [],
       "resolution": null,
       "created_at": "2026-11-21T14:44:59.948Z",
-      "updated_at": "2026-11-21T14:44:59.948Z",
+      "updated_at": "2026-11-21T15:02:48.976Z",
       "closed_at": null
     },
     {
@@ -350,7 +350,7 @@
       "key": "DOCS-19",
       "title": "Report the app term conflicts to the owner",
       "description": "List terms that the app translates in more than one way (for example voice profile in de and nl; fr speaker.unnamed). Accept: list delivered.",
-      "status": "todo",
+      "status": "in_progress",
       "type": "research",
       "epic_id": 3,
       "themes": [
@@ -359,7 +359,7 @@
       "labels": [],
       "resolution": null,
       "created_at": "2026-11-21T14:44:59.988Z",
-      "updated_at": "2026-11-21T14:44:59.988Z",
+      "updated_at": "2026-11-21T15:02:49.016Z",
       "closed_at": null
     },
     {
@@ -367,17 +367,17 @@
       "key": "DOCS-20",
       "title": "Write the video brief for the media team",
       "description": "One row for each video: feature key, pages, target length, what to show, subtitle files (en, de, fr, nl). Include the 7 trick videos of ../wallflower ticket WF-775 (formatting and slash menu; lists and checklists; links and mentions; find and replace; tables and images; transcript and citations; recording) and the feature videos (install and first meeting, speakers, enhanced notes, search, chat, export, MCP). Accept: brief in the repo.",
-      "status": "todo",
+      "status": "done",
       "type": "story",
       "epic_id": 4,
       "themes": [
         "video"
       ],
       "labels": [],
-      "resolution": null,
+      "resolution": "Done: video-brief.md in the repo root. 14 videos (7 feature videos, 7 trick videos from WF-775), rules, deliverables and the videos.json format.",
       "created_at": "2026-11-21T14:45:00.029Z",
-      "updated_at": "2026-11-21T14:45:00.029Z",
-      "closed_at": null
+      "updated_at": "2026-11-21T15:02:48.858Z",
+      "closed_at": "2026-11-21T15:02:48.858Z"
     },
     {
       "id": 21,
