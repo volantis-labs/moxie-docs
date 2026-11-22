@@ -1,3 +1,36 @@
+/* Geist (SIL Open Font License, src/assets/fonts/OFL.txt), served from this site: no font request goes to another server. */
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Serif';
+  src: url('../assets/fonts/GeistSerif-Variable.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --sl-font: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Geist Serif', ui-serif, Georgia, 'Times New Roman', serif;
+}
+
+/* Serif for titles. Geist Serif has one weight, thus no bold (a bold would be a fake one). */
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6),
+.card .title,
+.right-sidebar-panel h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+h1, .sl-markdown-content h1 { letter-spacing: -0.02em; }
+
 /* Colours of volantislabs.dev: neutral greys, orange accent. */
 :root {
   --sl-color-accent-low: #3d2a05;
