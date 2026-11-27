@@ -15,7 +15,15 @@ const { feature } = Astro.props;
 const video = videos[feature];
 if (!video) throw new Error(`<Video>: no feature "${feature}" in src/data/videos.json`);
 
-const { lang, entry } = Astro.locals.starlightRoute;
+// starlight-llms-txt renders pages outside a Starlight route. There, the getter throws
+// and the video renders nothing: a text file for AI agents has no use for a player.
+let route: typeof Astro.locals.starlightRoute | undefined;
+try {
+  route = Astro.locals.starlightRoute;
+} catch {
+  route = undefined;
+}
+const { lang = 'en', entry } = route ?? {};
 const code = lang.split('-')[0];
 const t = ui[code as keyof typeof ui] ?? ui.en;
 
@@ -27,7 +35,7 @@ if (video.id && !poster) {
 ---
 
 {
-  video.id && poster && (
+  route && video.id && poster && (
     <moxie-video data-id={video.id} data-lang={code}>
       <button type="button" aria-label={`${t.playVideo}: ${entry.data.title}`}>
         <Image src={poster} alt="" widths={[720, 1440]} sizes="(min-width: 50em) 45rem, 100vw" />

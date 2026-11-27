@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
+import starlightLlmsTxt from 'starlight-llms-txt';
 import links from './src/data/links.json' with { type: 'json' };
 
 // A sidebar group: English label, translated labels, page slugs in order.
@@ -72,7 +73,22 @@ export default defineConfig({
         group('Reference', 'Referenz', 'Référence', 'Referentie', ['reference/settings', 'reference/shortcuts']),
         group('Help', 'Hilfe', 'Aide', 'Hulp', ['help/troubleshooting', 'help/report-problem', 'help/updates']),
       ],
-      plugins: [starlightLinksValidator({ errorOnFallbackPages: false, errorOnInconsistentLocale: true })],
+      plugins: [
+        starlightLinksValidator({ errorOnFallbackPages: false, errorOnInconsistentLocale: true }),
+        // Writes llms.txt, llms-full.txt and llms-small.txt (English pages) for AI agents.
+        starlightLlmsTxt({
+          projectName: 'Moxie',
+          description:
+            'Moxie is a free, open-source app for AI meeting notes and prep on the Mac (macOS 15 or later). It records meetings without a bot, writes the transcript, names the speakers and makes notes. Audio, transcripts and notes stay on the Mac.',
+          details:
+            '- Moxie works with Google Meet, Microsoft Teams, Zoom and meetings in person.\n- A local MCP server lets AI agents on the Mac, such as Claude and Codex, read your notes.\n- These files contain the English pages. The docs also have German, French and Dutch pages.',
+          optionalLinks: [
+            { label: 'Moxie site', url: links.site },
+            { label: 'Source on GitHub', url: links.github },
+            { label: 'Privacy policy', url: links.privacy },
+          ],
+        }),
+      ],
     }),
   ],
 });

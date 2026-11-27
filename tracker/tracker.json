@@ -497,6 +497,23 @@
       "created_at": "2026-11-22T03:08:03.289Z",
       "updated_at": "2026-11-22T03:08:06.955Z",
       "closed_at": "2026-11-22T03:08:06.954Z"
+    },
+    {
+      "id": 28,
+      "key": "DOCS-28",
+      "title": "Publish llms.txt, llms-full.txt and llms-small.txt for AI agents",
+      "description": "Goal: AI agents and coding tools read the English docs as Markdown. Add starlight-llms-txt 0.12.0. The Video component must not fail when the plugin renders a page outside a Starlight route. Acceptance: the build writes /moxie/docs/llms.txt, llms-full.txt and llms-small.txt; videos still render on pages in each language; npm test passes.",
+      "status": "done",
+      "type": "story",
+      "epic_id": 5,
+      "themes": [
+        "infra"
+      ],
+      "labels": [],
+      "resolution": "Added starlight-llms-txt 0.12.0. Video.astro now renders nothing when locals.starlightRoute is missing (the plugin renders pages outside a route). Verified: build writes llms.txt (1.2 KB), llms-full.txt (89 KB) and llms-small.txt (75 KB) with the English pages; with a temporary video id the player renders on the en, de and fr pages with the correct data-lang and does not appear in llms-full.txt; npm test passes.",
+      "created_at": "2026-11-27T21:58:16.835Z",
+      "updated_at": "2026-11-27T21:58:16.904Z",
+      "closed_at": "2026-11-27T21:58:16.904Z"
     }
   ],
   "dependencies": [
